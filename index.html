@@ -3,23 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Synaipse — The Operating System for Clinical Autonomy</title>
+
+  <!-- SEO Meta Tags -->
+  <title>Synaipse | Unified Healthcare Automation Platform</title>
+  <meta name="description" content="Synaipse is a physician-led unified automation platform that sits atop your existing EHR to eliminate administrative burden. AI-powered patient communication, revenue cycle management, and workflow automation.">
+  <meta name="keywords" content="healthcare automation platform, EHR integration, revenue cycle management, prior authorization automation, patient communication AI, medical billing AI, healthcare workflow automation, athenahealth integration, eClinicalWorks AI, practice management automation">
+  <meta name="author" content="Synaipse Inc.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://synaipse.org/">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://synaipse.org/">
+  <meta property="og:title" content="Synaipse | Unified Healthcare Automation Platform">
+  <meta property="og:description" content="A unified automation layer that sits atop your EHR to eliminate administrative burden. Built by physicians, for physicians.">
+  <meta property="og:image" content="https://synaipse.org/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Synaipse | Unified Healthcare Automation Platform">
+  <meta name="twitter:description" content="A unified automation layer that sits atop your EHR to eliminate administrative burden.">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Synaipse Inc.",
+    "url": "https://synaipse.org",
+    "logo": "https://synaipse.org/logo.svg",
+    "description": "Physician-led unified healthcare automation platform for eliminating administrative burden",
+    "foundingLocation": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cincinnati",
+        "addressRegion": "OH",
+        "addressCountry": "US"
+      }
+    },
+    "founder": [
+      {
+        "@type": "Person",
+        "name": "Soliman Oushy, MD",
+        "jobTitle": "Co-Founder"
+      },
+      {
+        "@type": "Person",
+        "name": "Robert James, MD",
+        "jobTitle": "Co-Founder"
+      }
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "info@synaipse.org",
+      "contactType": "sales"
+    }
+  }
+  </script>
+
   <style>
     :root {
       --blue-primary: #00629B;
-      --blue-deep: #003D5C;
       --blue-light: #2E8BC0;
-      --grey-cool: #5E6A71;
-      --grey-light: #8A9BA8;
-      --amber-spark: #E8A838;
-      --amber-light: #F5C15D;
+      --blue-deep: #003D5C;
+      --blue-pale: #E8F4FA;
       --slate: #1A2332;
       --slate-light: #2D3B4F;
-      --off-white: #F7F9FB;
+      --grey: #5E6A71;
+      --grey-light: #8A9BA8;
+      --grey-muted: #9CA3AF;
+      --amber: #E8A838;
+      --amber-light: #F5C15D;
+      --amber-pale: #FEF7E8;
       --white: #FFFFFF;
+      --off-white: #F8FAFC;
+      --border: #E5E7EB;
     }
 
     * {
@@ -33,17 +97,17 @@
     }
 
     body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--slate);
-      color: var(--white);
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--white);
+      color: var(--slate);
       line-height: 1.6;
-      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
     }
 
     .container {
-      max-width: 1200px;
+      max-width: 1140px;
       margin: 0 auto;
-      padding: 0 40px;
+      padding: 0 24px;
     }
 
     /* Navigation */
@@ -53,13 +117,18 @@
       left: 0;
       right: 0;
       z-index: 1000;
-      padding: 24px 40px;
+      padding: 16px 24px;
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      max-width: 1140px;
+      margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: linear-gradient(to bottom, rgba(26,35,50,0.95), rgba(26,35,50,0));
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
     }
 
     .nav-logo {
@@ -70,151 +139,130 @@
     }
 
     .nav-logo svg {
-      width: 36px;
-      height: 36px;
+      width: 40px;
+      height: 40px;
     }
 
     .nav-wordmark {
       font-size: 22px;
       font-weight: 700;
       letter-spacing: -0.5px;
-      color: var(--white);
+      color: var(--slate);
     }
 
     .nav-wordmark .ai {
-      color: var(--amber-spark);
+      color: var(--blue-primary);
+      font-weight: 800;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 40px;
+      gap: 32px;
     }
 
     .nav-links a {
-      color: var(--grey-light);
+      color: var(--grey);
       text-decoration: none;
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 500;
       transition: color 0.2s;
     }
 
     .nav-links a:hover {
-      color: var(--white);
+      color: var(--blue-primary);
     }
 
     .nav-cta {
-      background: var(--amber-spark);
-      color: var(--slate);
-      padding: 10px 24px;
-      border-radius: 6px;
+      background: var(--blue-primary);
+      color: var(--white) !important;
+      padding: 10px 20px;
+      border-radius: 8px;
       font-weight: 600;
-      font-size: 14px;
-      text-decoration: none;
       transition: all 0.2s;
     }
 
     .nav-cta:hover {
-      background: var(--amber-light);
+      background: var(--blue-deep);
       transform: translateY(-1px);
     }
 
-    /* Hero Section */
+    /* Hero */
     .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
+      padding: 160px 0 100px;
+      background: linear-gradient(135deg, var(--blue-pale) 0%, var(--white) 50%, var(--amber-pale) 100%);
       position: relative;
       overflow: hidden;
-      padding-top: 100px;
     }
 
-    .hero-bg {
+    .hero::before {
+      content: '';
       position: absolute;
-      inset: 0;
-      background: 
-        radial-gradient(ellipse 80% 60% at 70% 40%, rgba(0,98,155,0.15), transparent),
-        radial-gradient(ellipse 60% 50% at 20% 80%, rgba(232,168,56,0.08), transparent);
-    }
-
-    .hero-grid {
-      position: absolute;
-      inset: 0;
-      background-image: 
-        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
-      background-size: 60px 60px;
-      mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black, transparent);
+      top: -50%;
+      right: -20%;
+      width: 60%;
+      height: 150%;
+      background: radial-gradient(ellipse, rgba(0,98,155,0.08) 0%, transparent 70%);
+      pointer-events: none;
     }
 
     .hero-content {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
       position: relative;
       z-index: 2;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-    }
-
-    .hero-text {
-      animation: fadeInUp 0.8s ease-out;
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
 
     .hero-badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(232,168,56,0.1);
-      border: 1px solid rgba(232,168,56,0.3);
+      background: var(--white);
+      border: 1px solid var(--blue-primary);
       padding: 8px 16px;
       border-radius: 100px;
       font-size: 13px;
-      font-weight: 500;
-      color: var(--amber-spark);
-      margin-bottom: 32px;
+      font-weight: 600;
+      color: var(--blue-primary);
+      margin-bottom: 24px;
+      box-shadow: 0 2px 8px rgba(0,98,155,0.1);
     }
 
     .hero-badge::before {
       content: '';
       width: 8px;
       height: 8px;
-      background: var(--amber-spark);
+      background: var(--amber);
       border-radius: 50%;
       animation: pulse 2s infinite;
     }
 
     @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(0.9); }
     }
 
     .hero h1 {
-      font-size: 58px;
+      font-size: 56px;
       font-weight: 800;
       line-height: 1.08;
       letter-spacing: -2px;
-      margin-bottom: 28px;
+      margin-bottom: 24px;
+      color: var(--slate);
     }
 
     .hero h1 .highlight {
-      color: var(--blue-light);
+      color: var(--blue-primary);
+    }
+
+    .hero h1 .highlight-amber {
+      color: var(--amber);
     }
 
     .hero-sub {
       font-size: 20px;
-      color: var(--grey-light);
-      max-width: 500px;
+      color: var(--grey);
       margin-bottom: 40px;
       line-height: 1.7;
     }
@@ -222,13 +270,15 @@
     .hero-actions {
       display: flex;
       gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
     .btn-primary {
-      background: var(--amber-spark);
-      color: var(--slate);
+      background: var(--blue-primary);
+      color: var(--white);
       padding: 16px 32px;
-      border-radius: 8px;
+      border-radius: 10px;
       font-weight: 700;
       font-size: 16px;
       text-decoration: none;
@@ -241,362 +291,43 @@
     }
 
     .btn-primary:hover {
-      background: var(--amber-light);
+      background: var(--blue-deep);
       transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(232,168,56,0.3);
+      box-shadow: 0 8px 24px rgba(0,98,155,0.25);
+    }
+
+    .btn-primary.amber {
+      background: var(--amber);
+      color: var(--slate);
+    }
+
+    .btn-primary.amber:hover {
+      background: var(--amber-light);
+      box-shadow: 0 8px 24px rgba(232,168,56,0.3);
     }
 
     .btn-secondary {
-      background: transparent;
-      color: var(--white);
+      background: var(--white);
+      color: var(--slate);
       padding: 16px 32px;
-      border-radius: 8px;
+      border-radius: 10px;
       font-weight: 600;
       font-size: 16px;
       text-decoration: none;
-      border: 1px solid var(--grey-cool);
+      border: 2px solid var(--border);
       transition: all 0.2s;
     }
 
     .btn-secondary:hover {
-      border-color: var(--white);
-      background: rgba(255,255,255,0.05);
-    }
-
-    /* Hero Visual */
-    .hero-visual {
-      position: relative;
-      animation: fadeInUp 0.8s ease-out 0.2s both;
-    }
-
-    .hero-visual-inner {
-      position: relative;
-      background: linear-gradient(135deg, var(--slate-light), var(--slate));
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 16px;
-      padding: 0;
-      box-shadow: 
-        0 40px 80px rgba(0,0,0,0.4),
-        inset 0 1px 0 rgba(255,255,255,0.05);
-      overflow: hidden;
-    }
-
-    .chat-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px 20px;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      background: rgba(0,0,0,0.2);
-    }
-
-    .chat-header-left {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .chat-avatar {
-      width: 36px;
-      height: 36px;
-      background: var(--blue-primary);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .chat-header-info h4 {
-      font-size: 14px;
-      font-weight: 600;
-      margin-bottom: 2px;
-    }
-
-    .chat-header-info span {
-      font-size: 12px;
-      color: #27CA40;
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .chat-header-info span::before {
-      content: '';
-      width: 6px;
-      height: 6px;
-      background: #27CA40;
-      border-radius: 50%;
-    }
-
-    .chat-body {
-      padding: 24px 20px;
-      min-height: 320px;
-    }
-
-    .chat-message {
-      display: flex;
-      gap: 12px;
-      margin-bottom: 20px;
-      opacity: 0;
-      animation: chatFade 0.4s ease-out forwards;
-    }
-
-    .chat-message:nth-child(1) { animation-delay: 0.3s; }
-    .chat-message:nth-child(2) { animation-delay: 0.9s; }
-    .chat-message:nth-child(3) { animation-delay: 1.5s; }
-    .chat-message:nth-child(4) { animation-delay: 2.1s; }
-    .chat-message:nth-child(5) { animation-delay: 2.7s; }
-
-    @keyframes chatFade {
-      to { opacity: 1; }
-    }
-
-    .chat-message.patient {
-      flex-direction: row-reverse;
-    }
-
-    .chat-message-avatar {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-      font-weight: 600;
-    }
-
-    .chat-message.ai .chat-message-avatar {
-      background: var(--blue-primary);
-    }
-
-    .chat-message.patient .chat-message-avatar {
-      background: var(--grey-cool);
-    }
-
-    .chat-message-bubble {
-      max-width: 280px;
-      padding: 12px 16px;
-      border-radius: 16px;
-      font-size: 14px;
-      line-height: 1.5;
-    }
-
-    .chat-message.ai .chat-message-bubble {
-      background: rgba(255,255,255,0.06);
-      border-bottom-left-radius: 4px;
-    }
-
-    .chat-message.patient .chat-message-bubble {
-      background: var(--blue-primary);
-      border-bottom-right-radius: 4px;
-    }
-
-    .chat-input {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 16px 20px;
-      border-top: 1px solid rgba(255,255,255,0.06);
-      background: rgba(0,0,0,0.15);
-    }
-
-    .chat-input input {
-      flex: 1;
-      background: rgba(255,255,255,0.06);
-      border: none;
-      padding: 12px 16px;
-      border-radius: 8px;
-      color: var(--white);
-      font-size: 14px;
-      font-family: inherit;
-    }
-
-    .chat-input input::placeholder {
-      color: var(--grey-cool);
-    }
-
-    .chat-input button {
-      width: 40px;
-      height: 40px;
-      background: var(--amber-spark);
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .hero-visual-glow {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(circle, rgba(232,168,56,0.12), transparent 70%);
-      pointer-events: none;
-    }
-
-    /* ============================================
-       EHR INTEGRATION SECTION - PROMINENT
-       ============================================ */
-    .ehr-integration {
-      padding: 120px 0;
-      background: var(--off-white);
-      color: var(--slate);
-    }
-
-    .ehr-integration-header {
-      text-align: center;
-      margin-bottom: 60px;
-    }
-
-    .ehr-integration-label {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--blue-primary);
-      margin-bottom: 20px;
-    }
-
-    .ehr-integration-title {
-      font-size: 52px;
-      font-weight: 800;
-      letter-spacing: -2px;
-      margin-bottom: 24px;
-      color: var(--slate);
-    }
-
-    .ehr-integration-sub {
-      font-size: 18px;
-      color: var(--grey-cool);
-      max-width: 700px;
-      margin: 0 auto;
-      line-height: 1.7;
-    }
-
-    .ehr-logos-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      margin-bottom: 60px;
-    }
-
-    .ehr-logo-card {
-      background: var(--white);
-      border: 1px solid #E5E7EB;
-      border-radius: 12px;
-      padding: 32px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100px;
-      transition: all 0.3s;
-    }
-
-    .ehr-logo-card:hover {
       border-color: var(--blue-primary);
-      box-shadow: 0 8px 24px rgba(0,98,155,0.1);
-      transform: translateY(-2px);
+      color: var(--blue-primary);
     }
 
-    .ehr-logo-card span {
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--slate);
-      letter-spacing: -0.3px;
-    }
-
-    /* Colored logo text styles */
-    .ehr-logo-card .logo-athena {
-      color: #7B68EE;
-    }
-    .ehr-logo-card .logo-athena .health {
-      color: #2ECC71;
-    }
-    
-    .ehr-logo-card .logo-modmed {
-      color: #7B2D8E;
-    }
-
-    .ehr-logo-card .logo-nextech {
-      color: #1A5F2A;
-    }
-
-    .ehr-logo-card .logo-ecw {
-      font-style: italic;
-      color: #0066CC;
-    }
-
-    .ehr-logo-card .logo-advancedmd {
-      color: #E85D04;
-    }
-    .ehr-logo-card .logo-advancedmd .md {
-      color: var(--slate);
-      font-weight: 800;
-    }
-
-    .ehr-logo-card .logo-eyecare {
-      color: #1E40AF;
-    }
-
-    .ehr-logo-card .logo-greenway {
-      color: #16A34A;
-    }
-
-    .ehr-logo-card .logo-veradigm {
-      color: #DC2626;
-    }
-
-    /* Integration Features */
-    .ehr-features-row {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 32px;
-      padding-top: 40px;
-      border-top: 1px solid #E5E7EB;
-    }
-
-    .ehr-feature-item {
-      text-align: center;
-    }
-
-    .ehr-feature-icon {
-      width: 56px;
-      height: 56px;
-      background: rgba(0,98,155,0.1);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 16px;
-      font-size: 24px;
-    }
-
-    .ehr-feature-item h4 {
-      font-size: 16px;
-      font-weight: 700;
-      margin-bottom: 8px;
-      color: var(--slate);
-    }
-
-    .ehr-feature-item p {
-      font-size: 14px;
-      color: var(--grey-cool);
-      line-height: 1.5;
-    }
-
-    /* Stats Bar */
-    .stats-bar {
-      background: var(--slate-light);
-      border-top: 1px solid rgba(255,255,255,0.05);
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-      padding: 60px 0;
+    /* Stats */
+    .stats {
+      padding: 80px 0;
+      background: var(--blue-primary);
+      color: var(--white);
     }
 
     .stats-grid {
@@ -613,103 +344,443 @@
       font-size: 48px;
       font-weight: 800;
       color: var(--white);
-      letter-spacing: -2px;
+      letter-spacing: -1px;
       margin-bottom: 8px;
     }
 
     .stat-number .accent {
-      color: var(--amber-spark);
+      color: var(--amber);
     }
 
     .stat-label {
       font-size: 14px;
-      color: var(--grey-light);
+      color: rgba(255,255,255,0.8);
       font-weight: 500;
     }
 
-    /* Section styling */
+    /* Platform Section */
+    .platform {
+      padding: 100px 0;
+      background: var(--white);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
     .section-label {
       font-family: 'IBM Plex Mono', monospace;
       font-size: 12px;
-      font-weight: 500;
+      font-weight: 600;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: var(--amber-spark);
-      margin-bottom: 20px;
+      color: var(--amber);
+      margin-bottom: 16px;
     }
 
     .section-title {
-      font-size: 48px;
+      font-size: 44px;
       font-weight: 800;
       letter-spacing: -1.5px;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
+      color: var(--slate);
+    }
+
+    .section-title .highlight {
+      color: var(--blue-primary);
     }
 
     .section-sub {
       font-size: 18px;
-      color: var(--grey-light);
+      color: var(--grey);
       max-width: 650px;
       margin: 0 auto;
     }
 
-    /* Two Column Products Section */
-    .products {
-      padding: 140px 0;
-      background: var(--slate);
+    .platform-visual {
+      background: linear-gradient(135deg, var(--slate) 0%, var(--slate-light) 100%);
+      border-radius: 24px;
+      padding: 60px;
+      position: relative;
+      overflow: hidden;
     }
 
-    .products-header {
+    .platform-visual::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.5;
+    }
+
+    .platform-layers {
+      position: relative;
+      z-index: 2;
+    }
+
+    .platform-layer {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 24px 32px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.3s;
+    }
+
+    .platform-layer:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: var(--amber);
+    }
+
+    .platform-layer.synaipse {
+      background: linear-gradient(135deg, var(--blue-primary), var(--blue-light));
+      border: 2px solid var(--amber);
+      box-shadow: 0 8px 32px rgba(232,168,56,0.2);
+    }
+
+    .platform-layer-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .platform-layer-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+
+    .platform-layer.synaipse .platform-layer-icon {
+      background: var(--amber);
+    }
+
+    .platform-layer h4 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .platform-layer p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .platform-layer-right {
+      display: flex;
+      gap: 8px;
+    }
+
+    .platform-tag {
+      background: rgba(255,255,255,0.1);
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.8);
+    }
+
+    .platform-layer.synaipse .platform-tag {
+      background: rgba(255,255,255,0.2);
+      color: var(--white);
+    }
+
+    /* EHR Section */
+    .ehr-section {
+      padding: 100px 0;
+      background: linear-gradient(180deg, var(--off-white) 0%, var(--white) 100%);
+    }
+
+    .ehr-logos {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      margin-bottom: 60px;
+    }
+
+    .ehr-logo-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 80px;
+      transition: all 0.2s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .ehr-logo-card:hover {
+      border-color: var(--blue-primary);
+      box-shadow: 0 8px 24px rgba(0,98,155,0.1);
+      transform: translateY(-2px);
+    }
+
+    .ehr-logo-card .logo-text {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    /* Individual EHR logo styles matching reference image */
+    .logo-advancedmd {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .logo-advancedmd .icon {
+      color: #F97316;
+      font-size: 20px;
+    }
+    .logo-advancedmd .text {
+      color: #374151;
+      font-weight: 600;
+    }
+    .logo-advancedmd .text span {
+      color: #F97316;
+      font-weight: 700;
+    }
+
+    .logo-elation {
+      color: #10B981;
+      font-weight: 700;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .logo-elation::before {
+      content: '✦';
+      color: #F59E0B;
+    }
+
+    .logo-webpt {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .logo-webpt .bars {
+      display: flex;
+      gap: 2px;
+    }
+    .logo-webpt .bar {
+      width: 4px;
+      height: 16px;
+      border-radius: 2px;
+    }
+    .logo-webpt .bar:nth-child(1) { background: #EF4444; }
+    .logo-webpt .bar:nth-child(2) { background: #3B82F6; }
+    .logo-webpt .bar:nth-child(3) { background: #10B981; }
+    .logo-webpt .text {
+      color: #374151;
+      font-weight: 700;
+    }
+
+    .logo-eclinicalworks {
+      color: #374151;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .logo-athenahealth {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #374151;
+      font-weight: 600;
+    }
+    .logo-athenahealth::before {
+      content: '❋';
+      color: #84CC16;
+      font-size: 18px;
+    }
+
+    .logo-practicefusion {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .logo-practicefusion .icon {
+      color: #06B6D4;
+      font-size: 18px;
+    }
+    .logo-practicefusion .text {
+      color: #06B6D4;
+      font-weight: 600;
+    }
+    .logo-practicefusion .text span {
+      color: #374151;
+    }
+
+    .logo-cerbo {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #374151;
+      font-weight: 700;
+    }
+    .logo-cerbo::before {
+      content: '✤';
+      color: #EC4899;
+      font-size: 16px;
+    }
+
+    .logo-simplepractice {
+      color: #374151;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .logo-tebra {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #374151;
+      font-weight: 700;
+    }
+    .logo-tebra::before {
+      content: '❧';
+      color: #22C55E;
+      font-size: 16px;
+    }
+
+    .logo-kipu {
+      color: #7C3AED;
+      font-weight: 800;
+      font-size: 20px;
+      letter-spacing: -0.5px;
+    }
+
+    .ehr-features {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+    }
+
+    .ehr-feature {
       text-align: center;
-      margin-bottom: 80px;
+    }
+
+    .ehr-feature-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--blue-pale);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      font-size: 26px;
+    }
+
+    .ehr-feature h4 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--slate);
+    }
+
+    .ehr-feature p {
+      font-size: 14px;
+      color: var(--grey);
+      line-height: 1.5;
+    }
+
+    /* Products */
+    .products {
+      padding: 100px 0;
+      background: var(--white);
     }
 
     .products-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 40px;
+      gap: 32px;
     }
 
     .product-card {
-      background: linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
-      border: 1px solid rgba(255,255,255,0.08);
+      background: var(--white);
+      border: 2px solid var(--border);
       border-radius: 20px;
-      padding: 48px;
+      padding: 40px;
       transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--blue-primary);
+      transform: scaleX(0);
+      transition: transform 0.3s;
     }
 
     .product-card:hover {
-      border-color: rgba(0,98,155,0.4);
-      transform: translateY(-4px);
-      box-shadow: 0 24px 48px rgba(0,0,0,0.3);
+      border-color: var(--blue-primary);
+      box-shadow: 0 12px 40px rgba(0,98,155,0.12);
     }
 
-    .product-card-icon {
-      width: 64px;
-      height: 64px;
-      background: rgba(0,98,155,0.15);
+    .product-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .product-card.amber::before {
+      background: var(--amber);
+    }
+
+    .product-card.amber:hover {
+      border-color: var(--amber);
+      box-shadow: 0 12px 40px rgba(232,168,56,0.15);
+    }
+
+    .product-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--blue-pale);
       border-radius: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 28px;
-      font-size: 32px;
+      margin-bottom: 24px;
+      font-size: 30px;
     }
 
-    .product-card-icon.amber {
-      background: rgba(232,168,56,0.15);
+    .product-card.amber .product-icon {
+      background: var(--amber-pale);
     }
 
     .product-card h3 {
-      font-size: 26px;
+      font-size: 24px;
       font-weight: 700;
       margin-bottom: 12px;
+      color: var(--slate);
     }
 
     .product-card > p {
-      color: var(--grey-light);
+      color: var(--grey);
       font-size: 16px;
       line-height: 1.7;
-      margin-bottom: 32px;
+      margin-bottom: 28px;
     }
 
     .product-features {
@@ -720,298 +791,43 @@
       display: flex;
       align-items: flex-start;
       gap: 12px;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       font-size: 15px;
-      color: var(--grey-light);
+      color: var(--grey);
     }
 
     .product-features li::before {
-      content: '';
-      width: 20px;
-      height: 20px;
-      background: var(--blue-primary);
-      border-radius: 50%;
-      flex-shrink: 0;
-      margin-top: 2px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
-      background-size: 12px;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-
-    .product-ehr-badge {
-      margin-top: 28px;
-      padding: 16px 20px;
-      background: rgba(232,168,56,0.1);
-      border: 1px solid rgba(232,168,56,0.2);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 14px;
-      color: var(--amber-spark);
-      font-weight: 500;
-    }
-
-    .product-ehr-badge svg {
-      width: 20px;
-      height: 20px;
+      content: '✓';
+      color: var(--blue-primary);
+      font-weight: 700;
       flex-shrink: 0;
     }
 
-    /* Capabilities Grid */
-    .capabilities {
-      padding: 140px 0;
-      background: linear-gradient(to bottom, var(--slate), var(--slate-light));
+    .product-card.amber .product-features li::before {
+      color: var(--amber);
     }
 
-    .capabilities-header {
-      text-align: center;
-      margin-bottom: 80px;
-    }
-
-    .capabilities-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-    }
-
-    .capability-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 16px;
-      padding: 32px;
-      transition: all 0.3s;
-    }
-
-    .capability-card:hover {
-      border-color: rgba(232,168,56,0.3);
-      transform: translateY(-4px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-    }
-
-    .capability-icon {
-      width: 48px;
-      height: 48px;
-      background: rgba(0,98,155,0.15);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-      font-size: 24px;
-    }
-
-    .capability-card h3 {
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-
-    .capability-card p {
-      color: var(--grey-light);
-      font-size: 14px;
-      line-height: 1.6;
-    }
-
-    /* Problem Section */
-    .problem {
-      padding: 140px 0;
-      background: var(--slate-light);
-    }
-
-    .problem-header {
-      text-align: center;
-      margin-bottom: 80px;
-    }
-
-    .problem-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-    }
-
-    .problem-card {
-      background: var(--slate);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 16px;
-      padding: 36px;
-      transition: all 0.3s;
-    }
-
-    .problem-card:hover {
-      border-color: rgba(232,168,56,0.3);
-    }
-
-    .problem-card-icon {
-      width: 56px;
-      height: 56px;
-      background: rgba(232,168,56,0.1);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 24px;
-      font-size: 28px;
-    }
-
-    .problem-card h3 {
-      font-size: 20px;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-
-    .problem-card p {
-      color: var(--grey-light);
-      font-size: 15px;
-      line-height: 1.7;
-    }
-
-    /* Results Section */
-    .results {
-      padding: 140px 0;
-      background: var(--slate);
-    }
-
-    .results-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-    }
-
-    .results-text h2 {
-      font-size: 44px;
-      font-weight: 800;
-      letter-spacing: -1.5px;
-      margin-bottom: 28px;
-      line-height: 1.15;
-    }
-
-    .results-text > p {
-      font-size: 18px;
-      color: var(--grey-light);
-      margin-bottom: 40px;
-      line-height: 1.8;
-    }
-
-    .results-stats {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-    }
-
-    .results-stat {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 12px;
-      padding: 24px;
-    }
-
-    .results-stat-number {
-      font-size: 36px;
-      font-weight: 800;
-      color: var(--amber-spark);
-      margin-bottom: 4px;
-    }
-
-    .results-stat-label {
-      font-size: 14px;
-      color: var(--grey-light);
-    }
-
-    .results-visual {
-      position: relative;
-    }
-
-    .results-card {
-      background: var(--slate-light);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 16px;
-      padding: 28px;
-      margin-bottom: 16px;
-      transition: all 0.3s;
-    }
-
-    .results-card:hover {
-      border-color: var(--blue-light);
-    }
-
-    .results-card-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 16px;
-    }
-
-    .results-card-title {
-      font-weight: 600;
-      font-size: 15px;
-    }
-
-    .results-card-status {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 12px;
-      padding: 4px 12px;
-      border-radius: 100px;
-      background: rgba(39,202,64,0.15);
-      color: #27CA40;
-    }
-
-    .results-card-status.pending {
-      background: rgba(232,168,56,0.15);
-      color: var(--amber-spark);
-    }
-
-    .results-card-body {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-
-    .results-card-stat {
-      background: rgba(255,255,255,0.03);
-      border-radius: 8px;
-      padding: 14px;
-    }
-
-    .results-card-stat-label {
-      font-size: 11px;
-      color: var(--grey-light);
-      margin-bottom: 4px;
-    }
-
-    .results-card-stat-value {
-      font-size: 18px;
-      font-weight: 700;
-    }
-
-    /* How It Works */
+    /* How it Works */
     .how-it-works {
-      padding: 140px 0;
-      background: linear-gradient(to bottom, var(--slate), var(--slate-light));
+      padding: 100px 0;
+      background: var(--off-white);
     }
 
-    .how-it-works-header {
-      text-align: center;
-      margin-bottom: 80px;
-    }
-
-    .steps-grid {
+    .steps {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
+      gap: 48px;
       position: relative;
     }
 
-    .steps-grid::before {
+    .steps::before {
       content: '';
       position: absolute;
-      top: 48px;
-      left: 15%;
-      right: 15%;
+      top: 40px;
+      left: 20%;
+      right: 20%;
       height: 2px;
-      background: linear-gradient(to right, transparent, var(--grey-cool), transparent);
+      background: linear-gradient(90deg, var(--border), var(--blue-primary), var(--border));
     }
 
     .step {
@@ -1020,130 +836,264 @@
     }
 
     .step-number {
-      width: 96px;
-      height: 96px;
-      background: var(--slate);
-      border: 2px solid var(--grey-cool);
+      width: 80px;
+      height: 80px;
+      background: var(--white);
+      border: 3px solid var(--blue-primary);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 32px;
-      font-size: 36px;
+      margin: 0 auto 24px;
+      font-size: 32px;
       font-weight: 800;
-      color: var(--amber-spark);
+      color: var(--blue-primary);
       position: relative;
       z-index: 2;
       transition: all 0.3s;
     }
 
     .step:hover .step-number {
-      border-color: var(--amber-spark);
-      box-shadow: 0 0 40px rgba(232,168,56,0.2);
+      background: var(--blue-primary);
+      color: var(--white);
+      box-shadow: 0 8px 24px rgba(0,98,155,0.25);
     }
 
     .step h3 {
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 700;
       margin-bottom: 12px;
+      color: var(--slate);
     }
 
     .step p {
-      color: var(--grey-light);
+      color: var(--grey);
       font-size: 15px;
-      line-height: 1.7;
-      max-width: 280px;
-      margin: 0 auto;
+      line-height: 1.6;
     }
 
-    .step-ehr-highlight {
-      margin-top: 16px;
-      display: inline-block;
-      background: rgba(232,168,56,0.1);
-      border: 1px solid rgba(232,168,56,0.25);
-      padding: 8px 16px;
-      border-radius: 6px;
-      font-size: 12px;
+    /* Blog Preview */
+    .blog-preview {
+      padding: 100px 0;
+      background: var(--white);
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+
+    .blog-card {
+      background: var(--white);
+      border: 2px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .blog-card:hover {
+      border-color: var(--blue-primary);
+      box-shadow: 0 8px 24px rgba(0,98,155,0.08);
+    }
+
+    .blog-card-tag {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
       font-weight: 600;
-      color: var(--amber-spark);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 12px;
     }
 
-    /* CTA Section */
-    .cta {
-      padding: 140px 0;
-      background: var(--slate-light);
+    .blog-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--slate);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .blog-card p {
+      font-size: 15px;
+      color: var(--grey);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .blog-card-meta {
+      font-size: 13px;
+      color: var(--grey-light);
+    }
+
+    .blog-cta {
+      text-align: center;
+    }
+
+    /* Contact */
+    .contact {
+      padding: 100px 0;
+      background: var(--slate);
+      color: var(--white);
       position: relative;
       overflow: hidden;
     }
 
-    .cta-bg {
+    .contact::before {
+      content: '';
       position: absolute;
-      inset: 0;
-      background: 
-        radial-gradient(ellipse 60% 50% at 50% 100%, rgba(0,98,155,0.2), transparent),
-        radial-gradient(ellipse 40% 40% at 80% 20%, rgba(232,168,56,0.1), transparent);
+      top: -50%;
+      right: -20%;
+      width: 60%;
+      height: 150%;
+      background: radial-gradient(ellipse, rgba(232,168,56,0.1) 0%, transparent 70%);
+      pointer-events: none;
     }
 
-    .cta-content {
+    .contact .section-label {
+      color: var(--amber);
+    }
+
+    .contact .section-title {
+      color: var(--white);
+    }
+
+    .contact .section-sub {
+      color: var(--grey-light);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      margin-top: 60px;
       position: relative;
       z-index: 2;
-      text-align: center;
     }
 
-    .cta h2 {
-      font-size: 52px;
-      font-weight: 800;
-      letter-spacing: -2px;
-      margin-bottom: 24px;
+    .contact-info h3 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 16px;
     }
 
-    .cta p {
-      font-size: 20px;
+    .contact-info p {
       color: var(--grey-light);
-      max-width: 600px;
-      margin: 0 auto 48px;
-    }
-
-    .cta-actions {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
+      font-size: 16px;
+      line-height: 1.7;
       margin-bottom: 32px;
     }
 
-    .cta-ehr-note {
-      font-size: 14px;
-      color: var(--grey-light);
+    .contact-detail {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 8px;
+      gap: 12px;
+      margin-bottom: 16px;
+      color: var(--grey-light);
+      font-size: 15px;
     }
 
-    .cta-ehr-note svg {
-      color: var(--amber-spark);
+    .contact-detail svg {
+      color: var(--amber);
+      flex-shrink: 0;
+    }
+
+    .contact-form {
+      background: var(--slate-light);
+      border-radius: 16px;
+      padding: 40px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--white);
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 14px 16px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      color: var(--white);
+      font-size: 15px;
+      font-family: inherit;
+      transition: border-color 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--amber);
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: var(--grey-light);
+    }
+
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-submit {
+      width: 100%;
+      background: var(--amber);
+      color: var(--slate);
+      padding: 16px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .form-submit:hover {
+      background: var(--amber-light);
+      transform: translateY(-1px);
     }
 
     /* Footer */
     footer {
       background: var(--slate);
-      border-top: 1px solid rgba(255,255,255,0.05);
-      padding: 80px 0 40px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 60px 0 40px;
     }
 
     .footer-grid {
       display: grid;
       grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 60px;
-      margin-bottom: 60px;
+      gap: 48px;
+      margin-bottom: 48px;
     }
 
     .footer-brand p {
       color: var(--grey-light);
       font-size: 14px;
       line-height: 1.7;
-      margin-top: 20px;
-      max-width: 300px;
+      margin-top: 16px;
+      max-width: 280px;
     }
 
     .footer-col h4 {
@@ -1165,30 +1115,30 @@
     }
 
     .footer-col a:hover {
-      color: var(--amber-spark);
+      color: var(--amber);
     }
 
     .footer-bottom {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-top: 40px;
-      border-top: 1px solid rgba(255,255,255,0.05);
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.06);
     }
 
     .footer-bottom p {
-      color: var(--grey-cool);
+      color: var(--grey);
       font-size: 13px;
     }
 
     .footer-social {
       display: flex;
-      gap: 16px;
+      gap: 12px;
     }
 
     .footer-social a {
-      width: 40px;
-      height: 40px;
+      width: 36px;
+      height: 36px;
       background: rgba(255,255,255,0.05);
       border-radius: 8px;
       display: flex;
@@ -1200,55 +1150,50 @@
     }
 
     .footer-social a:hover {
-      background: var(--amber-spark);
+      background: var(--amber);
       color: var(--slate);
+    }
+
+    /* Mobile Navigation */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
     }
 
     /* Responsive */
     @media (max-width: 1024px) {
-      .hero-content,
-      .results-content {
-        grid-template-columns: 1fr;
-        gap: 60px;
-      }
-
       .hero h1 {
-        font-size: 48px;
-      }
-
-      .ehr-integration-title {
-        font-size: 40px;
-      }
-
-      .ehr-logos-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .ehr-features-row {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
-      }
-
-      .products-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .capabilities-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .problem-grid,
-      .steps-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
-      }
-
-      .steps-grid::before {
-        display: none;
+        font-size: 44px;
       }
 
       .stats-grid {
         grid-template-columns: repeat(2, 1fr);
+      }
+
+      .ehr-logos {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .ehr-features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .products-grid,
+      .blog-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .steps::before {
+        display: none;
       }
 
       .footer-grid {
@@ -1257,20 +1202,21 @@
     }
 
     @media (max-width: 640px) {
-      .container {
-        padding: 0 24px;
-      }
-
-      nav {
-        padding: 16px 24px;
-      }
-
       .nav-links {
         display: none;
       }
 
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .hero {
+        padding: 140px 0 80px;
+      }
+
       .hero h1 {
-        font-size: 36px;
+        font-size: 32px;
+        letter-spacing: -1px;
       }
 
       .hero-sub {
@@ -1281,19 +1227,17 @@
         flex-direction: column;
       }
 
-      .section-title,
-      .ehr-integration-title {
-        font-size: 32px;
+      .section-title {
+        font-size: 28px;
       }
 
       .stats-grid,
-      .capabilities-grid,
-      .ehr-logos-grid,
-      .ehr-features-row {
-        grid-template-columns: 1fr;
+      .ehr-logos,
+      .ehr-features {
+        grid-template-columns: 1fr 1fr;
       }
 
-      .results-stats {
+      .form-row {
         grid-template-columns: 1fr;
       }
 
@@ -1307,208 +1251,233 @@
 
   <!-- Navigation -->
   <nav>
-    <a href="#" class="nav-logo">
-      <svg viewBox="0 0 80 80" fill="none">
-        <circle cx="40" cy="40" r="14" fill="#2E8BC0"/>
-        <line x1="40" y1="26" x2="40" y2="14" stroke="#8A9BA8" stroke-width="4" stroke-linecap="round"/>
-        <line x1="54" y1="40" x2="66" y2="40" stroke="#8A9BA8" stroke-width="4" stroke-linecap="round"/>
-        <line x1="40" y1="54" x2="40" y2="66" stroke="#8A9BA8" stroke-width="4" stroke-linecap="round"/>
-        <line x1="26" y1="40" x2="14" y2="40" stroke="#8A9BA8" stroke-width="4" stroke-linecap="round"/>
-        <circle cx="40" cy="10" r="4" fill="#8A9BA8"/>
-        <circle cx="70" cy="40" r="4" fill="#8A9BA8"/>
-        <circle cx="40" cy="70" r="4" fill="#8A9BA8"/>
-        <circle cx="10" cy="40" r="4" fill="#8A9BA8"/>
-        <circle cx="40" cy="40" r="9" fill="#F5C15D" fill-opacity="0.25"/>
-        <circle cx="40" cy="40" r="6" fill="#F5C15D"/>
-      </svg>
-      <span class="nav-wordmark">Syn<span class="ai">AI</span>pse</span>
-    </a>
-    <div class="nav-links">
-      <a href="#integration">Integrations</a>
-      <a href="#products">Products</a>
-      <a href="#how-it-works">How It Works</a>
-      <a href="#" class="nav-cta">Request Demo</a>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Synaipse Home">
+        <svg width="40" height="40" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+          <circle cx="40" cy="40" r="14" fill="#00629B"/>
+          <line x1="40" y1="26" x2="40" y2="14" stroke="#5E6A71" stroke-width="4" stroke-linecap="round"/>
+          <line x1="54" y1="40" x2="66" y2="40" stroke="#5E6A71" stroke-width="4" stroke-linecap="round"/>
+          <line x1="40" y1="54" x2="40" y2="66" stroke="#5E6A71" stroke-width="4" stroke-linecap="round"/>
+          <line x1="26" y1="40" x2="14" y2="40" stroke="#5E6A71" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="40" cy="10" r="4" fill="#5E6A71"/>
+          <circle cx="70" cy="40" r="4" fill="#5E6A71"/>
+          <circle cx="40" cy="70" r="4" fill="#5E6A71"/>
+          <circle cx="10" cy="40" r="4" fill="#5E6A71"/>
+          <circle cx="40" cy="40" r="9" fill="#E8A838" fill-opacity="0.2"/>
+          <circle cx="40" cy="40" r="6" fill="#E8A838"/>
+        </svg>
+        <span class="nav-wordmark">Syn<span class="ai">AI</span>pse</span>
+      </a>
+      <div class="nav-links">
+        <a href="#platform">Platform</a>
+        <a href="#integrations">Integrations</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="#contact" class="nav-cta">Request Demo</a>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
     </div>
   </nav>
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-grid"></div>
     <div class="container">
       <div class="hero-content">
-        <div class="hero-text">
-          <div class="hero-badge">Now in Private Beta</div>
-          <h1>The Operating System for <span class="highlight">Clinical Autonomy</span></h1>
-          <p class="hero-sub">AI agents that plug directly into your existing EHR to handle patient communication and revenue cycle management — 24/7, at any scale.</p>
-          <div class="hero-actions">
-            <a href="#" class="btn-primary">
-              Request Early Access
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
-            <a href="#integration" class="btn-secondary">See Integrations</a>
-          </div>
-        </div>
-        <div class="hero-visual">
-          <div class="hero-visual-glow"></div>
-          <div class="hero-visual-inner">
-            <div class="chat-header">
-              <div class="chat-header-left">
-                <div class="chat-avatar">
-                  <svg viewBox="0 0 80 80" fill="none">
-                    <circle cx="40" cy="40" r="14" fill="#fff"/>
-                    <circle cx="40" cy="40" r="6" fill="#F5C15D"/>
-                  </svg>
-                </div>
-                <div class="chat-header-info">
-                  <h4>Synaipse Assistant</h4>
-                  <span>Online</span>
-                </div>
-              </div>
-            </div>
-            <div class="chat-body">
-              <div class="chat-message patient">
-                <div class="chat-message-avatar">MR</div>
-                <div class="chat-message-bubble">Hi, I need to reschedule my appointment for next Thursday</div>
-              </div>
-              <div class="chat-message ai">
-                <div class="chat-message-avatar">
-                  <svg width="16" height="16" viewBox="0 0 80 80" fill="none">
-                    <circle cx="40" cy="40" r="20" fill="#fff"/>
-                    <circle cx="40" cy="40" r="8" fill="#F5C15D"/>
-                  </svg>
-                </div>
-                <div class="chat-message-bubble">Hi Maria! I found your appointment with Dr. Patel on Thursday at 2pm. Would you like to move it to a different day or time?</div>
-              </div>
-              <div class="chat-message patient">
-                <div class="chat-message-avatar">MR</div>
-                <div class="chat-message-bubble">Can you do Friday morning instead?</div>
-              </div>
-              <div class="chat-message ai">
-                <div class="chat-message-avatar">
-                  <svg width="16" height="16" viewBox="0 0 80 80" fill="none">
-                    <circle cx="40" cy="40" r="20" fill="#fff"/>
-                    <circle cx="40" cy="40" r="8" fill="#F5C15D"/>
-                  </svg>
-                </div>
-                <div class="chat-message-bubble">I have 9:30am or 11am available Friday. Which works better for you?</div>
-              </div>
-              <div class="chat-message patient">
-                <div class="chat-message-avatar">MR</div>
-                <div class="chat-message-bubble">9:30 works! Thanks</div>
-              </div>
-            </div>
-            <div class="chat-input">
-              <input type="text" placeholder="Type a message...">
-              <button>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A2332" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-              </button>
-            </div>
-          </div>
+        <div class="hero-badge">Physician-Founded · Now in Private Beta</div>
+        <h1>The <span class="highlight">Unified Automation Layer</span> for Your EHR</h1>
+        <p class="hero-sub">Synaipse sits atop your existing EHR with seamless API integration to nearly eliminate administrative burden. Built by physicians who understand the problem firsthand.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">
+            Request Early Access
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="about.html" class="btn-secondary">Meet the Founders</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- EHR Integration Section - PROMINENT LIGHT SECTION -->
-  <section class="ehr-integration" id="integration">
-    <div class="container">
-      <div class="ehr-integration-header">
-        <div class="ehr-integration-label">Integrations Made Easy</div>
-        <h2 class="ehr-integration-title">Built to Fit Your Tech Stack</h2>
-        <p class="ehr-integration-sub">Synaipse integrates seamlessly with your EHR, PMS, and RCM systems via secure API, ensuring 100% safe and accurate patient data with HIPAA and SOC 2 Type II compliance — all without disrupting existing workflows.</p>
-      </div>
-
-      <div class="ehr-logos-grid">
-        <div class="ehr-logo-card">
-          <span class="logo-athena">athena<span class="health">health</span></span>
-        </div>
-        <div class="ehr-logo-card">
-          <span class="logo-modmed">ModMed</span>
-        </div>
-        <div class="ehr-logo-card">
-          <span class="logo-nextech">Nextech</span>
-        </div>
-        <div class="ehr-logo-card">
-          <span class="logo-ecw">eClinicalWorks</span>
-        </div>
-        <div class="ehr-logo-card">
-          <span class="logo-advancedmd">Advanced<span class="md">MD</span></span>
-        </div>
-        <div class="ehr-logo-card">
-          <span class="logo-eyecare">EyeCare Leaders</span>
-        </div>
-        <div class="ehr-logo-card">
-          <span class="logo-greenway">Greenway Health</span>
-        </div>
-        <div class="ehr-logo-card">
-          <span class="logo-veradigm">Veradigm</span>
-        </div>
-      </div>
-
-      <div class="ehr-features-row">
-        <div class="ehr-feature-item">
-          <div class="ehr-feature-icon">🔌</div>
-          <h4>API-First</h4>
-          <p>Direct backend integration via secure REST APIs — no middleware needed</p>
-        </div>
-        <div class="ehr-feature-item">
-          <div class="ehr-feature-icon">🔄</div>
-          <h4>Real-Time Sync</h4>
-          <p>Bi-directional data flow keeps your EHR always up to date</p>
-        </div>
-        <div class="ehr-feature-item">
-          <div class="ehr-feature-icon">🛡️</div>
-          <h4>HIPAA & SOC 2</h4>
-          <p>Enterprise-grade security with full compliance certification</p>
-        </div>
-        <div class="ehr-feature-item">
-          <div class="ehr-feature-icon">⚡</div>
-          <h4>Go Live in Days</h4>
-          <p>Guided setup gets you running in under a week</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Stats Bar -->
-  <section class="stats-bar">
+  <!-- Stats -->
+  <section class="stats">
     <div class="container">
       <div class="stats-grid">
-        <div class="stat-item">
+        <article class="stat-item">
           <div class="stat-number">87<span class="accent">%</span></div>
           <div class="stat-label">Appeal Success Rate</div>
-        </div>
-        <div class="stat-item">
+        </article>
+        <article class="stat-item">
           <div class="stat-number"><span class="accent">68</span>%</div>
           <div class="stat-label">Call Volume Reduced</div>
-        </div>
-        <div class="stat-item">
+        </article>
+        <article class="stat-item">
           <div class="stat-number">$<span class="accent">2.4</span>M</div>
-          <div class="stat-label">Revenue Recovered (Beta)</div>
-        </div>
-        <div class="stat-item">
+          <div class="stat-label">Revenue Recovered</div>
+        </article>
+        <article class="stat-item">
           <div class="stat-number">24<span class="accent">/7</span></div>
           <div class="stat-label">Autonomous Operation</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Platform Section -->
+  <section class="platform" id="platform">
+    <div class="container">
+      <header class="section-header">
+        <div class="section-label">The Platform</div>
+        <h2 class="section-title">One Layer. <span class="highlight">Total Automation.</span></h2>
+        <p class="section-sub">Synaipse doesn't replace your EHR — it supercharges it. Our unified automation layer handles the tedious work so your team can focus on patients.</p>
+      </header>
+
+      <div class="platform-visual">
+        <div class="platform-layers">
+          <div class="platform-layer">
+            <div class="platform-layer-left">
+              <div class="platform-layer-icon">👩‍⚕️</div>
+              <div>
+                <h4>Your Clinical Staff</h4>
+                <p>Focus on patient care, not paperwork</p>
+              </div>
+            </div>
+            <div class="platform-layer-right">
+              <span class="platform-tag">Humans</span>
+            </div>
+          </div>
+
+          <div class="platform-layer synaipse">
+            <div class="platform-layer-left">
+              <div class="platform-layer-icon">
+                <svg width="24" height="24" viewBox="0 0 80 80" fill="none">
+                  <circle cx="40" cy="40" r="14" fill="#fff"/>
+                  <circle cx="40" cy="40" r="6" fill="#1A2332"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Synaipse Automation Layer</h4>
+                <p>AI agents handling RCM, patient comms, workflows & more</p>
+              </div>
+            </div>
+            <div class="platform-layer-right">
+              <span class="platform-tag">API</span>
+              <span class="platform-tag">24/7</span>
+              <span class="platform-tag">AI</span>
+            </div>
+          </div>
+
+          <div class="platform-layer">
+            <div class="platform-layer-left">
+              <div class="platform-layer-icon">🏥</div>
+              <div>
+                <h4>Your Existing EHR/PMS</h4>
+                <p>athenahealth, eClinicalWorks, WebPT, and more</p>
+              </div>
+            </div>
+            <div class="platform-layer-right">
+              <span class="platform-tag">Unchanged</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Two Products Section -->
+  <!-- EHR Integrations -->
+  <section class="ehr-section" id="integrations">
+    <div class="container">
+      <header class="section-header">
+        <div class="section-label">Integrations</div>
+        <h2 class="section-title">Works With Your EHR</h2>
+        <p class="section-sub">Seamless API integration with leading healthcare systems. HIPAA and SOC 2 Type II compliant.</p>
+      </header>
+
+      <div class="ehr-logos">
+        <div class="ehr-logo-card">
+          <div class="logo-advancedmd">
+            <span class="icon">🦋</span>
+            <span class="text">Advanced<span>MD</span></span>
+          </div>
+        </div>
+        <div class="ehr-logo-card">
+          <span class="logo-elation">Elation</span>
+        </div>
+        <div class="ehr-logo-card">
+          <div class="logo-webpt">
+            <div class="bars">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+            <span class="text">webpt.</span>
+          </div>
+        </div>
+        <div class="ehr-logo-card">
+          <span class="logo-eclinicalworks">eClinicalWorks</span>
+        </div>
+        <div class="ehr-logo-card">
+          <span class="logo-athenahealth">athenahealth</span>
+        </div>
+        <div class="ehr-logo-card">
+          <div class="logo-practicefusion">
+            <span class="icon">⬡</span>
+            <span class="text">practice<span>fusion</span></span>
+          </div>
+        </div>
+        <div class="ehr-logo-card">
+          <span class="logo-cerbo">cerbo</span>
+        </div>
+        <div class="ehr-logo-card">
+          <span class="logo-simplepractice">SimplePractice</span>
+        </div>
+        <div class="ehr-logo-card">
+          <span class="logo-tebra">tebra</span>
+        </div>
+        <div class="ehr-logo-card">
+          <span class="logo-kipu">Kipu</span>
+        </div>
+      </div>
+
+      <div class="ehr-features">
+        <article class="ehr-feature">
+          <div class="ehr-feature-icon">🔌</div>
+          <h4>API-First</h4>
+          <p>Direct backend integration via secure REST APIs</p>
+        </article>
+        <article class="ehr-feature">
+          <div class="ehr-feature-icon">🔄</div>
+          <h4>Real-Time Sync</h4>
+          <p>Bi-directional data flow keeps your EHR current</p>
+        </article>
+        <article class="ehr-feature">
+          <div class="ehr-feature-icon">🛡️</div>
+          <h4>HIPAA & SOC 2</h4>
+          <p>Enterprise-grade security and compliance</p>
+        </article>
+        <article class="ehr-feature">
+          <div class="ehr-feature-icon">⚡</div>
+          <h4>Go Live in Days</h4>
+          <p>Guided setup gets you running quickly</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
   <section class="products" id="products">
     <div class="container">
-      <div class="products-header">
-        <div class="section-label">Products</div>
-        <h2 class="section-title">Two AI Engines. One Platform.</h2>
-        <p class="section-sub">Synaipse tackles the two biggest operational burdens in healthcare — patient communication and revenue cycle management.</p>
-      </div>
+      <header class="section-header">
+        <div class="section-label">Capabilities</div>
+        <h2 class="section-title">What Synaipse Automates</h2>
+        <p class="section-sub">Starting with RCM in our MVP — expanding to full practice automation.</p>
+      </header>
+
       <div class="products-grid">
-        <!-- Patient Communication -->
-        <div class="product-card">
-          <div class="product-card-icon">💬</div>
-          <h3>Patient Communication AI</h3>
-          <p>Handle every patient call, text, and message with natural AI conversations that feel personal — at any scale, 24/7.</p>
+        <article class="product-card">
+          <div class="product-icon">💬</div>
+          <h3>Patient Communication</h3>
+          <p>Handle every patient call, text, and message with natural AI conversations that feel personal.</p>
           <ul class="product-features">
             <li>Appointment scheduling & rescheduling</li>
             <li>Billing questions & payment collection</li>
@@ -1517,16 +1486,12 @@
             <li>Intake forms & pre-visit prep</li>
             <li>Smart escalation with full context</li>
           </ul>
-          <div class="product-ehr-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-            Syncs directly with your EHR in real-time
-          </div>
-        </div>
-        <!-- Revenue Cycle -->
-        <div class="product-card">
-          <div class="product-card-icon amber">⚡</div>
-          <h3>Revenue Cycle AI</h3>
-          <p>Autonomous agents that crush insurance denials, handle prior authorizations, and recover revenue while you sleep.</p>
+        </article>
+
+        <article class="product-card amber">
+          <div class="product-icon">⚡</div>
+          <h3>Revenue Cycle Management</h3>
+          <p>Autonomous agents that crush insurance denials, handle prior authorizations, and recover revenue.</p>
           <ul class="product-features">
             <li>Automated prior authorization processing</li>
             <li>AI-generated appeals with clinical evidence</li>
@@ -1535,173 +1500,7 @@
             <li>Revenue leakage identification</li>
             <li>Automated follow-up & resubmission</li>
           </ul>
-          <div class="product-ehr-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-            Pulls claim data directly from your EHR/PMS
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Capabilities Grid -->
-  <section class="capabilities" id="capabilities">
-    <div class="container">
-      <div class="capabilities-header">
-        <div class="section-label">Capabilities</div>
-        <h2 class="section-title">Everything Your Practice Needs</h2>
-        <p class="section-sub">From front desk to back office, Synaipse handles the work that buries your staff.</p>
-      </div>
-      <div class="capabilities-grid">
-        <div class="capability-card">
-          <div class="capability-icon">📅</div>
-          <h3>Scheduling</h3>
-          <p>Book, reschedule, cancel via natural conversation. Real-time EHR sync.</p>
-        </div>
-        <div class="capability-card">
-          <div class="capability-icon">💳</div>
-          <h3>Billing Support</h3>
-          <p>Explain bills, collect payments, set up plans automatically.</p>
-        </div>
-        <div class="capability-card">
-          <div class="capability-icon">🔗</div>
-          <h3>Referrals</h3>
-          <p>Process requests, verify insurance, coordinate with specialists.</p>
-        </div>
-        <div class="capability-card">
-          <div class="capability-icon">📋</div>
-          <h3>Prior Auth</h3>
-          <p>Submit, track, and manage authorizations autonomously.</p>
-        </div>
-        <div class="capability-card">
-          <div class="capability-icon">❌</div>
-          <h3>Denial Management</h3>
-          <p>Identify patterns, generate appeals, recover lost revenue.</p>
-        </div>
-        <div class="capability-card">
-          <div class="capability-icon">📝</div>
-          <h3>Intake & Forms</h3>
-          <p>Collect patient info conversationally, populate EHR directly.</p>
-        </div>
-        <div class="capability-card">
-          <div class="capability-icon">🔔</div>
-          <h3>Reminders</h3>
-          <p>Appointment, refill, and care gap notifications that feel personal.</p>
-        </div>
-        <div class="capability-card">
-          <div class="capability-icon">📊</div>
-          <h3>Analytics</h3>
-          <p>Real-time dashboards for communication and revenue metrics.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Problem Section -->
-  <section class="problem" id="problem">
-    <div class="container">
-      <div class="problem-header">
-        <div class="section-label">The Problem</div>
-        <h2 class="section-title">Bureaucracy Is Killing Private Practice</h2>
-        <p class="section-sub">Your staff is drowning in calls and paperwork. Patients expect instant responses. Insurance companies are winning.</p>
-      </div>
-      <div class="problem-grid">
-        <div class="problem-card">
-          <div class="problem-card-icon">📞</div>
-          <h3>Phone Overload</h3>
-          <p>67% of inbound calls are routine tasks — scheduling, billing questions, refills. Staff spend 20+ hours per week on hold or on calls.</p>
-        </div>
-        <div class="problem-card">
-          <div class="problem-card-icon">📋</div>
-          <h3>Prior Auth Hell</h3>
-          <p>45+ prior authorizations per physician per week. Each takes 20+ minutes. That's a full-time job just pushing paper.</p>
-        </div>
-        <div class="problem-card">
-          <div class="problem-card-icon">💸</div>
-          <h3>Revenue Leakage</h3>
-          <p>Denial rates up 67% since 2020. Practices lose $125K+ annually to unworked denials and abandoned claims.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Results Section -->
-  <section class="results" id="results">
-    <div class="container">
-      <div class="results-content">
-        <div class="results-text">
-          <div class="section-label">Results</div>
-          <h2>AI That Delivers Outcomes</h2>
-          <p>Synaipse integrates directly into your existing EHR via secure API — no rip-and-replace, no workflow disruption. Real results from day one.</p>
-          <div class="results-stats">
-            <div class="results-stat">
-              <div class="results-stat-number">94%</div>
-              <div class="results-stat-label">Patient satisfaction rate</div>
-            </div>
-            <div class="results-stat">
-              <div class="results-stat-number">87%</div>
-              <div class="results-stat-label">Appeal success rate</div>
-            </div>
-            <div class="results-stat">
-              <div class="results-stat-number">68%</div>
-              <div class="results-stat-label">Reduction in call volume</div>
-            </div>
-            <div class="results-stat">
-              <div class="results-stat-number">3min</div>
-              <div class="results-stat-label">Avg. claim processing time</div>
-            </div>
-          </div>
-        </div>
-        <div class="results-visual">
-          <div class="results-card">
-            <div class="results-card-header">
-              <span class="results-card-title">Today's Patient Conversations</span>
-              <span class="results-card-status">Live</span>
-            </div>
-            <div class="results-card-body">
-              <div class="results-card-stat">
-                <div class="results-card-stat-label">Handled by AI</div>
-                <div class="results-card-stat-value">847</div>
-              </div>
-              <div class="results-card-stat">
-                <div class="results-card-stat-label">Staff Hours Saved</div>
-                <div class="results-card-stat-value">34.2</div>
-              </div>
-            </div>
-          </div>
-          <div class="results-card">
-            <div class="results-card-header">
-              <span class="results-card-title">Claim #PA-2024-8847</span>
-              <span class="results-card-status">Approved</span>
-            </div>
-            <div class="results-card-body">
-              <div class="results-card-stat">
-                <div class="results-card-stat-label">Processing Time</div>
-                <div class="results-card-stat-value">2m 34s</div>
-              </div>
-              <div class="results-card-stat">
-                <div class="results-card-stat-label">Revenue Recovered</div>
-                <div class="results-card-stat-value">$4,280</div>
-              </div>
-            </div>
-          </div>
-          <div class="results-card">
-            <div class="results-card-header">
-              <span class="results-card-title">Denial Appeal #DN-3321</span>
-              <span class="results-card-status pending">In Progress</span>
-            </div>
-            <div class="results-card-body">
-              <div class="results-card-stat">
-                <div class="results-card-stat-label">Appeal Confidence</div>
-                <div class="results-card-stat-value">91%</div>
-              </div>
-              <div class="results-card-stat">
-                <div class="results-card-stat-label">Estimated Value</div>
-                <div class="results-card-stat-value">$8,750</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        </article>
       </div>
     </div>
   </section>
@@ -1709,50 +1508,129 @@
   <!-- How It Works -->
   <section class="how-it-works" id="how-it-works">
     <div class="container">
-      <div class="how-it-works-header">
+      <header class="section-header">
         <div class="section-label">How It Works</div>
         <h2 class="section-title">Live in Days, Not Months</h2>
-        <p class="section-sub">Synaipse connects to your existing EHR via secure API and goes live fast. No workflow changes required.</p>
-      </div>
-      <div class="steps-grid">
-        <div class="step">
+        <p class="section-sub">Simple integration with no workflow disruption.</p>
+      </header>
+
+      <div class="steps">
+        <article class="step">
           <div class="step-number">1</div>
           <h3>Connect Your EHR</h3>
-          <p>Secure API integration with your existing system — eClinicalWorks, athenahealth, ModMed, and more.</p>
-          <span class="step-ehr-highlight">No data migration needed</span>
-        </div>
-        <div class="step">
+          <p>Secure API integration with your existing system — no data migration required.</p>
+        </article>
+        <article class="step">
           <div class="step-number">2</div>
           <h3>Configure</h3>
           <p>We train the AI on your scheduling rules, payer contracts, and communication style.</p>
-        </div>
-        <div class="step">
+        </article>
+        <article class="step">
           <div class="step-number">3</div>
           <h3>Go Live</h3>
           <p>AI handles patient comms and RCM 24/7. Your staff reviews escalations with full context.</p>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="cta">
-    <div class="cta-bg"></div>
+  <!-- Blog Preview -->
+  <section class="blog-preview" id="blog">
     <div class="container">
-      <div class="cta-content">
-        <h2>Ready to Fight Back?</h2>
-        <p>Join the private beta and see how Synaipse transforms your practice operations. Limited spots for Q1 2025.</p>
-        <div class="cta-actions">
-          <a href="#" class="btn-primary">
-            Request Demo
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
-          <a href="#" class="btn-secondary">Talk to Sales</a>
+      <header class="section-header">
+        <div class="section-label">Insights</div>
+        <h2 class="section-title">From the Blog</h2>
+        <p class="section-sub">Latest thinking on AI in healthcare operations.</p>
+      </header>
+
+      <div class="blog-grid">
+        <a href="blog.html#post-1" class="blog-card">
+          <div class="blog-card-tag">Revenue Cycle</div>
+          <h3>How AI Is Transforming Prior Authorization in Healthcare</h3>
+          <p>Prior authorization consumes 34+ hours per physician per week. Learn how AI agents are cutting that by 70%.</p>
+          <div class="blog-card-meta">5 min read · Feb 2025</div>
+        </a>
+        <a href="blog.html#post-2" class="blog-card">
+          <div class="blog-card-tag">Patient Experience</div>
+          <h3>Reducing Revenue Leakage With Intelligent Denial Management</h3>
+          <p>Denial rates are up 67% since 2020. Here's how AI-powered appeal generation is recovering millions.</p>
+          <div class="blog-card-meta">7 min read · Feb 2025</div>
+        </a>
+      </div>
+
+      <div class="blog-cta">
+        <a href="blog.html" class="btn-secondary">View All Articles</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <header class="section-header">
+        <div class="section-label">Contact</div>
+        <h2 class="section-title">Ready to Get Started?</h2>
+        <p class="section-sub">Request a demo or ask us anything. We'll get back to you within 24 hours.</p>
+      </header>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Let's Talk</h3>
+          <p>Join the private beta and see how Synaipse can transform your practice operations. Built by physicians who understand the burden of administrative work firsthand.</p>
+          <div class="contact-detail">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            info@synaipse.org
+          </div>
+          <div class="contact-detail">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Cincinnati, OH
+          </div>
         </div>
-        <p class="cta-ehr-note">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-          Works with your existing EHR — no system changes required
-        </p>
+
+        <form class="contact-form" action="https://formspree.io/f/xpwzgkqr" method="POST">
+          <input type="hidden" name="_to" value="info@synaipse.org">
+          <input type="hidden" name="_subject" value="New Demo Request from Synaipse.org">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First Name *</label>
+              <input type="text" id="first-name" name="first_name" required placeholder="John">
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name *</label>
+              <input type="text" id="last-name" name="last_name" required placeholder="Smith">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Work Email *</label>
+            <input type="email" id="email" name="email" required placeholder="john@practice.com">
+          </div>
+          <div class="form-group">
+            <label for="practice">Practice Name</label>
+            <input type="text" id="practice" name="practice" placeholder="Smith Medical Group">
+          </div>
+          <div class="form-group">
+            <label for="ehr">Current EHR</label>
+            <select id="ehr" name="ehr">
+              <option value="">Select your EHR</option>
+              <option value="advancedmd">AdvancedMD</option>
+              <option value="athenahealth">athenahealth</option>
+              <option value="cerbo">Cerbo</option>
+              <option value="eclinicalworks">eClinicalWorks</option>
+              <option value="elation">Elation</option>
+              <option value="kipu">Kipu</option>
+              <option value="practicefusion">Practice Fusion</option>
+              <option value="simplepractice">SimplePractice</option>
+              <option value="tebra">Tebra</option>
+              <option value="webpt">WebPT</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your practice and what you're looking for..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Request Demo</button>
+        </form>
       </div>
     </div>
   </section>
@@ -1762,7 +1640,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="#" class="nav-logo">
+          <a href="index.html" class="nav-logo">
             <svg width="32" height="32" viewBox="0 0 80 80" fill="none">
               <circle cx="40" cy="40" r="14" fill="#2E8BC0"/>
               <line x1="40" y1="26" x2="40" y2="14" stroke="#8A9BA8" stroke-width="4" stroke-linecap="round"/>
@@ -1775,53 +1653,42 @@
               <circle cx="10" cy="40" r="4" fill="#8A9BA8"/>
               <circle cx="40" cy="40" r="6" fill="#F5C15D"/>
             </svg>
-            <span class="nav-wordmark">Syn<span class="ai">AI</span>pse</span>
+            <span class="nav-wordmark" style="color: #fff;">Syn<span class="ai" style="color: #E8A838;">AI</span>pse</span>
           </a>
-          <p>The operating system for clinical autonomy. AI agents that integrate with your existing EHR to handle patient communication and revenue cycle management.</p>
+          <p>Physician-led healthcare automation. Eliminating administrative burden so you can focus on patients.</p>
         </div>
         <div class="footer-col">
-          <h4>Products</h4>
-          <a href="#">Patient Communication AI</a>
-          <a href="#">Revenue Cycle AI</a>
-          <a href="#">Integrations</a>
-          <a href="#">Pricing</a>
+          <h4>Platform</h4>
+          <a href="#platform">Overview</a>
+          <a href="#products">Capabilities</a>
+          <a href="#integrations">Integrations</a>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
-          <a href="#">About</a>
-          <a href="#">Blog</a>
-          <a href="#">Careers</a>
-          <a href="#">Contact</a>
+          <a href="about.html">About Us</a>
+          <a href="blog.html">Blog</a>
+          <a href="#contact">Contact</a>
         </div>
         <div class="footer-col">
           <h4>Legal</h4>
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>
           <a href="#">HIPAA Compliance</a>
-          <a href="#">BAA</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2025 Synaipse Inc. All rights reserved.</p>
+        <p>&copy; 2025 Synaipse Inc. Cincinnati, OH. All rights reserved.</p>
         <div class="footer-social">
-          <a href="#">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          <a href="#" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
           </a>
-          <a href="#">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
-          </a>
-          <a href="#">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          <a href="#" aria-label="Twitter">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
           </a>
         </div>
       </div>
     </div>
   </footer>
-
-  <script>
-    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-  </script>
-  <script defer src="/_vercel/insights/script.js"></script>
 
 </body>
 </html>
