@@ -17,11 +17,15 @@
   <meta property="og:url" content="https://synaipse.org/about">
   <meta property="og:title" content="About Us | Synaipse - Physician-Led Healthcare Automation">
   <meta property="og:description" content="Founded by neurosurgeons to eliminate administrative burden. Learn about our mission to empower independent practices.">
+  <meta property="og:image" content="https://synaipse.org/og-image.png">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Shared Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -48,646 +52,10 @@
     }
   }
   </script>
-
-  <style>
-    :root {
-      --blue-primary: #00629B;
-      --blue-light: #2E8BC0;
-      --blue-deep: #003D5C;
-      --blue-pale: #E8F4FA;
-      --slate: #1A2332;
-      --slate-light: #2D3B4F;
-      --grey: #5E6A71;
-      --grey-light: #8A9BA8;
-      --amber: #E8A838;
-      --amber-light: #F5C15D;
-      --amber-pale: #FEF7E8;
-      --white: #FFFFFF;
-      --off-white: #F8FAFC;
-      --border: #E5E7EB;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--white);
-      color: var(--slate);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    .container {
-      max-width: 1140px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* Navigation */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      padding: 16px 24px;
-      background: rgba(255,255,255,0.97);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav-inner {
-      max-width: 1140px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-    }
-
-    .nav-logo svg {
-      width: 40px;
-      height: 40px;
-    }
-
-    .nav-wordmark {
-      font-size: 22px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      color: var(--slate);
-    }
-
-    .nav-wordmark .ai {
-      color: var(--blue-primary);
-      font-weight: 800;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 32px;
-    }
-
-    .nav-links a {
-      color: var(--grey);
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: var(--blue-primary);
-    }
-
-    .nav-cta {
-      background: var(--blue-primary);
-      color: var(--white) !important;
-      padding: 10px 20px;
-      border-radius: 8px;
-      font-weight: 600;
-      transition: all 0.2s;
-    }
-
-    .nav-cta:hover {
-      background: var(--blue-deep);
-    }
-
-    /* Hero */
-    .about-hero {
-      padding: 160px 0 100px;
-      background: linear-gradient(135deg, var(--blue-pale) 0%, var(--white) 50%, var(--amber-pale) 100%);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .about-hero::before {
-      content: '';
-      position: absolute;
-      top: -30%;
-      right: -10%;
-      width: 50%;
-      height: 120%;
-      background: radial-gradient(ellipse, rgba(0,98,155,0.06) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .about-hero-content {
-      max-width: 800px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .section-label {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--amber);
-      margin-bottom: 16px;
-    }
-
-    .about-hero h1 {
-      font-size: 52px;
-      font-weight: 800;
-      line-height: 1.1;
-      letter-spacing: -2px;
-      margin-bottom: 24px;
-      color: var(--slate);
-    }
-
-    .about-hero h1 .highlight {
-      color: var(--blue-primary);
-    }
-
-    .about-hero-sub {
-      font-size: 20px;
-      color: var(--grey);
-      line-height: 1.7;
-      max-width: 650px;
-    }
-
-    /* Mission Section */
-    .mission {
-      padding: 100px 0;
-      background: var(--white);
-    }
-
-    .mission-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-    }
-
-    .mission-content h2 {
-      font-size: 36px;
-      font-weight: 800;
-      letter-spacing: -1px;
-      margin-bottom: 24px;
-      color: var(--slate);
-    }
-
-    .mission-content p {
-      font-size: 17px;
-      color: var(--grey);
-      line-height: 1.8;
-      margin-bottom: 20px;
-    }
-
-    .mission-visual {
-      background: linear-gradient(135deg, var(--slate) 0%, var(--slate-light) 100%);
-      border-radius: 24px;
-      padding: 48px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .mission-visual::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-      opacity: 0.5;
-    }
-
-    .mission-values {
-      position: relative;
-      z-index: 2;
-    }
-
-    .mission-value {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      margin-bottom: 28px;
-    }
-
-    .mission-value:last-child {
-      margin-bottom: 0;
-    }
-
-    .mission-value-icon {
-      width: 48px;
-      height: 48px;
-      background: var(--amber);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      flex-shrink: 0;
-    }
-
-    .mission-value h4 {
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 6px;
-    }
-
-    .mission-value p {
-      font-size: 15px;
-      color: var(--grey-light);
-      line-height: 1.6;
-    }
-
-    /* Founders Section */
-    .founders {
-      padding: 100px 0;
-      background: var(--off-white);
-    }
-
-    .founders-header {
-      text-align: center;
-      margin-bottom: 60px;
-    }
-
-    .founders-header h2 {
-      font-size: 40px;
-      font-weight: 800;
-      letter-spacing: -1.5px;
-      margin-bottom: 16px;
-      color: var(--slate);
-    }
-
-    .founders-header p {
-      font-size: 18px;
-      color: var(--grey);
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .founders-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-    }
-
-    .founder-card {
-      background: var(--white);
-      border: 2px solid var(--border);
-      border-radius: 24px;
-      padding: 48px;
-      transition: all 0.3s;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .founder-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, var(--blue-primary), var(--amber));
-      transform: scaleX(0);
-      transition: transform 0.3s;
-    }
-
-    .founder-card:hover {
-      border-color: var(--blue-primary);
-      box-shadow: 0 16px 48px rgba(0,98,155,0.1);
-    }
-
-    .founder-card:hover::before {
-      transform: scaleX(1);
-    }
-
-    .founder-avatar {
-      width: 120px;
-      height: 120px;
-      background: linear-gradient(135deg, var(--blue-pale), var(--amber-pale));
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 28px;
-      font-size: 48px;
-      border: 4px solid var(--white);
-      box-shadow: 0 8px 24px rgba(0,98,155,0.1);
-    }
-
-    .founder-name {
-      font-size: 28px;
-      font-weight: 800;
-      color: var(--slate);
-      margin-bottom: 4px;
-      letter-spacing: -0.5px;
-    }
-
-    .founder-title {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--blue-primary);
-      margin-bottom: 20px;
-    }
-
-    .founder-bio {
-      font-size: 16px;
-      color: var(--grey);
-      line-height: 1.7;
-      margin-bottom: 24px;
-    }
-
-    .founder-credentials {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .founder-credential {
-      background: var(--blue-pale);
-      color: var(--blue-primary);
-      padding: 8px 14px;
-      border-radius: 8px;
-      font-size: 13px;
-      font-weight: 600;
-    }
-
-    /* Story Section */
-    .story {
-      padding: 100px 0;
-      background: var(--white);
-    }
-
-    .story-content {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .story-header {
-      text-align: center;
-      margin-bottom: 48px;
-    }
-
-    .story-header h2 {
-      font-size: 40px;
-      font-weight: 800;
-      letter-spacing: -1.5px;
-      margin-bottom: 16px;
-      color: var(--slate);
-    }
-
-    .story-text p {
-      font-size: 18px;
-      color: var(--grey);
-      line-height: 1.8;
-      margin-bottom: 24px;
-    }
-
-    .story-text p:last-child {
-      margin-bottom: 0;
-    }
-
-    .story-quote {
-      background: linear-gradient(135deg, var(--blue-pale), var(--amber-pale));
-      border-left: 4px solid var(--blue-primary);
-      padding: 32px 40px;
-      margin: 48px 0;
-      border-radius: 0 16px 16px 0;
-    }
-
-    .story-quote p {
-      font-size: 22px;
-      font-weight: 600;
-      color: var(--slate);
-      line-height: 1.5;
-      margin-bottom: 12px;
-      font-style: italic;
-    }
-
-    .story-quote cite {
-      font-size: 14px;
-      color: var(--grey);
-      font-style: normal;
-    }
-
-    /* CTA Section */
-    .about-cta {
-      padding: 100px 0;
-      background: var(--slate);
-      color: var(--white);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .about-cta::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -20%;
-      width: 60%;
-      height: 150%;
-      background: radial-gradient(ellipse, rgba(0,98,155,0.2) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .about-cta::after {
-      content: '';
-      position: absolute;
-      bottom: -50%;
-      right: -20%;
-      width: 60%;
-      height: 150%;
-      background: radial-gradient(ellipse, rgba(232,168,56,0.1) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .about-cta-content {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .about-cta h2 {
-      font-size: 44px;
-      font-weight: 800;
-      letter-spacing: -1.5px;
-      margin-bottom: 20px;
-    }
-
-    .about-cta p {
-      font-size: 18px;
-      color: var(--grey-light);
-      margin-bottom: 40px;
-      line-height: 1.7;
-    }
-
-    .btn-primary {
-      background: var(--amber);
-      color: var(--slate);
-      padding: 16px 32px;
-      border-radius: 10px;
-      font-weight: 700;
-      font-size: 16px;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      transition: all 0.2s;
-    }
-
-    .btn-primary:hover {
-      background: var(--amber-light);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(232,168,56,0.3);
-    }
-
-    /* Footer */
-    footer {
-      background: var(--slate);
-      border-top: 1px solid rgba(255,255,255,0.06);
-      padding: 60px 0 40px;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 48px;
-      margin-bottom: 48px;
-    }
-
-    .footer-brand p {
-      color: var(--grey-light);
-      font-size: 14px;
-      line-height: 1.7;
-      margin-top: 16px;
-      max-width: 280px;
-    }
-
-    .footer-col h4 {
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--grey-light);
-      margin-bottom: 20px;
-    }
-
-    .footer-col a {
-      display: block;
-      color: var(--white);
-      text-decoration: none;
-      font-size: 14px;
-      margin-bottom: 12px;
-      transition: color 0.2s;
-    }
-
-    .footer-col a:hover {
-      color: var(--amber);
-    }
-
-    .footer-bottom {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-top: 32px;
-      border-top: 1px solid rgba(255,255,255,0.06);
-    }
-
-    .footer-bottom p {
-      color: var(--grey);
-      font-size: 13px;
-    }
-
-    .footer-social {
-      display: flex;
-      gap: 12px;
-    }
-
-    .footer-social a {
-      width: 36px;
-      height: 36px;
-      background: rgba(255,255,255,0.05);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--grey-light);
-      text-decoration: none;
-      transition: all 0.2s;
-    }
-
-    .footer-social a:hover {
-      background: var(--amber);
-      color: var(--slate);
-    }
-
-    /* Responsive */
-    @media (max-width: 1024px) {
-      .about-hero h1 {
-        font-size: 40px;
-      }
-
-      .mission-grid {
-        grid-template-columns: 1fr;
-        gap: 48px;
-      }
-
-      .founders-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .nav-links {
-        display: none;
-      }
-
-      .about-hero {
-        padding: 140px 0 80px;
-      }
-
-      .about-hero h1 {
-        font-size: 32px;
-      }
-
-      .founders-header h2,
-      .story-header h2 {
-        font-size: 28px;
-      }
-
-      .founder-card {
-        padding: 32px;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </head>
 <body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
 
   <!-- Navigation -->
   <nav>
@@ -713,13 +81,27 @@
         <a href="index.html#integrations">Integrations</a>
         <a href="about.html" class="active">About</a>
         <a href="blog.html">Blog</a>
+        <a href="careers.html">Careers</a>
         <a href="index.html#contact" class="nav-cta">Request Demo</a>
       </div>
+      <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
     </div>
   </nav>
 
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+    <a href="index.html#platform">Platform</a>
+    <a href="index.html#integrations">Integrations</a>
+    <a href="about.html" class="active">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="careers.html">Careers</a>
+    <a href="index.html#contact" class="mobile-cta">Request Demo</a>
+  </div>
+
   <!-- Hero -->
-  <section class="about-hero">
+  <section class="about-hero" id="main">
     <div class="container">
       <div class="about-hero-content">
         <div class="section-label">About Us</div>
@@ -743,21 +125,27 @@
         <div class="mission-visual">
           <div class="mission-values">
             <div class="mission-value">
-              <div class="mission-value-icon">🎯</div>
+              <div class="mission-value-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+              </div>
               <div>
                 <h4>Patient Care First</h4>
                 <p>Every feature we build is measured by one metric: does it give clinicians more time with patients?</p>
               </div>
             </div>
             <div class="mission-value">
-              <div class="mission-value-icon">🤝</div>
+              <div class="mission-value-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
               <div>
                 <h4>Practice Independence</h4>
                 <p>We protect and strengthen independent practices — they deserve enterprise-grade tools without enterprise complexity.</p>
               </div>
             </div>
             <div class="mission-value">
-              <div class="mission-value-icon">⚕️</div>
+              <div class="mission-value-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              </div>
               <div>
                 <h4>Physician-Led Design</h4>
                 <p>Our founders are practicing physicians. We build what we'd want to use — nothing more, nothing less.</p>
@@ -780,7 +168,7 @@
 
       <div class="founders-grid">
         <article class="founder-card">
-          <div class="founder-avatar">👨‍⚕️</div>
+          <div class="founder-avatar" aria-hidden="true">👨‍⚕️</div>
           <h3 class="founder-name">Co-Founder</h3>
           <div class="founder-title">Neurosurgeon, MD</div>
           <p class="founder-bio">A board-certified neurosurgeon with extensive experience in both academic medicine and private practice. Frustrated by the administrative burden consuming the practice, he set out to build the automation platform he wished existed.</p>
@@ -792,7 +180,7 @@
         </article>
 
         <article class="founder-card">
-          <div class="founder-avatar">👨‍⚕️</div>
+          <div class="founder-avatar" aria-hidden="true">👨‍⚕️</div>
           <h3 class="founder-name">Co-Founder</h3>
           <div class="founder-title">Neurosurgeon, MD</div>
           <p class="founder-bio">Brings deep expertise in neurosurgery and healthcare operations. Firsthand experience with the inefficiencies of modern healthcare administration drives Synaipse's product vision and clinical accuracy.</p>
@@ -839,12 +227,12 @@
   <section class="about-cta">
     <div class="container">
       <div class="about-cta-content">
-        <div class="section-label" style="color: var(--amber);">Join Us</div>
+        <div class="section-label" style="color: var(--amber-bright);">Join Us</div>
         <h2>Ready to Take Back Your Time?</h2>
         <p>We're looking for forward-thinking practices to join our private beta. If you're tired of administrative burden stealing time from your patients, we should talk.</p>
         <a href="index.html#contact" class="btn-primary">
           Request a Demo
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
       </div>
     </div>
@@ -855,8 +243,8 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="nav-logo">
-            <svg width="32" height="32" viewBox="0 0 80 80" fill="none">
+          <a href="index.html" class="nav-logo" aria-label="Synaipse Home">
+            <svg width="32" height="32" viewBox="0 0 80 80" fill="none" aria-hidden="true">
               <circle cx="40" cy="40" r="14" fill="#2E8BC0"/>
               <line x1="40" y1="26" x2="40" y2="14" stroke="#8A9BA8" stroke-width="4" stroke-linecap="round"/>
               <line x1="54" y1="40" x2="66" y2="40" stroke="#8A9BA8" stroke-width="4" stroke-linecap="round"/>
@@ -882,6 +270,7 @@
           <h4>Company</h4>
           <a href="about.html">About Us</a>
           <a href="blog.html">Blog</a>
+          <a href="careers.html">Careers</a>
           <a href="index.html#contact">Contact</a>
         </div>
         <div class="footer-col">
@@ -892,13 +281,13 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Synaipse Inc. Cincinnati, OH. All rights reserved.</p>
+        <p>&copy; 2026 Synaipse Inc. Cincinnati, OH. All rights reserved.</p>
         <div class="footer-social">
           <a href="#" aria-label="LinkedIn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
           </a>
           <a href="#" aria-label="Twitter">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
           </a>
         </div>
       </div>
@@ -910,6 +299,7 @@
     window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
   </script>
   <script defer src="/_vercel/speed-insights/script.js"></script>
+  <script defer src="main.js"></script>
 
 </body>
 </html>
