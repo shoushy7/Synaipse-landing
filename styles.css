@@ -59,8 +59,91 @@
     background: var(--off-white);
   }
 
+  footer {
+    background: #0F1419;
+    border-top-color: rgba(255,255,255,0.06);
+  }
+
+  .footer-col a {
+    color: #fff;
+  }
+
+  .footer-col a:hover {
+    color: var(--amber-bright);
+  }
+
+  .footer-col h4 {
+    color: var(--grey-light);
+  }
+
+  .footer-brand p {
+    color: var(--grey-light);
+  }
+
+  .footer-bottom {
+    border-top-color: rgba(255,255,255,0.06);
+  }
+
+  .footer-social a {
+    background: rgba(255,255,255,0.05);
+    color: var(--grey-light);
+  }
+
+  .footer-social a:hover {
+    background: var(--amber-bright);
+    color: #1A2332;
+  }
+
+  .footer-partner {
+    border-top-color: rgba(255,255,255,0.06);
+  }
+
+  .footer-contact-item,
+  .footer-contact-item a {
+    color: var(--grey-light);
+  }
+
+  .footer-contact-item svg {
+    color: var(--amber-bright);
+  }
+
+  .contact {
+    background: #0F1419;
+  }
+
+  .contact .section-title {
+    color: #fff;
+  }
+
+  .contact-info h3 {
+    color: #fff;
+  }
+
   .contact-form {
     background: #1A2332;
+    border-color: rgba(255,255,255,0.1);
+  }
+
+  .form-group label {
+    color: #fff;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    background: rgba(255,255,255,0.06);
+    border-color: rgba(255,255,255,0.1);
+    color: #fff;
+  }
+
+  .about-cta,
+  .careers-cta {
+    background: #0F1419;
+  }
+
+  .about-cta h2,
+  .careers-cta h2 {
+    color: #fff;
   }
 
   .blog-card,
@@ -1032,8 +1115,8 @@ nav {
 /* ---------- Contact ---------- */
 .contact {
   padding: 100px 0;
-  background: #1A2332;
-  color: #fff;
+  background: linear-gradient(135deg, var(--blue-pale) 0%, var(--off-white) 50%, var(--amber-pale) 100%);
+  color: var(--slate);
   position: relative;
   overflow: hidden;
 }
@@ -1045,20 +1128,20 @@ nav {
   right: -20%;
   width: 60%;
   height: 150%;
-  background: radial-gradient(ellipse, rgba(232,168,56,0.1) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(0,98,155,0.06) 0%, transparent 70%);
   pointer-events: none;
 }
 
 .contact .section-label {
-  color: var(--amber-bright);
+  color: var(--amber);
 }
 
 .contact .section-title {
-  color: #fff;
+  color: var(--slate);
 }
 
 .contact .section-sub {
-  color: var(--grey-light);
+  color: var(--grey);
 }
 
 .contact-grid {
@@ -1074,10 +1157,11 @@ nav {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 16px;
+  color: var(--slate);
 }
 
 .contact-info p {
-  color: var(--grey-light);
+  color: var(--grey);
   font-size: 16px;
   line-height: 1.7;
   margin-bottom: 32px;
@@ -1088,19 +1172,21 @@ nav {
   align-items: center;
   gap: 12px;
   margin-bottom: 16px;
-  color: var(--grey-light);
+  color: var(--grey);
   font-size: 15px;
 }
 
 .contact-detail svg {
-  color: var(--amber-bright);
+  color: var(--blue-primary);
   flex-shrink: 0;
 }
 
 .contact-form {
-  background: #2D3B4F;
+  background: var(--white);
+  border: 1px solid var(--border);
   border-radius: 16px;
   padding: 40px;
+  box-shadow: var(--shadow-md);
 }
 
 .form-group {
@@ -1112,7 +1198,7 @@ nav {
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 8px;
-  color: #fff;
+  color: var(--slate);
 }
 
 .form-group input,
@@ -1120,10 +1206,10 @@ nav {
 .form-group select {
   width: 100%;
   padding: 14px 16px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: var(--off-white);
+  border: 1px solid var(--border);
   border-radius: 8px;
-  color: #fff;
+  color: var(--slate);
   font-size: 15px;
   font-family: inherit;
   transition: border-color 0.2s;
@@ -1133,7 +1219,7 @@ nav {
 .form-group textarea:focus,
 .form-group select:focus {
   outline: none;
-  border-color: var(--amber-bright);
+  border-color: var(--blue-primary);
 }
 
 .form-group input::placeholder,
@@ -1171,8 +1257,8 @@ nav {
 
 .form-submit {
   width: 100%;
-  background: var(--amber-bright);
-  color: #1A2332;
+  background: var(--blue-primary);
+  color: #fff;
   padding: 16px;
   border: none;
   border-radius: 8px;
@@ -1183,14 +1269,15 @@ nav {
 }
 
 .form-submit:hover {
-  background: var(--amber-light);
+  background: var(--blue-deep);
   transform: translateY(-1px);
+  box-shadow: var(--shadow-blue-bright);
 }
 
 /* ---------- Footer ---------- */
 footer {
-  background: #1A2332;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  background: var(--off-white);
+  border-top: 1px solid var(--border);
   padding: 60px 0 40px;
 }
 
@@ -1202,7 +1289,7 @@ footer {
 }
 
 .footer-brand p {
-  color: var(--grey-light);
+  color: var(--grey);
   font-size: 14px;
   line-height: 1.7;
   margin-top: 16px;
@@ -1224,13 +1311,13 @@ footer {
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: var(--grey-light);
+  color: var(--grey);
   margin-bottom: 20px;
 }
 
 .footer-col a {
   display: block;
-  color: #fff;
+  color: var(--slate);
   text-decoration: none;
   font-size: 14px;
   margin-bottom: 12px;
@@ -1238,7 +1325,7 @@ footer {
 }
 
 .footer-col a:hover {
-  color: var(--amber-bright);
+  color: var(--blue-primary);
 }
 
 .footer-bottom {
@@ -1246,7 +1333,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding-top: 32px;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid var(--border);
 }
 
 .footer-bottom p {
@@ -1262,19 +1349,19 @@ footer {
 .footer-social a {
   width: 36px;
   height: 36px;
-  background: rgba(255,255,255,0.05);
+  background: rgba(0,0,0,0.04);
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--grey-light);
+  color: var(--grey);
   text-decoration: none;
   transition: all 0.2s;
 }
 
 .footer-social a:hover {
-  background: var(--amber-bright);
-  color: #1A2332;
+  background: var(--blue-primary);
+  color: #fff;
 }
 
 /* ---------- About Page ---------- */
@@ -1588,8 +1675,8 @@ footer {
 /* About CTA */
 .about-cta {
   padding: 100px 0;
-  background: #1A2332;
-  color: #fff;
+  background: linear-gradient(135deg, var(--blue-pale) 0%, var(--white) 50%, var(--amber-pale) 100%);
+  color: var(--slate);
   position: relative;
   overflow: hidden;
 }
@@ -1601,7 +1688,7 @@ footer {
   left: -20%;
   width: 60%;
   height: 150%;
-  background: radial-gradient(ellipse, rgba(0,98,155,0.2) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(0,98,155,0.06) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -1612,7 +1699,7 @@ footer {
   right: -20%;
   width: 60%;
   height: 150%;
-  background: radial-gradient(ellipse, rgba(232,168,56,0.1) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(232,168,56,0.04) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -1629,23 +1716,24 @@ footer {
   font-weight: 800;
   letter-spacing: -1.5px;
   margin-bottom: 20px;
+  color: var(--slate);
 }
 
 .about-cta p {
   font-size: 18px;
-  color: var(--grey-light);
+  color: var(--grey);
   margin-bottom: 40px;
   line-height: 1.7;
 }
 
 .about-cta .btn-primary {
-  background: var(--amber-bright);
-  color: #1A2332;
+  background: var(--blue-primary);
+  color: #fff;
 }
 
 .about-cta .btn-primary:hover {
-  background: var(--amber-light);
-  box-shadow: var(--shadow-amber-lg);
+  background: var(--blue-deep);
+  box-shadow: var(--shadow-blue-bright);
 }
 
 /* ---------- Blog Page ---------- */
@@ -2401,8 +2489,8 @@ footer {
 
 .careers-cta {
   padding: 100px 0;
-  background: #1A2332;
-  color: #fff;
+  background: linear-gradient(135deg, var(--blue-pale) 0%, var(--white) 50%, var(--amber-pale) 100%);
+  color: var(--slate);
   position: relative;
   overflow: hidden;
 }
@@ -2414,7 +2502,7 @@ footer {
   left: -20%;
   width: 60%;
   height: 150%;
-  background: radial-gradient(ellipse, rgba(0,98,155,0.2) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(0,98,155,0.06) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -2431,23 +2519,24 @@ footer {
   font-weight: 800;
   letter-spacing: -1.5px;
   margin-bottom: 20px;
+  color: var(--slate);
 }
 
 .careers-cta p {
   font-size: 18px;
-  color: var(--grey-light);
+  color: var(--grey);
   margin-bottom: 40px;
   line-height: 1.7;
 }
 
 .careers-cta .btn-primary {
-  background: var(--amber-bright);
-  color: #1A2332;
+  background: var(--blue-primary);
+  color: #fff;
 }
 
 .careers-cta .btn-primary:hover {
-  background: var(--amber-light);
-  box-shadow: var(--shadow-amber-lg);
+  background: var(--blue-deep);
+  box-shadow: var(--shadow-blue-bright);
 }
 
 /* ---------- Footer Contact & Partner ---------- */
@@ -2462,22 +2551,22 @@ footer {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  color: var(--grey-light);
+  color: var(--grey);
   font-size: 14px;
 }
 
 .footer-contact-item a {
-  color: var(--grey-light);
+  color: var(--grey);
   text-decoration: none;
   transition: color 0.2s;
 }
 
 .footer-contact-item a:hover {
-  color: var(--amber-bright);
+  color: var(--blue-primary);
 }
 
 .footer-contact-item svg {
-  color: var(--amber-bright);
+  color: var(--blue-primary);
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -2486,7 +2575,7 @@ footer {
   display: flex;
   justify-content: center;
   padding: 28px 0;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid var(--border);
   margin-bottom: 0;
 }
 
