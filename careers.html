@@ -39,7 +39,7 @@
     {
       "@context": "https://schema.org",
       "@type": "JobPosting",
-      "title": "Founding Lead Engineer (Employee #1)",
+      "title": "Founding Lead Engineer",
       "description": "As our Founding Lead Engineer, you will own the technical roadmap. You aren't just building features; you are architecting the foundation of a healthcare transformation engine. You will report directly to the CEO and President.",
       "datePosted": "2026-02-01",
       "employmentType": "FULL_TIME",
@@ -107,6 +107,133 @@
     }
   ]
   </script>
+
+  <!-- Job card overrides -->
+  <style>
+    .job-cards-minimal {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .job-category-label {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--blue-primary);
+      margin-bottom: 4px;
+    }
+
+    .job-card-minimal {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--blue-primary);
+      border-radius: 12px;
+      padding: 24px 28px;
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow 0.2s, border-color 0.2s;
+      gap: 24px;
+    }
+
+    .job-card-minimal:hover {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      border-color: var(--blue-primary);
+    }
+
+    .job-card-minimal-left {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .job-card-minimal-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--slate);
+      margin: 0 0 6px 0;
+      letter-spacing: -0.3px;
+    }
+
+    .job-card-minimal-meta {
+      font-size: 14px;
+      color: var(--grey);
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    .job-card-minimal-meta span {
+      white-space: nowrap;
+    }
+
+    .job-card-minimal-meta .meta-sep {
+      margin: 0 6px;
+      opacity: 0.4;
+    }
+
+    .job-card-minimal-right {
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    .job-card-minimal-comp {
+      font-size: 14px;
+      color: var(--grey);
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    .job-card-minimal-equity {
+      font-size: 13px;
+      color: var(--amber);
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    .job-apply-note {
+      text-align: center;
+      font-size: 15px;
+      color: var(--grey);
+      margin-top: 32px;
+      line-height: 1.6;
+    }
+
+    .job-apply-note a {
+      color: var(--blue-primary);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .job-apply-note a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .job-card-minimal {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 20px 20px;
+      }
+
+      .job-card-minimal-right {
+        text-align: left;
+      }
+
+      .job-card-minimal-title {
+        font-size: 17px;
+      }
+
+      .job-card-minimal-meta {
+        font-size: 13px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -133,7 +260,6 @@
       </a>
       <div class="nav-links">
         <a href="index.html#platform">Platform</a>
-        <a href="index.html#integrations">Integrations</a>
         <a href="about.html">About</a>
         <a href="blog.html">Blog</a>
         <a href="careers.html" class="active">Careers</a>
@@ -148,7 +274,6 @@
   <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
     <a href="index.html#platform">Platform</a>
-    <a href="index.html#integrations">Integrations</a>
     <a href="about.html">About</a>
     <a href="blog.html">Blog</a>
     <a href="careers.html" class="active">Careers</a>
@@ -221,101 +346,38 @@
         <p class="section-sub">We're looking for builders who want to own problems, not just tickets.</p>
       </header>
 
-      <!-- Job 1: Founding Lead Engineer -->
-      <article class="job-card" id="lead-engineer">
-        <div class="job-card-header">
-          <div>
-            <h3>Founding Lead Engineer (Employee #1)</h3>
-            <div class="job-meta">
-              <span class="job-tag">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                Remote / Hybrid (Cincinnati, OH)
-              </span>
-              <span class="job-tag">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                Full-Time, Founding Team
-              </span>
-              <span class="job-tag">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                Competitive Salary + Founding Equity (1% &ndash; 5%)
-              </span>
+      <div class="job-cards-minimal">
+        <div class="job-category-label">Engineering</div>
+
+        <!-- Job 1: Founding Lead Engineer -->
+        <a href="mailto:careers@synaipse.org?subject=Application%3A%20Founding%20Lead%20Engineer" class="job-card-minimal" id="lead-engineer">
+          <div class="job-card-minimal-left">
+            <h3 class="job-card-minimal-title">Founding Lead Engineer</h3>
+            <div class="job-card-minimal-meta">
+              <span>Engineering</span><span class="meta-sep">&middot;</span><span>Cincinnati, OH</span><span class="meta-sep">&middot;</span><span>Full-time</span><span class="meta-sep">&middot;</span><span>Remote/Hybrid</span>
             </div>
           </div>
-        </div>
+          <div class="job-card-minimal-right">
+            <div class="job-card-minimal-comp">Competitive Salary</div>
+            <div class="job-card-minimal-equity">Founding Equity (1&ndash;5%)</div>
+          </div>
+        </a>
 
-        <div class="job-card-body">
-          <p>As our Founding Lead Engineer, you will own the technical roadmap. You aren't just building features &mdash; you are architecting the foundation of a healthcare transformation engine. You will report directly to the CEO and President.</p>
-
-          <h4>What You Will Do</h4>
-          <ul>
-            <li><strong>Architect &amp; Build:</strong> Lead the development of our MVP, focusing on RAG-based LLM pipelines and HIPAA-compliant cloud architecture.</li>
-            <li><strong>Product Evolution:</strong> Work alongside neurosurgeons to translate complex clinical workflows into seamless automation tools.</li>
-            <li><strong>Security First:</strong> Implement and maintain rigorous data security standards (HIPAA/SOC2) from day one.</li>
-            <li><strong>Scale:</strong> Set the engineering culture. Recruit, mentor, and lead the future engineering team as we grow.</li>
-          </ul>
-
-          <h4>What We're Looking For</h4>
-          <ul>
-            <li><strong>"0-to-1" Experience:</strong> You have built and shipped products from scratch. You thrive in ambiguity.</li>
-            <li><strong>Technical Stack:</strong> Proficiency in Python (FastAPI/Flask), TypeScript/Node, React, and experience with Vector Databases (Pinecone/Weaviate) and LLM Orchestration (LangChain/LlamaIndex).</li>
-            <li><strong>Healthcare Context:</strong> Deep understanding of PHI, HIPAA compliance, and ideally, experience with EHR integrations (HL7/FHIR).</li>
-            <li><strong>Execution over Ego:</strong> You write clean code fast. You prioritize solving the problem over using the "coolest" new framework.</li>
-          </ul>
-
-          <a href="mailto:info@synaipse.org?subject=Application%3A%20Founding%20Lead%20Engineer%20(Employee%20%231)" class="btn-primary">
-            Apply Now
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-        </div>
-      </article>
-
-      <!-- Job 2: Founding Senior Frontend Engineer -->
-      <article class="job-card" id="frontend-engineer">
-        <div class="job-card-header">
-          <div>
-            <h3>Founding Senior Frontend Engineer</h3>
-            <div class="job-meta">
-              <span class="job-tag">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                Cincinnati, OH (Hybrid Preferred)
-              </span>
-              <span class="job-tag">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                Full-Time, Founding Team
-              </span>
-              <span class="job-tag">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                Significant Equity Component
-              </span>
+        <!-- Job 2: Founding Senior Frontend Engineer -->
+        <a href="mailto:careers@synaipse.org?subject=Application%3A%20Founding%20Senior%20Frontend%20Engineer" class="job-card-minimal" id="frontend-engineer">
+          <div class="job-card-minimal-left">
+            <h3 class="job-card-minimal-title">Founding Senior Frontend Engineer</h3>
+            <div class="job-card-minimal-meta">
+              <span>Engineering</span><span class="meta-sep">&middot;</span><span>Cincinnati, OH</span><span class="meta-sep">&middot;</span><span>Full-time</span><span class="meta-sep">&middot;</span><span>Hybrid</span>
             </div>
           </div>
-        </div>
+          <div class="job-card-minimal-right">
+            <div class="job-card-minimal-equity">Significant Equity</div>
+          </div>
+        </a>
+      </div>
 
-        <div class="job-card-body">
-          <p>Your mission is to build the "Command Center" &mdash; a high-velocity React interface that consolidates Fax, Email, and Portal data into a single, lightning-fast workflow for surgical intake teams.</p>
-
-          <h4>Key Responsibilities</h4>
-          <ul>
-            <li><strong>Architect the "Command Center":</strong> Design and build a complex, data-heavy dashboard using React, TypeScript, and Tailwind. It must be fast, keyboard-navigable, and dense with information.</li>
-            <li><strong>The "Click-to-Verify" Engine:</strong> Build the PDF interaction system &mdash; rendering PDFs in the browser and creating a coordinate-mapping layer that allows AI to highlight specific text.</li>
-            <li><strong>Invisible UX:</strong> Design workflows that require zero training. If a user has to read a manual, we failed.</li>
-            <li><strong>EHR Integration (Frontend):</strong> Build "Headless" UI components that visualize data scraped from legacy systems.</li>
-          </ul>
-
-          <h4>Who You Are</h4>
-          <ul>
-            <li><strong>The "0 to 1" Builder:</strong> You have built complex SPAs from scratch. You don't need a Jira ticket to know what to do next.</li>
-            <li><strong>Visual Thinker:</strong> You understand that in high-volume operations, density and speed matter more than white space.</li>
-            <li><strong>Technical Stack &mdash; Expert:</strong> React, TypeScript, CSS/Tailwind. Required: Canvas API, PDF rendering (react-pdf / pdf.js), or complex DOM manipulation. Bonus: Electron or Chrome Extensions.</li>
-            <li><strong>Egoless:</strong> Ready to work directly with two neurosurgeon-founders who value logic, speed, and clinical accuracy.</li>
-          </ul>
-
-          <a href="mailto:info@synaipse.org?subject=Application%3A%20Founding%20Senior%20Frontend%20Engineer" class="btn-primary">
-            Apply Now
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-        </div>
-      </article>
+      <p class="job-apply-note">To apply, please send a short cover letter and your CV to <a href="mailto:careers@synaipse.org">careers@synaipse.org</a></p>
     </div>
   </section>
 
@@ -326,7 +388,7 @@
         <div class="section-label">Don't See Your Role?</div>
         <h2>We're Always Looking for Exceptional People</h2>
         <p>If you're passionate about fixing healthcare with technology and believe you can make an outsized impact, we want to hear from you. Send us a note about what you'd bring to the team.</p>
-        <a href="mailto:info@synaipse.org?subject=General%20Inquiry" class="btn-primary">
+        <a href="mailto:careers@synaipse.org?subject=General%20Inquiry" class="btn-primary">
           Get in Touch
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
@@ -373,8 +435,8 @@
         <div class="footer-col">
           <h4>Platform</h4>
           <a href="index.html#platform">Overview</a>
-          <a href="index.html#products">Capabilities</a>
-          <a href="index.html#integrations">Integrations</a>
+          <a href="index.html#journey">Patient Journey</a>
+          <a href="index.html#comparison">Before &amp; After</a>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
@@ -394,14 +456,14 @@
         <div class="footer-partner-content">
           <span class="footer-partner-label">Proudly headquartered at</span>
           <div class="footer-partner-logo" aria-label="1819 Innovation Hub">
-            <svg width="100" height="48" viewBox="0 0 100 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect x="2" y="2" width="7" height="28" rx="1" fill="#4B5563"/>
-              <circle cx="28" cy="10" r="8" stroke="#4B5563" stroke-width="5" fill="none"/>
-              <circle cx="28" cy="24" r="8" stroke="#4B5563" stroke-width="5" fill="none"/>
-              <rect x="48" y="2" width="7" height="28" rx="1" fill="#4B5563"/>
-              <circle cx="74" cy="10" r="8" stroke="#4B5563" stroke-width="5" fill="none"/>
-              <rect x="78" y="10" width="5" height="22" rx="1" fill="#4B5563"/>
-              <text x="1" y="44" font-family="'DM Sans', sans-serif" font-weight="700" font-size="10" fill="#4B5563" letter-spacing="0.3">innovation hub</text>
+            <svg width="114" height="52" viewBox="0 0 76 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <g fill="#3D3D3D">
+                <rect x="0" y="0" width="8" height="32"/>
+                <circle cx="22" cy="8" r="8"/><circle cx="22" cy="24" r="8"/>
+                <rect x="36" y="0" width="8" height="32"/>
+                <circle cx="58" cy="8" r="8"/><rect x="54" y="8" width="8" height="24"/>
+              </g>
+              <text x="0" y="46" font-family="'DM Sans',sans-serif" font-weight="800" font-size="11" fill="#3D3D3D" letter-spacing="0.3">innovation hub</text>
             </svg>
           </div>
           <span class="footer-partner-sub">University of Cincinnati</span>
@@ -410,11 +472,8 @@
       <div class="footer-bottom">
         <p>&copy; 2026 Synaipse Inc. Cincinnati, OH. All rights reserved.</p>
         <div class="footer-social">
-          <a href="#" aria-label="LinkedIn">
+          <a href="https://linkedin.com/company/synaipseinc" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          </a>
-          <a href="#" aria-label="Twitter">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
           </a>
         </div>
       </div>

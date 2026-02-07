@@ -147,9 +147,27 @@
   }
 
   .blog-card,
-  .product-card,
+  .role-card,
   .founder-card {
     background: var(--off-white);
+  }
+
+  .comparison-before {
+    background: var(--off-white);
+  }
+
+  .comparison-after {
+    background: rgba(0,98,155,0.1);
+    border-color: rgba(0,98,155,0.2);
+  }
+
+  .comparison-header h3 {
+    color: #fff;
+  }
+
+  .ehr-strip-section {
+    background: var(--off-white);
+    border-color: var(--border);
   }
 
   .subscribe-form input {
@@ -694,213 +712,24 @@ nav {
   color: #fff;
 }
 
-/* ---------- EHR Section ---------- */
-.ehr-section {
-  padding: 100px 0;
-  background: linear-gradient(180deg, var(--off-white) 0%, var(--white) 100%);
-}
-
-.ehr-logos {
+/* ---------- Role-Based Cards (Platform Section) ---------- */
+.role-cards {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
-  margin-bottom: 60px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
 }
 
-.ehr-logo-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 24px 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 80px;
-  transition: all 0.2s;
-  box-shadow: var(--shadow-sm);
-}
-
-.ehr-logo-card:hover {
-  border-color: var(--blue-primary);
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
-}
-
-.ehr-logo-card .logo-text {
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: -0.3px;
-}
-
-.logo-advancedmd {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.logo-advancedmd .icon {
-  color: #F97316;
-  font-size: 20px;
-}
-.logo-advancedmd .text {
-  color: #374151;
-  font-weight: 600;
-}
-.logo-advancedmd .text span {
-  color: #F97316;
-  font-weight: 700;
-}
-
-.logo-elation {
-  color: #10B981;
-  font-weight: 700;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.logo-webpt {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-.logo-webpt .bars {
-  display: flex;
-  gap: 2px;
-}
-.logo-webpt .bar {
-  width: 4px;
-  height: 16px;
-  border-radius: 2px;
-}
-.logo-webpt .bar:nth-child(1) { background: #EF4444; }
-.logo-webpt .bar:nth-child(2) { background: #3B82F6; }
-.logo-webpt .bar:nth-child(3) { background: #10B981; }
-.logo-webpt .text {
-  color: #374151;
-  font-weight: 700;
-}
-
-.logo-eclinicalworks {
-  color: #374151;
-  font-weight: 600;
-  font-size: 14px;
-}
-
-.logo-athenahealth {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: #374151;
-  font-weight: 600;
-}
-
-.logo-practicefusion {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.logo-practicefusion .icon {
-  color: #06B6D4;
-  font-size: 18px;
-}
-.logo-practicefusion .text {
-  color: #06B6D4;
-  font-weight: 600;
-}
-.logo-practicefusion .text span {
-  color: #374151;
-}
-
-.logo-cerbo {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: #374151;
-  font-weight: 700;
-}
-
-.logo-simplepractice {
-  color: #374151;
-  font-weight: 600;
-  font-size: 14px;
-}
-
-.logo-tebra {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: #374151;
-  font-weight: 700;
-}
-
-.logo-kipu {
-  color: #7C3AED;
-  font-weight: 800;
-  font-size: 20px;
-  letter-spacing: -0.5px;
-}
-
-.ehr-features {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
-  padding-top: 40px;
-  border-top: 1px solid var(--border);
-}
-
-.ehr-feature {
-  text-align: center;
-}
-
-.ehr-feature-icon {
-  width: 56px;
-  height: 56px;
-  background: var(--blue-pale);
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 16px;
-  color: var(--blue-primary);
-}
-
-.ehr-feature h4 {
-  font-size: 17px;
-  font-weight: 700;
-  margin-bottom: 8px;
-  color: var(--slate);
-}
-
-.ehr-feature p {
-  font-size: 14px;
-  color: var(--grey);
-  line-height: 1.5;
-}
-
-/* ---------- Products ---------- */
-.products {
-  padding: 100px 0;
-  background: var(--white);
-}
-
-.products-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-}
-
-.product-card {
+.role-card {
   background: var(--white);
   border: 2px solid var(--border);
   border-radius: 20px;
-  padding: 40px;
+  padding: 36px;
   transition: all 0.3s;
   position: relative;
   overflow: hidden;
 }
 
-.product-card::before {
+.role-card::before {
   content: '';
   position: absolute;
   top: 0;
@@ -912,77 +741,386 @@ nav {
   transition: transform 0.3s;
 }
 
-.product-card:hover {
+.role-card:hover {
   border-color: var(--blue-primary);
   box-shadow: var(--shadow-lg);
 }
 
-.product-card:hover::before {
+.role-card:hover::before {
   transform: scaleX(1);
 }
 
-.product-card.amber::before {
-  background: var(--amber-bright);
+.role-card.featured {
+  border-color: var(--blue-primary);
+  box-shadow: var(--shadow-md);
 }
 
-.product-card.amber:hover {
-  border-color: var(--amber-bright);
-  box-shadow: 0 12px 40px rgba(232,168,56,0.15);
+.role-card.featured::before {
+  transform: scaleX(1);
+  background: linear-gradient(90deg, var(--blue-primary), var(--amber-bright));
 }
 
-.product-icon {
-  width: 60px;
-  height: 60px;
+.role-card-icon {
+  width: 56px;
+  height: 56px;
   background: var(--blue-pale);
-  border-radius: 16px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   color: var(--blue-primary);
 }
 
-.product-card.amber .product-icon {
-  background: var(--amber-pale);
-  color: var(--amber);
+.role-card.featured .role-card-icon {
+  background: linear-gradient(135deg, var(--blue-primary), var(--blue-light));
+  color: #fff;
 }
 
-.product-card h3 {
-  font-size: 24px;
+.role-card h3 {
+  font-size: 22px;
   font-weight: 700;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   color: var(--slate);
 }
 
-.product-card > p {
+.role-card > p {
   color: var(--grey);
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.7;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
-.product-features {
+.role-card-features {
   list-style: none;
 }
 
-.product-features li {
+.role-card-features li {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  margin-bottom: 14px;
-  font-size: 15px;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 14px;
   color: var(--grey);
+  line-height: 1.5;
 }
 
-.product-features li::before {
+.role-card-features li::before {
   content: '\2713';
   color: var(--blue-primary);
   font-weight: 700;
   flex-shrink: 0;
 }
 
-.product-card.amber .product-features li::before {
+.role-card.featured .role-card-features li::before {
   color: var(--amber);
+}
+
+/* ---------- EHR Strip ---------- */
+.ehr-strip-section {
+  padding: 48px 0;
+  background: var(--off-white);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.ehr-strip-subtitle {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--grey-light);
+  margin-bottom: 24px;
+}
+
+.ehr-strip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+  flex-wrap: wrap;
+}
+
+.ehr-vendor {
+  font-size: 16px;
+  color: var(--grey-light);
+  letter-spacing: -0.2px;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.ehr-vendor:hover {
+  color: var(--blue-primary);
+}
+
+/* ---------- Patient Journey ---------- */
+.journey {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #1A2332 0%, #2D3B4F 100%);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.journey::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.5;
+}
+
+.journey .section-label {
+  color: var(--amber-bright);
+}
+
+.journey .section-title {
+  color: #fff;
+}
+
+.journey .section-title .highlight {
+  color: var(--amber-bright);
+}
+
+.journey .section-sub {
+  color: rgba(255,255,255,0.7);
+}
+
+.journey-phases {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.journey-phase {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 28px 32px;
+  transition: all 0.3s;
+}
+
+.journey-phase:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(232,168,56,0.4);
+}
+
+.journey-phase-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  color: var(--amber-bright);
+}
+
+.journey-phase-header h4 {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--amber-bright);
+}
+
+.journey-steps {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.journey-step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 10px;
+  padding: 12px 18px;
+  transition: all 0.2s;
+}
+
+.journey-step:hover {
+  background: rgba(255,255,255,0.14);
+}
+
+.journey-step span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.journey-step-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--blue-light);
+  flex-shrink: 0;
+}
+
+.journey-step-dot.clinical {
+  background: var(--amber-bright);
+}
+
+.journey-step-dot.billing {
+  background: #34D399;
+}
+
+.journey-step-arrow {
+  color: rgba(255,255,255,0.4);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.journey-phase-connector {
+  display: flex;
+  justify-content: center;
+  padding: 12px 0;
+  color: rgba(255,255,255,0.3);
+}
+
+.journey-sync-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 40px;
+  padding: 16px 24px;
+  background: rgba(232,168,56,0.12);
+  border: 1px solid rgba(232,168,56,0.25);
+  border-radius: 12px;
+  position: relative;
+  z-index: 2;
+}
+
+.journey-sync-note svg {
+  color: var(--amber-bright);
+  flex-shrink: 0;
+}
+
+.journey-sync-note span {
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+}
+
+/* ---------- Before/After Comparison ---------- */
+.comparison {
+  padding: 100px 0;
+  background: var(--white);
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.comparison-col {
+  border-radius: 20px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.comparison-before {
+  background: var(--off-white);
+  border: 2px solid var(--border);
+}
+
+.comparison-before::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #EF4444;
+}
+
+.comparison-after {
+  background: var(--blue-pale);
+  border: 2px solid rgba(0,98,155,0.2);
+}
+
+.comparison-after::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--blue-primary), var(--amber-bright));
+}
+
+.comparison-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.comparison-before .comparison-header svg {
+  color: #EF4444;
+}
+
+.comparison-after .comparison-header svg {
+  color: var(--blue-primary);
+}
+
+.comparison-header h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--slate);
+}
+
+.comparison-list {
+  list-style: none;
+  padding: 0;
+}
+
+.comparison-before .comparison-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 15px;
+  color: var(--grey);
+  line-height: 1.6;
+}
+
+.comparison-before .comparison-list li::before {
+  content: '\2717';
+  color: #EF4444;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.comparison-after .comparison-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 15px;
+  color: var(--grey);
+  line-height: 1.6;
+}
+
+.comparison-after .comparison-list li::before {
+  content: '\2713';
+  color: var(--blue-primary);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
 }
 
 /* ---------- How it Works ---------- */
@@ -2614,17 +2752,16 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .ehr-logos {
-    grid-template-columns: repeat(3, 1fr);
+  .role-cards {
+    grid-template-columns: 1fr;
   }
 
-  .ehr-features {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .products-grid,
   .blog-grid,
   .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-grid {
     grid-template-columns: 1fr;
   }
 
@@ -2746,10 +2883,30 @@ footer {
     font-size: 28px;
   }
 
-  .stats-grid,
-  .ehr-logos,
-  .ehr-features {
+  .stats-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .ehr-strip {
+    gap: 20px;
+  }
+
+  .ehr-vendor {
+    font-size: 14px;
+  }
+
+  .journey-steps {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .journey-step-arrow {
+    justify-content: center;
+    transform: rotate(90deg);
+  }
+
+  .journey-step {
+    justify-content: center;
   }
 
   .form-row {
