@@ -108,7 +108,7 @@
   ]
   </script>
 
-  <!-- Job card overrides -->
+  <!-- Job card styles -->
   <style>
     .job-cards-minimal {
       display: flex;
@@ -127,32 +127,41 @@
       margin-bottom: 4px;
     }
 
-    .job-card-minimal {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    .job-card-expandable {
       background: var(--white);
       border: 1px solid var(--border);
       border-left: 4px solid var(--blue-primary);
       border-radius: 12px;
-      padding: 24px 28px;
-      text-decoration: none;
-      color: inherit;
+      overflow: hidden;
       transition: box-shadow 0.2s, border-color 0.2s;
-      gap: 24px;
     }
 
-    .job-card-minimal:hover {
+    .job-card-expandable:hover {
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
       border-color: var(--blue-primary);
     }
 
-    .job-card-minimal-left {
+    .job-card-expandable.expanded {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      border-color: var(--blue-primary);
+    }
+
+    .job-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 28px;
+      cursor: pointer;
+      gap: 24px;
+      user-select: none;
+    }
+
+    .job-card-header-left {
       flex: 1;
       min-width: 0;
     }
 
-    .job-card-minimal-title {
+    .job-card-header-title {
       font-size: 18px;
       font-weight: 700;
       color: var(--slate);
@@ -160,39 +169,159 @@
       letter-spacing: -0.3px;
     }
 
-    .job-card-minimal-meta {
+    .job-card-header-meta {
       font-size: 14px;
       color: var(--grey);
       font-weight: 400;
       line-height: 1.5;
     }
 
-    .job-card-minimal-meta span {
+    .job-card-header-meta span {
       white-space: nowrap;
     }
 
-    .job-card-minimal-meta .meta-sep {
+    .job-card-header-meta .meta-sep {
       margin: 0 6px;
       opacity: 0.4;
     }
 
-    .job-card-minimal-right {
-      text-align: right;
+    .job-card-header-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
       flex-shrink: 0;
     }
 
-    .job-card-minimal-comp {
+    .job-card-header-comp {
+      text-align: right;
+    }
+
+    .job-card-header-comp-text {
       font-size: 14px;
       color: var(--grey);
       font-weight: 500;
       line-height: 1.5;
     }
 
-    .job-card-minimal-equity {
+    .job-card-header-equity {
       font-size: 13px;
       color: var(--amber);
       font-weight: 600;
       margin-top: 2px;
+    }
+
+    .job-card-chevron {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      background: var(--blue-pale);
+      color: var(--blue-primary);
+      transition: transform 0.3s, background 0.2s;
+      flex-shrink: 0;
+    }
+
+    .job-card-expandable.expanded .job-card-chevron {
+      transform: rotate(180deg);
+      background: var(--blue-primary);
+      color: #fff;
+    }
+
+    .job-card-details {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+
+    .job-card-expandable.expanded .job-card-details {
+      max-height: 2000px;
+    }
+
+    .job-card-details-inner {
+      padding: 0 28px 32px;
+      border-top: 1px solid var(--border);
+    }
+
+    .job-detail-section {
+      margin-top: 24px;
+    }
+
+    .job-detail-section h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--blue-primary);
+      margin-bottom: 12px;
+      padding-left: 14px;
+      border-left: 3px solid var(--amber-bright);
+    }
+
+    .job-detail-section p {
+      font-size: 15px;
+      color: var(--grey);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .job-detail-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .job-detail-section li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: var(--grey);
+      line-height: 1.6;
+    }
+
+    .job-detail-section li::before {
+      content: '\2713';
+      color: var(--blue-primary);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .job-card-apply {
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .job-card-apply p {
+      font-size: 14px;
+      color: var(--grey);
+      margin: 0;
+    }
+
+    .job-card-apply a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--blue-primary);
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .job-card-apply a:hover {
+      background: var(--blue-deep);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0,98,155,0.3);
     }
 
     .job-apply-note {
@@ -214,23 +343,37 @@
     }
 
     @media (max-width: 640px) {
-      .job-card-minimal {
+      .job-card-header {
         flex-direction: column;
         align-items: flex-start;
         gap: 12px;
         padding: 20px 20px;
       }
 
-      .job-card-minimal-right {
+      .job-card-header-right {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .job-card-header-comp {
         text-align: left;
       }
 
-      .job-card-minimal-title {
+      .job-card-header-title {
         font-size: 17px;
       }
 
-      .job-card-minimal-meta {
+      .job-card-header-meta {
         font-size: 13px;
+      }
+
+      .job-card-details-inner {
+        padding: 0 20px 24px;
+      }
+
+      .job-card-apply {
+        flex-direction: column;
+        align-items: flex-start;
       }
     }
   </style>
@@ -350,31 +493,139 @@
         <div class="job-category-label">Engineering</div>
 
         <!-- Job 1: Founding Lead Engineer -->
-        <a href="mailto:careers@synaipse.org?subject=Application%3A%20Founding%20Lead%20Engineer" class="job-card-minimal" id="lead-engineer">
-          <div class="job-card-minimal-left">
-            <h3 class="job-card-minimal-title">Founding Lead Engineer</h3>
-            <div class="job-card-minimal-meta">
-              <span>Engineering</span><span class="meta-sep">&middot;</span><span>Cincinnati, OH</span><span class="meta-sep">&middot;</span><span>Full-time</span><span class="meta-sep">&middot;</span><span>Remote/Hybrid</span>
+        <div class="job-card-expandable" id="lead-engineer">
+          <div class="job-card-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleJob(this)">
+            <div class="job-card-header-left">
+              <h3 class="job-card-header-title">Founding Lead Engineer</h3>
+              <div class="job-card-header-meta">
+                <span>Engineering</span><span class="meta-sep">&middot;</span><span>Cincinnati, OH</span><span class="meta-sep">&middot;</span><span>Full-time</span><span class="meta-sep">&middot;</span><span>Remote/Hybrid</span>
+              </div>
+            </div>
+            <div class="job-card-header-right">
+              <div class="job-card-header-comp">
+                <div class="job-card-header-comp-text">Competitive Salary</div>
+                <div class="job-card-header-equity">Founding Equity (1&ndash;5%)</div>
+              </div>
+              <div class="job-card-chevron" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
             </div>
           </div>
-          <div class="job-card-minimal-right">
-            <div class="job-card-minimal-comp">Competitive Salary</div>
-            <div class="job-card-minimal-equity">Founding Equity (1&ndash;5%)</div>
+          <div class="job-card-details">
+            <div class="job-card-details-inner">
+              <div class="job-detail-section">
+                <h4>About the Role</h4>
+                <p>As our Founding Lead Engineer, you will own the entire technical roadmap for Synaipse. You aren't just building features — you are architecting the foundation of a healthcare transformation engine that automates the full patient journey from intake through reimbursement. You will report directly to the CEO and President, both practicing neurosurgeons.</p>
+                <p>This is a ground-floor opportunity to shape the technical direction of a company building the comprehensive practice platform for independent healthcare. You'll make decisions on architecture, infrastructure, AI/ML pipelines, and integrations that will define the product for years to come.</p>
+              </div>
+              <div class="job-detail-section">
+                <h4>What You'll Build</h4>
+                <ul>
+                  <li>The core platform architecture — APIs, data layer, authentication, and role-based access for front desk, clinical, and billing workflows</li>
+                  <li>AI/ML pipelines for ambient clinical documentation, intelligent coding suggestions, and automated prior authorization generation</li>
+                  <li>Bidirectional EHR integration engine supporting Epic, Cerner, athenahealth, eClinicalWorks, and other major systems via FHIR, HL7, and proprietary APIs</li>
+                  <li>Real-time data processing for insurance eligibility verification, claims tracking, and denial management automation</li>
+                  <li>A secure, HIPAA-compliant infrastructure (SOC 2 Type II) built for healthcare from day one</li>
+                </ul>
+              </div>
+              <div class="job-detail-section">
+                <h4>What We're Looking For</h4>
+                <ul>
+                  <li>7+ years of software engineering experience, with at least 2 years in a technical leadership role</li>
+                  <li>Deep proficiency in Python (FastAPI/Flask) and TypeScript/Node.js</li>
+                  <li>Production experience with LLM orchestration (LangChain, LlamaIndex, or similar), vector databases, and RAG architectures</li>
+                  <li>Strong understanding of React/Next.js for frontend systems</li>
+                  <li>Experience designing and consuming healthcare interoperability standards (FHIR, HL7 v2, X12 EDI) is a significant plus</li>
+                  <li>Comfort operating as both architect and hands-on builder in a fast-moving startup environment</li>
+                </ul>
+              </div>
+              <div class="job-detail-section">
+                <h4>Compensation &amp; Benefits</h4>
+                <ul>
+                  <li>Competitive base salary commensurate with experience</li>
+                  <li>Founding equity stake (1&ndash;5%) — you're building something that's yours</li>
+                  <li>Health, dental, and vision insurance</li>
+                  <li>Remote-first with optional hybrid at 1819 Innovation Hub, Cincinnati</li>
+                  <li>Direct line to physician co-founders and clinical end-users</li>
+                </ul>
+              </div>
+              <div class="job-card-apply">
+                <p>Send a short cover letter and your CV to apply.</p>
+                <a href="mailto:careers@synaipse.org?subject=Application%3A%20Founding%20Lead%20Engineer">
+                  Apply Now
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+              </div>
+            </div>
           </div>
-        </a>
+        </div>
 
         <!-- Job 2: Founding Senior Frontend Engineer -->
-        <a href="mailto:careers@synaipse.org?subject=Application%3A%20Founding%20Senior%20Frontend%20Engineer" class="job-card-minimal" id="frontend-engineer">
-          <div class="job-card-minimal-left">
-            <h3 class="job-card-minimal-title">Founding Senior Frontend Engineer</h3>
-            <div class="job-card-minimal-meta">
-              <span>Engineering</span><span class="meta-sep">&middot;</span><span>Cincinnati, OH</span><span class="meta-sep">&middot;</span><span>Full-time</span><span class="meta-sep">&middot;</span><span>Hybrid</span>
+        <div class="job-card-expandable" id="frontend-engineer">
+          <div class="job-card-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleJob(this)">
+            <div class="job-card-header-left">
+              <h3 class="job-card-header-title">Founding Senior Frontend Engineer</h3>
+              <div class="job-card-header-meta">
+                <span>Engineering</span><span class="meta-sep">&middot;</span><span>Cincinnati, OH</span><span class="meta-sep">&middot;</span><span>Full-time</span><span class="meta-sep">&middot;</span><span>Hybrid</span>
+              </div>
+            </div>
+            <div class="job-card-header-right">
+              <div class="job-card-header-comp">
+                <div class="job-card-header-equity">Significant Equity</div>
+              </div>
+              <div class="job-card-chevron" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
             </div>
           </div>
-          <div class="job-card-minimal-right">
-            <div class="job-card-minimal-equity">Significant Equity</div>
+          <div class="job-card-details">
+            <div class="job-card-details-inner">
+              <div class="job-detail-section">
+                <h4>About the Role</h4>
+                <p>Your mission is to build the Command Center — the high-velocity React interface that powers every daily workflow at Synaipse. You'll create the unified workspace where front desk staff manage intake, clinicians review AI-generated notes, and billing teams handle the entire revenue cycle — all without leaving a single browser tab.</p>
+                <p>This is the interface that replaces toggling between 4-6 applications per patient case. Every pixel, every interaction, every millisecond of latency matters. You'll work directly with physician end-users to ship features that eliminate hours of administrative work daily.</p>
+              </div>
+              <div class="job-detail-section">
+                <h4>What You'll Build</h4>
+                <ul>
+                  <li>Role-based workspaces — purpose-built views for front desk (scheduling, eligibility, referrals), clinical staff (ambient scribing, note review, orders), and billing (coding, PA, claims, denials)</li>
+                  <li>A real-time dashboard consolidating patient journey status, authorization tracking, and revenue cycle KPIs in one view</li>
+                  <li>High-performance document handling — PDF rendering, fax image processing, and inline annotation for clinical documentation review</li>
+                  <li>AI-powered UI components: confidence-scored coding suggestions, auto-populated form fields from referral data, and smart search across patient records</li>
+                  <li>Accessible, responsive design that works seamlessly across desktop and tablet for clinical environments</li>
+                </ul>
+              </div>
+              <div class="job-detail-section">
+                <h4>What We're Looking For</h4>
+                <ul>
+                  <li>5+ years of frontend engineering experience with React and TypeScript</li>
+                  <li>Proven track record building complex, data-dense interfaces — think dashboards, workflow tools, or enterprise SaaS</li>
+                  <li>Deep understanding of state management (Redux, Zustand, or similar), performance optimization, and component architecture</li>
+                  <li>Experience with Canvas API, PDF.js, or similar document rendering technologies is a strong plus</li>
+                  <li>Eye for design and UX — ability to translate requirements into clean, intuitive interfaces without detailed mockups</li>
+                  <li>Comfort working in a fast-paced startup where you'll ship features measured in days, not sprints</li>
+                </ul>
+              </div>
+              <div class="job-detail-section">
+                <h4>Compensation &amp; Benefits</h4>
+                <ul>
+                  <li>Competitive base salary commensurate with experience</li>
+                  <li>Significant founding equity stake — own what you build</li>
+                  <li>Health, dental, and vision insurance</li>
+                  <li>Hybrid work from 1819 Innovation Hub, Cincinnati with flexible remote days</li>
+                  <li>Direct access to physician co-founders and real clinical users for rapid feedback loops</li>
+                </ul>
+              </div>
+              <div class="job-card-apply">
+                <p>Send a short cover letter and your CV to apply.</p>
+                <a href="mailto:careers@synaipse.org?subject=Application%3A%20Founding%20Senior%20Frontend%20Engineer">
+                  Apply Now
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+              </div>
+            </div>
           </div>
-        </a>
+        </div>
       </div>
 
       <p class="job-apply-note">To apply, please send a short cover letter and your CV to <a href="mailto:careers@synaipse.org">careers@synaipse.org</a></p>
@@ -486,6 +737,31 @@
   </script>
   <script defer src="/_vercel/speed-insights/script.js"></script>
   <script defer src="main.js"></script>
+
+  <!-- Job card expand/collapse -->
+  <script>
+    function toggleJob(header) {
+      var card = header.closest('.job-card-expandable');
+      var isExpanded = card.classList.contains('expanded');
+      // Collapse all others
+      document.querySelectorAll('.job-card-expandable.expanded').forEach(function(el) {
+        el.classList.remove('expanded');
+        el.querySelector('.job-card-header').setAttribute('aria-expanded', 'false');
+      });
+      // Toggle clicked
+      if (!isExpanded) {
+        card.classList.add('expanded');
+        header.setAttribute('aria-expanded', 'true');
+      }
+    }
+    // Keyboard support
+    document.addEventListener('keydown', function(e) {
+      if ((e.key === 'Enter' || e.key === ' ') && e.target.classList.contains('job-card-header')) {
+        e.preventDefault();
+        toggleJob(e.target);
+      }
+    });
+  </script>
 
 </body>
 </html>
