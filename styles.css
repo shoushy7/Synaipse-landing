@@ -1810,6 +1810,94 @@ footer {
   font-style: normal;
 }
 
+/* Name Etymology Section */
+.name-etymology {
+  padding: 100px 0;
+  background: var(--off-white);
+}
+
+.etymology-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.etymology-header h2 {
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  color: var(--slate);
+}
+
+.etymology-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.etymology-word-breakdown {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.etymology-part,
+.etymology-plus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.etymology-fragment {
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: var(--slate);
+  line-height: 1;
+}
+
+.etymology-fragment.highlight {
+  color: var(--blue-primary);
+  font-size: 48px;
+}
+
+.etymology-source {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--grey-light);
+  white-space: nowrap;
+}
+
+.etymology-plus .etymology-source {
+  color: var(--blue-primary);
+}
+
+.etymology-text p {
+  font-size: 17px;
+  color: var(--grey);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.etymology-text p:last-child {
+  margin-bottom: 0;
+}
+
+.etymology-text strong {
+  color: var(--slate);
+}
+
+.etymology-text em {
+  color: var(--blue-primary);
+  font-style: italic;
+}
+
 /* About CTA */
 .about-cta {
   padding: 100px 0;
@@ -2783,6 +2871,15 @@ footer {
     font-size: 40px;
   }
 
+  .etymology-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .etymology-word-breakdown {
+    justify-content: center;
+  }
+
   .mission-grid {
     grid-template-columns: 1fr;
     gap: 48px;
@@ -2926,6 +3023,15 @@ footer {
   /* About responsive */
   .about-hero {
     padding: 140px 0 80px;
+  }
+
+  .etymology-fragment,
+  .etymology-fragment.highlight {
+    font-size: 36px;
+  }
+
+  .etymology-header h2 {
+    font-size: 28px;
   }
 
   .about-hero h1,
