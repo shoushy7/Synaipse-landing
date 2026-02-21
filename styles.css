@@ -52,7 +52,7 @@
   }
 
   nav {
-    background: rgba(15,20,25,0.97) !important;
+    background: rgba(15, 20, 25, 0.8) !important;
   }
 
   .ehr-logo-card {
@@ -261,9 +261,16 @@ nav {
   right: 0;
   z-index: 1000;
   padding: 16px 24px;
-  background: rgba(255,255,255,0.97);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(229, 231, 235, 0.8);
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+nav.scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border-bottom-color: rgba(0, 98, 155, 0.1);
 }
 
 .nav-inner {

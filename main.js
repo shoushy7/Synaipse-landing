@@ -38,6 +38,18 @@
       });
     }
 
+    /* ---------- Nav Scroll State ---------- */
+    var nav = document.querySelector('nav');
+    if (nav) {
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 20) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      }, { passive: true });
+    }
+
     /* ---------- "Back to all articles" scroll (replaces inline onclick) ---------- */
     document.querySelectorAll('.back-link[data-scroll-top]').forEach(function (link) {
       link.addEventListener('click', function (e) {
