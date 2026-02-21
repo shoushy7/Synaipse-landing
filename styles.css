@@ -997,6 +997,38 @@ nav {
   color: var(--blue-primary);
 }
 
+/* EHR Marquee Animation */
+.ehr-marquee {
+  overflow: hidden;
+  width: 100%;
+  padding: 8px 0;
+}
+
+.ehr-marquee-track {
+  display: flex;
+  gap: 48px;
+  width: max-content;
+  animation: marquee-scroll 30s linear infinite;
+}
+
+.ehr-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ehr-marquee-track {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: auto;
+  }
+}
+
 /* ---------- Patient Journey ---------- */
 .journey {
   padding: 100px 0;
