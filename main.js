@@ -36,6 +36,26 @@
           menuBtn.focus();
         }
       });
+
+      // Mobile accordion toggle
+      mobileMenu.querySelectorAll('.mobile-nav-group-trigger').forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+          var group = trigger.closest('.mobile-nav-group');
+          var wasOpen = group.classList.contains('open');
+
+          // Close all other groups
+          mobileMenu.querySelectorAll('.mobile-nav-group.open').forEach(function (g) {
+            g.classList.remove('open');
+            g.querySelector('.mobile-nav-group-trigger').setAttribute('aria-expanded', 'false');
+          });
+
+          // Toggle this group
+          if (!wasOpen) {
+            group.classList.add('open');
+            trigger.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
     }
 
     /* ---------- Nav Scroll State ---------- */
