@@ -55,6 +55,21 @@
     background: rgba(15, 20, 25, 0.8) !important;
   }
 
+  .nav-dropdown {
+    background: rgba(15, 20, 25, 0.95);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .nav-dropdown a {
+    color: #E8ECF0;
+  }
+
+  .nav-dropdown a:hover {
+    background: rgba(0, 98, 155, 0.2);
+    color: #fff;
+  }
+
   .ehr-logo-card {
     background: var(--off-white);
   }
@@ -357,6 +372,87 @@ nav.scrolled {
   transform: translateY(-1px);
 }
 
+/* ---------- Nav Dropdowns ---------- */
+.nav-item {
+  position: relative;
+}
+
+.nav-item > .nav-item-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--grey);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s;
+  cursor: default;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+}
+
+.nav-item > .nav-item-trigger:hover,
+.nav-item:hover > .nav-item-trigger,
+.nav-item:focus-within > .nav-item-trigger {
+  color: var(--blue-primary);
+}
+
+.nav-item-chevron {
+  width: 12px;
+  height: 12px;
+  transition: transform 0.2s;
+}
+
+.nav-item:hover .nav-item-chevron,
+.nav-item:focus-within .nav-item-chevron {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  min-width: 220px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(229, 231, 235, 0.8);
+  border-radius: 12px;
+  padding: 8px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
+  z-index: 1001;
+}
+
+.nav-item:hover > .nav-dropdown,
+.nav-item:focus-within > .nav-dropdown {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+.nav-dropdown a {
+  display: block;
+  padding: 10px 14px;
+  color: var(--slate);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+
+.nav-dropdown a:hover {
+  background: var(--blue-pale);
+  color: var(--blue-primary);
+}
+
 /* Mobile menu button */
 .mobile-menu-btn {
   display: none;
@@ -415,6 +511,59 @@ nav.scrolled {
   font-weight: 600;
   text-align: center;
   margin-top: 8px;
+}
+
+/* Mobile dropdown accordion */
+.mobile-nav-group {
+  border-bottom: 1px solid var(--border);
+}
+
+.mobile-nav-group-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: var(--grey);
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+}
+
+.mobile-nav-group-trigger:hover {
+  color: var(--blue-primary);
+}
+
+.mobile-nav-group-chevron {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.25s;
+  color: var(--grey-light);
+}
+
+.mobile-nav-group.open .mobile-nav-group-chevron {
+  transform: rotate(180deg);
+}
+
+.mobile-nav-group-items {
+  display: none;
+  padding: 0 0 8px 16px;
+  flex-direction: column;
+  gap: 0;
+}
+
+.mobile-nav-group.open .mobile-nav-group-items {
+  display: flex;
+}
+
+.mobile-nav-group-items a {
+  font-size: 15px;
+  padding: 8px 0;
+  border-bottom: none;
 }
 
 /* ---------- Buttons ---------- */
