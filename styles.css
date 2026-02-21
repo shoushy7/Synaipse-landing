@@ -874,7 +874,7 @@ nav.scrolled {
   border: 2px solid var(--border);
   border-radius: 20px;
   padding: 36px;
-  transition: all 0.3s;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
 }
@@ -893,7 +893,8 @@ nav.scrolled {
 
 .role-card:hover {
   border-color: var(--blue-primary);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px) scale(1.01);
 }
 
 .role-card:hover::before {
@@ -908,6 +909,21 @@ nav.scrolled {
 .role-card.featured::before {
   transform: scaleX(1);
   background: linear-gradient(90deg, var(--blue-primary), var(--amber-bright));
+}
+
+.role-card-image {
+  background: linear-gradient(135deg, #1A2332 0%, #2D3B4F 100%);
+  border-radius: 12px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.role-card-image-placeholder {
+  color: rgba(255, 255, 255, 0.25);
 }
 
 .role-card-icon {
