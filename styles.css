@@ -120,8 +120,27 @@
   }
 
   .contact-form {
-    background: #1A2332;
-    border-color: rgba(255,255,255,0.1);
+    background: rgba(26, 35, 50, 0.85);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .hero-badge {
+    background: rgba(15, 20, 25, 0.6);
+    border-color: rgba(0, 98, 155, 0.3);
+  }
+
+  .hero-float-badge {
+    background: rgba(26, 35, 50, 0.9);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+
+  .hero-visual-frame {
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+
+  .role-card-image {
+    background: linear-gradient(135deg, #0F1419 0%, #1A2332 100%);
   }
 
   .form-group label {
