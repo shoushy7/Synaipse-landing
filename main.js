@@ -123,6 +123,65 @@
         }
       });
     }
+
+    /* ---------- Patient Timeline Tabs ---------- */
+    var timelineTrack = document.querySelector('.timeline-track');
+    if (timelineTrack) {
+      var nodes = timelineTrack.querySelectorAll('.timeline-node');
+      var panels = document.querySelectorAll('.timeline-panel');
+
+      timelineTrack.addEventListener('click', function (e) {
+        var node = e.target.closest('.timeline-node');
+        if (!node || node.classList.contains('active')) return;
+
+        // Deactivate all
+        nodes.forEach(function (n) {
+          n.classList.remove('active');
+          n.setAttribute('aria-selected', 'false');
+        });
+        panels.forEach(function (p) {
+          p.classList.remove('active');
+          p.hidden = true;
+        });
+
+        // Activate clicked
+        node.classList.add('active');
+        node.setAttribute('aria-selected', 'true');
+        var panelId = node.getAttribute('aria-controls');
+        var panel = document.getElementById(panelId);
+        if (panel) {
+          panel.hidden = false;
+          panel.classList.add('active');
+        }
+      });
+
+      // Keyboard navigation: arrow keys between tabs
+      timelineTrack.addEventListener('keydown', function (e) {
+        var nodeArr = Array.from(nodes);
+        var currentIndex = nodeArr.indexOf(document.activeElement);
+        if (currentIndex === -1) return;
+
+        var newIndex = currentIndex;
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+          newIndex = (currentIndex + 1) % nodeArr.length;
+          e.preventDefault();
+        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+          newIndex = (currentIndex - 1 + nodeArr.length) % nodeArr.length;
+          e.preventDefault();
+        } else if (e.key === 'Home') {
+          newIndex = 0;
+          e.preventDefault();
+        } else if (e.key === 'End') {
+          newIndex = nodeArr.length - 1;
+          e.preventDefault();
+        }
+
+        if (newIndex !== currentIndex) {
+          nodeArr[newIndex].focus();
+          nodeArr[newIndex].click();
+        }
+      });
+    }
   });
 
   /* ---------- Scroll Reveal (IntersectionObserver) ---------- */
