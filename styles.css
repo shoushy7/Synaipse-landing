@@ -1626,11 +1626,13 @@ nav.scrolled {
 }
 
 .contact-form {
-  background: var(--white);
-  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(229, 231, 235, 0.6);
   border-radius: 16px;
   padding: 40px;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg);
 }
 
 .form-group {
@@ -1714,8 +1716,8 @@ nav.scrolled {
 
 .form-submit:hover {
   background: var(--blue-deep);
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-blue-bright);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-blue-bright), 0 0 20px rgba(0, 98, 155, 0.2);
 }
 
 /* ---------- Footer ---------- */
