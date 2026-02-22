@@ -22,7 +22,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
 
   <!-- Shared Stylesheet -->
   <link rel="stylesheet" href="styles.css">
@@ -94,6 +94,7 @@
             <a href="automation-platform.html">Synaipse Automation Platform</a>
             <a href="credentialing.html">Synaipse Credentialing</a>
             <a href="ambient-scribe.html">Ambient Scribe <span class="nav-badge-soon">Coming Soon</span></a>
+            <a href="pricing.html">Pricing</a>
           </div>
         </div>
         <div class="nav-item">
@@ -142,6 +143,7 @@
         <a href="automation-platform.html">Synaipse Automation Platform</a>
         <a href="credentialing.html">Synaipse Credentialing</a>
         <a href="ambient-scribe.html">Ambient Scribe <span class="nav-badge-soon">Coming Soon</span></a>
+        <a href="pricing.html">Pricing</a>
       </div>
     </div>
     <div class="mobile-nav-group">
@@ -162,86 +164,109 @@
     <a href="index.html#contact" class="mobile-cta">Request Demo</a>
   </div>
 
-  <!-- Blog Header -->
-  <header class="blog-header" id="main">
+  <!-- ================================================================
+       BLOG HERO — Editorial magazine-style header
+       ================================================================ -->
+  <header class="blg-hero" id="main">
     <div class="container">
-      <span class="featured-badge">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        Expert Insights
-      </span>
-      <h1>Healthcare AI Insights</h1>
-      <p>Expert perspectives on AI-powered healthcare operations, revenue cycle management, and transforming patient care.</p>
+      <div class="blg-hero-inner">
+        <div class="blg-hero-label">
+          <span class="blg-hero-dot"></span>
+          The Synaipse Journal
+        </div>
+        <h1 class="blg-hero-title">Insights at the<br>Intersection of <span class="blg-hero-em">AI</span> &amp; <span class="blg-hero-em">Medicine</span></h1>
+        <p class="blg-hero-sub">Expert perspectives on prior authorization automation, revenue cycle intelligence, and the future of healthcare operations.</p>
+      </div>
     </div>
+    <div class="blg-hero-grid-bg" aria-hidden="true"></div>
   </header>
 
-  <!-- Stats Bar -->
-  <section class="stats-bar" aria-label="Key statistics">
+  <!-- ================================================================
+       FEATURED ARTICLE — Large hero card for the latest post
+       ================================================================ -->
+  <section class="blg-featured">
     <div class="container">
-      <div class="stats-grid">
-        <div class="stat-item">
-          <div class="stat-number">70%</div>
-          <div class="stat-label">Reduction in Auth Time</div>
+      <a href="#post-3" class="blg-featured-card" aria-label="Read featured article: CMS 0057-F">
+        <div class="blg-featured-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Featured
         </div>
-        <div class="stat-item">
-          <div class="stat-number">87%</div>
-          <div class="stat-label">Appeal Success Rate</div>
+        <div class="blg-featured-content">
+          <div class="blg-card-tag blg-card-tag--reg">Regulatory</div>
+          <h2>CMS 0057-F: What the Interoperability and Prior Authorization Final Rule Means for Your Practice</h2>
+          <p>The landmark CMS rule mandates FHIR-based APIs and faster prior auth decisions by 2027. Here's what providers need to know — and do — right now.</p>
+          <div class="blg-card-foot">
+            <span class="blg-card-time">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              8 min read
+            </span>
+            <span class="blg-card-date">February 22, 2026</span>
+            <span class="blg-card-arrow">
+              Read Article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </span>
+          </div>
         </div>
-        <div class="stat-item">
-          <div class="stat-number">50%</div>
-          <div class="stat-label">Fewer Denials</div>
+        <div class="blg-featured-visual" aria-hidden="true">
+          <div class="blg-featured-stat">$494M</div>
+          <div class="blg-featured-stat-label">Annual savings<br>from electronic PA</div>
+          <div class="blg-featured-orb blg-featured-orb--1"></div>
+          <div class="blg-featured-orb blg-featured-orb--2"></div>
         </div>
-        <div class="stat-item">
-          <div class="stat-number">$500K+</div>
-          <div class="stat-label">Annual Revenue Recovery</div>
-        </div>
-      </div>
+      </a>
     </div>
   </section>
 
-  <!-- Blog List -->
-  <section class="blog-list">
+  <!-- ================================================================
+       ARTICLE GRID — Remaining posts in editorial card layout
+       ================================================================ -->
+  <section class="blg-grid-section">
     <div class="container">
-      <div class="blog-list-header">
-        <h2 class="blog-list-title">Latest Articles</h2>
-        <a href="#subscribe" class="btn-secondary">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <div class="blg-grid-header">
+        <h2>Latest Articles</h2>
+        <a href="#subscribe" class="blg-subscribe-pill">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           Subscribe
         </a>
       </div>
-      <div class="blog-list-grid">
-        <a href="#post-1" class="blog-card" aria-label="Read article: How AI Is Transforming Prior Authorization in Healthcare">
-          <div class="blog-card-tag">Revenue Cycle</div>
-          <h2>How AI Is Transforming Prior Authorization in Healthcare</h2>
+
+      <div class="blg-card-grid">
+        <!-- Card 1 -->
+        <a href="#post-1" class="blg-card" aria-label="Read article: How AI Is Transforming Prior Authorization">
+          <div class="blg-card-top">
+            <div class="blg-card-tag blg-card-tag--rcm">Revenue Cycle</div>
+            <span class="blg-card-time">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              5 min
+            </span>
+          </div>
+          <h3>How AI Is Transforming Prior Authorization in Healthcare</h3>
           <p>Prior authorization consumes 34+ hours per physician per week. Learn how AI agents are cutting that by 70% while improving approval rates.</p>
-          <div class="blog-card-meta">
-            <span>5 min read · February 3, 2026</span>
-            <span class="blog-card-read">
-              Read More
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <div class="blg-card-foot">
+            <span class="blg-card-date">February 3, 2026</span>
+            <span class="blg-card-arrow">
+              Read
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </span>
           </div>
         </a>
-        <a href="#post-2" class="blog-card" aria-label="Read article: Reducing Revenue Leakage With Intelligent Denial Management">
-          <div class="blog-card-tag amber">Denial Management</div>
-          <h2>Reducing Revenue Leakage With Intelligent Denial Management</h2>
+
+        <!-- Card 2 -->
+        <a href="#post-2" class="blg-card" aria-label="Read article: Reducing Revenue Leakage With Intelligent Denial Management">
+          <div class="blg-card-top">
+            <div class="blg-card-tag blg-card-tag--denial">Denial Management</div>
+            <span class="blg-card-time">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              7 min
+            </span>
+          </div>
+          <h3>Reducing Revenue Leakage With Intelligent Denial Management</h3>
           <p>Denial rates are up 67% since 2020. Here's how AI-powered appeal generation is recovering millions in lost revenue for practices.</p>
-          <div class="blog-card-meta">
-            <span>7 min read · February 1, 2026</span>
-            <span class="blog-card-read">
-              Read More
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </span>
-          </div>
-        </a>
-        <a href="#post-3" class="blog-card" aria-label="Read article: CMS 0057-F: What the Interoperability and Prior Authorization Final Rule Means for Your Practice">
-          <div class="blog-card-tag">Regulatory</div>
-          <h2>CMS 0057-F: What the Interoperability and Prior Authorization Final Rule Means for Your Practice</h2>
-          <p>The landmark CMS rule mandates FHIR-based APIs and faster prior auth decisions by 2027. Here's what providers need to know — and do — right now.</p>
-          <div class="blog-card-meta">
-            <span>8 min read · February 22, 2026</span>
-            <span class="blog-card-read">
-              Read More
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <div class="blg-card-foot">
+            <span class="blg-card-date">February 1, 2026</span>
+            <span class="blg-card-arrow">
+              Read
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </span>
           </div>
         </a>
@@ -249,14 +274,45 @@
     </div>
   </section>
 
-  <!-- Article 1 -->
+  <!-- ================================================================
+       IMPACT STRIP — Animated number ribbon
+       ================================================================ -->
+  <section class="blg-impact" aria-label="Key statistics">
+    <div class="container">
+      <div class="blg-impact-grid">
+        <div class="blg-impact-item">
+          <div class="blg-impact-num">70%</div>
+          <div class="blg-impact-label">Reduction in<br>Auth Time</div>
+        </div>
+        <div class="blg-impact-divider" aria-hidden="true"></div>
+        <div class="blg-impact-item">
+          <div class="blg-impact-num">87%</div>
+          <div class="blg-impact-label">Appeal<br>Success Rate</div>
+        </div>
+        <div class="blg-impact-divider" aria-hidden="true"></div>
+        <div class="blg-impact-item">
+          <div class="blg-impact-num">50%</div>
+          <div class="blg-impact-label">Fewer<br>Denials</div>
+        </div>
+        <div class="blg-impact-divider" aria-hidden="true"></div>
+        <div class="blg-impact-item">
+          <div class="blg-impact-num">$500K+</div>
+          <div class="blg-impact-label">Annual Revenue<br>Recovery</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       ARTICLE 1 — Prior Authorization
+       ================================================================ -->
   <article class="article" id="post-1">
     <header class="article-header">
       <div class="container">
         <div class="article-tag">Revenue Cycle</div>
         <h1>How AI Is Transforming Prior Authorization in Healthcare</h1>
         <div class="article-meta">
-          February 3, 2026 <span>·</span> 5 min read
+          February 3, 2026 <span>&middot;</span> 5 min read
         </div>
       </div>
     </header>
@@ -346,14 +402,16 @@
     </div>
   </article>
 
-  <!-- Article 2 -->
+  <!-- ================================================================
+       ARTICLE 2 — Denial Management
+       ================================================================ -->
   <article class="article" id="post-2">
     <header class="article-header">
       <div class="container">
         <div class="article-tag">Revenue Cycle Management</div>
         <h1>Reducing Revenue Leakage With Intelligent Denial Management</h1>
         <div class="article-meta">
-          February 1, 2026 <span>·</span> 7 min read
+          February 1, 2026 <span>&middot;</span> 7 min read
         </div>
       </div>
     </header>
@@ -463,14 +521,16 @@
     </div>
   </article>
 
-  <!-- Article 3 -->
+  <!-- ================================================================
+       ARTICLE 3 — CMS 0057-F
+       ================================================================ -->
   <article class="article" id="post-3">
     <header class="article-header">
       <div class="container">
         <div class="article-tag">Regulatory</div>
         <h1>CMS 0057-F: What the Interoperability and Prior Authorization Final Rule Means for Your Practice</h1>
         <div class="article-meta">
-          February 22, 2026 <span>·</span> 8 min read
+          February 22, 2026 <span>&middot;</span> 8 min read
         </div>
       </div>
     </header>
@@ -627,7 +687,9 @@
     </div>
   </article>
 
-  <!-- Subscribe Section -->
+  <!-- ================================================================
+       SUBSCRIBE
+       ================================================================ -->
   <section class="subscribe-section" id="subscribe">
     <div class="container">
       <h2>Stay Informed</h2>
