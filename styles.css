@@ -3057,6 +3057,74 @@ footer {
   }
 }
 
+/* ---------- Board of Directors ---------- */
+.board-directors {
+  margin-top: 64px;
+  text-align: center;
+}
+
+.board-directors-heading {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--grey);
+  margin-bottom: 32px;
+}
+
+.board-directors-grid {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.board-member-card {
+  background: var(--off-white);
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 400px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.board-member-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.board-member-name {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--slate);
+  margin-bottom: 4px;
+}
+
+.board-member-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--blue-primary);
+  margin-bottom: 12px;
+}
+
+.board-member-bio {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--grey);
+}
+
+@media (prefers-color-scheme: dark) {
+  .board-member-card {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  .board-member-name {
+    color: #fff;
+  }
+}
+
 /* ---------- Advisory Board Page ---------- */
 .board-mission {
   padding: 100px 0;
