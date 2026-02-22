@@ -3024,17 +3024,18 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 48px;
   flex-wrap: wrap;
 }
 
 .institution-logo {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .institution-logo img {
-  height: 48px;
+  height: 100px;
   width: auto;
   display: block;
   filter: grayscale(1);
@@ -3052,7 +3053,7 @@ footer {
     gap: 24px;
   }
   .institution-logo img {
-    height: 36px;
+    height: 64px;
   }
 }
 
