@@ -2388,6 +2388,189 @@ footer {
   }
 }
 
+/* ---------- Advisory Board Page ---------- */
+.board-mission {
+  padding: 100px 0;
+  background: var(--off-white);
+}
+
+.board-mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.board-mission-content .section-label {
+  margin-bottom: 16px;
+}
+
+.board-mission-content h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--slate);
+  letter-spacing: -0.5px;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.board-mission-content p {
+  font-size: 17px;
+  color: var(--grey);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.board-mission-values {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.board-value {
+  display: flex;
+  gap: 20px;
+  background: var(--white);
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  transition: all 0.3s;
+}
+
+.board-value:hover {
+  border-color: var(--blue-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.board-value-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  background: var(--blue-pale);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-primary);
+}
+
+.board-value h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--slate);
+  margin-bottom: 6px;
+}
+
+.board-value p {
+  font-size: 15px;
+  color: var(--grey);
+  line-height: 1.6;
+}
+
+/* Board Members Grid */
+.board-members-section {
+  background: var(--white);
+}
+
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.board-card {
+  text-align: center;
+  padding: 40px 32px;
+}
+
+.board-avatar-placeholder {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--blue-pale);
+  border: 3px dashed var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  color: var(--grey-light);
+}
+
+.board-card .founder-name {
+  font-size: 20px;
+}
+
+.board-card .founder-title {
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+.board-card .founder-bio {
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* Board CTA */
+.board-cta {
+  padding: 80px 0;
+  background: var(--off-white);
+}
+
+.board-cta-inner {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.board-cta-inner h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--slate);
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.board-cta-inner p {
+  font-size: 17px;
+  color: var(--grey);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+/* Advisory Board Responsive */
+@media (max-width: 1024px) {
+  .board-mission-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .board-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .board-grid {
+    grid-template-columns: 1fr;
+  }
+  .board-mission-content h2 {
+    font-size: 28px;
+  }
+  .board-cta-inner h2 {
+    font-size: 26px;
+  }
+}
+
+/* Advisory Board Dark Mode */
+@media (prefers-color-scheme: dark) {
+  .board-value {
+    background: var(--off-white);
+  }
+  .board-avatar-placeholder {
+    border-color: var(--grey-muted);
+  }
+}
+
 /* Story Section */
 .story {
   padding: 100px 0;
