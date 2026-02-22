@@ -1782,7 +1782,7 @@ nav.scrolled {
 .cred-hero .about-hero-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .cred-logo {
