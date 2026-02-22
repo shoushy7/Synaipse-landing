@@ -1855,9 +1855,16 @@ nav.scrolled {
   display: block;
 }
 
+.cred-integration-logo--npdb svg {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+
 @media (prefers-color-scheme: dark) {
   .cred-integration-logo--caqh,
-  .cred-integration-logo--nppes {
+  .cred-integration-logo--nppes,
+  .cred-integration-logo--npdb {
     filter: brightness(1.6) saturate(0.8);
   }
 }
@@ -1892,6 +1899,9 @@ nav.scrolled {
   }
   .cred-integration-logo--nppes svg {
     height: 56px;
+  }
+  .cred-integration-logo--npdb svg {
+    height: 48px;
   }
 }
 
