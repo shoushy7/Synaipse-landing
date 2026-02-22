@@ -164,8 +164,170 @@
             <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
             <span class="titlebar-text">Synaipse &mdash; Unified Practice Dashboard</span>
           </div>
-          <div class="preview-frame-body">
-            <img src="images/synaipse-automation-platform.png" alt="Synaipse Automation Platform dashboard showing workspace, critical action queue, autopilot monitor, and network connectivity" style="width:100%; display:block;" loading="lazy">
+          <div class="preview-frame-body preview-frame-body--has-dashboard">
+            <!-- Dashboard mockup — reflects real Synaipse Automation Platform UI -->
+            <div class="dash-mock" aria-hidden="true">
+              <!-- Sidebar -->
+              <div class="dash-sidebar">
+                <div class="dash-sidebar-brand">
+                  <svg width="24" height="24" viewBox="0 0 80 80" fill="none"><rect x="10" y="10" width="60" height="60" rx="14" fill="#00629B"/><path d="M28 40h24M40 28v24" stroke="#fff" stroke-width="5" stroke-linecap="round"/><circle cx="40" cy="40" r="6" fill="#E8A838" fill-opacity="0.9"/></svg>
+                  <div class="dash-sidebar-wordmark">
+                    <span class="dash-brand-name">Syn<span class="dash-brand-ai">AI</span>pse</span>
+                    <span class="dash-brand-sub">Automation</span>
+                  </div>
+                </div>
+                <div class="dash-sidebar-label">Navigation</div>
+                <div class="dash-sidebar-nav">
+                  <div class="dash-nav-item dash-nav-active"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg> Dashboard</div>
+                  <div class="dash-nav-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Patients</div>
+                  <div class="dash-nav-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Prior Auth</div>
+                  <div class="dash-nav-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Billing / RCM</div>
+                  <div class="dash-nav-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg> Analytics</div>
+                  <div class="dash-nav-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg> Settings</div>
+                </div>
+                <div class="dash-sidebar-label">AI Agents</div>
+                <div class="dash-sidebar-agents">
+                  <div class="dash-agent"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Intake OCR <span class="dash-agent-dot dash-agent-running"></span></div>
+                  <div class="dash-agent"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Auth Scoring <span class="dash-agent-dot dash-agent-running"></span></div>
+                  <div class="dash-agent"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> EHR Sync <span class="dash-agent-dot dash-agent-done"></span></div>
+                  <div class="dash-agent"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Claim Builder <span class="dash-agent-dot dash-agent-idle"></span></div>
+                  <div class="dash-agent"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> Monitoring <span class="dash-agent-dot dash-agent-idle"></span></div>
+                </div>
+                <div class="dash-sidebar-user">
+                  <div class="dash-user-avatar">S</div>
+                  <div class="dash-user-info">
+                    <span class="dash-user-name">Staff</span>
+                    <span class="dash-user-role">Admin</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Main Content -->
+              <div class="dash-main">
+                <div class="dash-header">
+                  <div>
+                    <div class="dash-title">Dashboard</div>
+                    <div class="dash-subtitle">Unified practice automation &mdash; real-time overview</div>
+                  </div>
+                </div>
+                <!-- KPI Cards -->
+                <div class="dash-kpis">
+                  <div class="dash-kpi">
+                    <div class="dash-kpi-label">Active Pipeline</div>
+                    <div class="dash-kpi-value">5</div>
+                  </div>
+                  <div class="dash-kpi">
+                    <div class="dash-kpi-label">AI Finalized</div>
+                    <div class="dash-kpi-value">84%</div>
+                  </div>
+                  <div class="dash-kpi">
+                    <div class="dash-kpi-label">Pending Auth</div>
+                    <div class="dash-kpi-value">1</div>
+                  </div>
+                  <div class="dash-kpi">
+                    <div class="dash-kpi-label">Avg Cycle Time</div>
+                    <div class="dash-kpi-value">4.2h</div>
+                  </div>
+                </div>
+                <!-- Three-column cards -->
+                <div class="dash-cards-row">
+                  <div class="dash-card">
+                    <div class="dash-card-title"><span class="dash-icon-amber">&#x26A0;</span> Critical Action Queue</div>
+                    <div class="dash-attention-item">
+                      <div class="dash-attention-title">Auth expiring &mdash; R. Morales</div>
+                      <div class="dash-attention-sub">UHC prior auth lapses in 2 days</div>
+                    </div>
+                    <div class="dash-attention-item">
+                      <div class="dash-attention-title">Missing labs &mdash; T. Nguyen</div>
+                      <div class="dash-attention-sub">Pre-op CBC required by 02/24</div>
+                    </div>
+                    <div class="dash-attention-item">
+                      <div class="dash-attention-title">Claim denied &mdash; J. Harris</div>
+                      <div class="dash-attention-sub">Aetna CO-4, needs modifier</div>
+                    </div>
+                  </div>
+                  <div class="dash-card">
+                    <div class="dash-card-title"><span class="dash-icon-blue">&#x26A1;</span> Workflow Fast-Track</div>
+                    <div class="dash-pipeline-item"><span>Process Fax</span><span class="dash-pill dash-pill-blue">3 queued</span></div>
+                    <div class="dash-pipeline-item"><span>Verify Eligibility</span><span class="dash-pill dash-pill-green">Auto</span></div>
+                    <div class="dash-pipeline-item"><span>Bulk SMS</span><span class="dash-pill dash-pill-amber">12 pending</span></div>
+                    <div class="dash-pipeline-item"><span>Overdue Auth</span><span class="dash-pill dash-pill-purple">1 alert</span></div>
+                  </div>
+                  <div class="dash-card">
+                    <div class="dash-card-title">Network Connectivity</div>
+                    <div class="dash-activity-item">
+                      <span class="dash-agent-dot dash-agent-done"></span>
+                      <div class="dash-activity-info">
+                        <div class="dash-activity-name">UnitedHealthcare</div>
+                        <div class="dash-activity-detail">ERA + Eligibility active</div>
+                      </div>
+                      <span class="dash-pill dash-pill-green">Live</span>
+                    </div>
+                    <div class="dash-activity-item">
+                      <span class="dash-agent-dot dash-agent-done"></span>
+                      <div class="dash-activity-info">
+                        <div class="dash-activity-name">Aetna</div>
+                        <div class="dash-activity-detail">Claims + Auth portal</div>
+                      </div>
+                      <span class="dash-pill dash-pill-green">Live</span>
+                    </div>
+                    <div class="dash-activity-item">
+                      <span class="dash-agent-dot dash-agent-running"></span>
+                      <div class="dash-activity-info">
+                        <div class="dash-activity-name">BlueCross</div>
+                        <div class="dash-activity-detail">Syncing formulary...</div>
+                      </div>
+                      <span class="dash-pill dash-pill-blue">Sync</span>
+                    </div>
+                    <div class="dash-activity-item">
+                      <span class="dash-agent-dot dash-agent-done"></span>
+                      <div class="dash-activity-info">
+                        <div class="dash-activity-name">Cigna</div>
+                        <div class="dash-activity-detail">All channels active</div>
+                      </div>
+                      <span class="dash-pill dash-pill-green">Live</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Bottom row: Autopilot + Daily Productivity -->
+                <div class="dash-bottom-row">
+                  <div class="dash-card dash-card-wide">
+                    <div class="dash-card-title">Synaipse Autopilot Monitor</div>
+                    <div class="dash-table">
+                      <div class="dash-table-header">
+                        <span>Module</span><span>Status</span><span>Metric</span><span>Version</span>
+                      </div>
+                      <div class="dash-table-row">
+                        <span>OCR Queue</span><span class="dash-pill dash-pill-blue">Processing</span><span>128 pages</span><span>v3.1</span>
+                      </div>
+                      <div class="dash-table-row">
+                        <span>Auth Scoring</span><span class="dash-pill dash-pill-green">Active</span><span>94.8%</span><span>v2.7</span>
+                      </div>
+                      <div class="dash-table-row">
+                        <span>EHR Sync</span><span class="dash-pill dash-pill-green">Active</span><span>Bi-dir</span><span>v2.4</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dash-card">
+                    <div class="dash-card-title">Daily Productivity</div>
+                    <div class="dash-renewal-item">
+                      <div class="dash-renewal-label">Tasks completed</div>
+                      <div class="dash-renewal-bar"><div class="dash-renewal-fill dash-renewal-ok" style="width:78%"></div></div>
+                      <div class="dash-renewal-days">47</div>
+                    </div>
+                    <div class="dash-renewal-item">
+                      <div class="dash-renewal-label">Avg response</div>
+                      <div class="dash-renewal-bar"><div class="dash-renewal-fill dash-renewal-ok" style="width:92%"></div></div>
+                      <div class="dash-renewal-days">1.2m</div>
+                    </div>
+                    <div class="dash-renewal-item">
+                      <div class="dash-renewal-label">Auto-resolved</div>
+                      <div class="dash-renewal-bar"><div class="dash-renewal-fill dash-renewal-warning" style="width:64%"></div></div>
+                      <div class="dash-renewal-days">64%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -365,6 +527,36 @@
             <li>Collections follow-up</li>
           </ul>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EHR Integrations Strip -->
+  <section class="ehr-strip-section" aria-label="EHR Integrations">
+    <div class="container">
+      <p class="ehr-strip-subtitle">Bidirectional sync with leading EHR systems</p>
+    </div>
+    <div class="ehr-marquee" aria-hidden="true">
+      <div class="ehr-marquee-track">
+        <span class="ehr-vendor" style="font-weight:700;">Epic</span>
+        <span class="ehr-vendor" style="font-weight:600; font-style:italic;">athenahealth</span>
+        <span class="ehr-vendor" style="font-weight:700;">NextGen</span>
+        <span class="ehr-vendor" style="font-weight:700; letter-spacing:-0.3px;">Cerner</span>
+        <span class="ehr-vendor" style="font-weight:600;">eClinicalWorks</span>
+        <span class="ehr-vendor" style="font-weight:700;">Modernizing Medicine</span>
+        <span class="ehr-vendor" style="font-weight:700; letter-spacing:0.3px;">Veradigm</span>
+        <span class="ehr-vendor" style="font-weight:600;">Greenway</span>
+        <span class="ehr-vendor" style="font-weight:700;">AdvancedMD</span>
+        <!-- Duplicate for seamless loop -->
+        <span class="ehr-vendor" style="font-weight:700;">Epic</span>
+        <span class="ehr-vendor" style="font-weight:600; font-style:italic;">athenahealth</span>
+        <span class="ehr-vendor" style="font-weight:700;">NextGen</span>
+        <span class="ehr-vendor" style="font-weight:700; letter-spacing:-0.3px;">Cerner</span>
+        <span class="ehr-vendor" style="font-weight:600;">eClinicalWorks</span>
+        <span class="ehr-vendor" style="font-weight:700;">Modernizing Medicine</span>
+        <span class="ehr-vendor" style="font-weight:700; letter-spacing:0.3px;">Veradigm</span>
+        <span class="ehr-vendor" style="font-weight:600;">Greenway</span>
+        <span class="ehr-vendor" style="font-weight:700;">AdvancedMD</span>
       </div>
     </div>
   </section>
