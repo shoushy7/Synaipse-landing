@@ -1385,55 +1385,35 @@ nav.scrolled {
   margin-top: 2px;
 }
 
-/* ---------- Credentialing: Integration Logos ---------- */
-.cred-integrations {
-  padding: 56px 0;
-  background: var(--white);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-
-.cred-integrations-label {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: var(--grey);
-  text-align: center;
-  margin-bottom: 32px;
-}
-
-.cred-integrations-row {
-  display: flex;
+/* ---------- Credentialing: Integration Logos (inline with feature) ---------- */
+.cred-integration-inner {
+  grid-template-columns: 280px 1fr;
+  max-width: 960px;
+  gap: 48px;
   align-items: center;
-  justify-content: center;
-  gap: 64px;
-  flex-wrap: wrap;
+}
+
+.cred-integration-logos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
 }
 
 .cred-integration-logo {
-  color: var(--grey);
-  opacity: 0.6;
   transition: opacity 0.3s ease;
 }
 
-.cred-integration-logo:hover {
-  opacity: 1;
-}
-
-.cred-integration-logo svg {
-  height: 44px;
-  width: auto;
-}
-
-/* CAQH & NPPES logos use brand colors, not currentColor — need separate sizing */
 .cred-integration-logo--caqh svg {
-  height: 48px;
+  height: 64px;
+  width: auto;
+  display: block;
 }
 
 .cred-integration-logo--nppes svg {
-  height: 52px;
+  height: 72px;
+  width: auto;
+  display: block;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -1455,17 +1435,24 @@ nav.scrolled {
     letter-spacing: 3px;
     font-size: 12px;
   }
-  .cred-integrations-row {
-    gap: 40px;
+}
+
+@media (max-width: 768px) {
+  .cred-integration-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
-  .cred-integration-logo svg {
-    height: 36px;
+  .cred-integration-logos {
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
   }
   .cred-integration-logo--caqh svg {
-    height: 40px;
+    height: 52px;
   }
   .cred-integration-logo--nppes svg {
-    height: 42px;
+    height: 56px;
   }
 }
 
