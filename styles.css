@@ -1339,6 +1339,114 @@ nav.scrolled {
   margin-bottom: 32px;
 }
 
+/* ---------- Credentialing: Product Logo in Hero ---------- */
+.cred-hero .about-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cred-logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.cred-logo-icon {
+  flex-shrink: 0;
+}
+
+.cred-logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.cred-logo-wordmark {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--slate);
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+.cred-logo-ai {
+  color: var(--blue-primary);
+}
+
+.cred-logo-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-top: 2px;
+}
+
+/* ---------- Credentialing: Integration Logos ---------- */
+.cred-integrations {
+  padding: 56px 0;
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.cred-integrations-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--grey);
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.cred-integrations-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  flex-wrap: wrap;
+}
+
+.cred-integration-logo {
+  color: var(--grey);
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.cred-integration-logo:hover {
+  opacity: 0.8;
+}
+
+.cred-integration-logo svg {
+  height: 44px;
+  width: auto;
+}
+
+@media (max-width: 640px) {
+  .cred-logo {
+    flex-direction: column;
+    text-align: center;
+  }
+  .cred-logo-wordmark {
+    font-size: 30px;
+  }
+  .cred-logo-sub {
+    letter-spacing: 3px;
+    font-size: 12px;
+  }
+  .cred-integrations-row {
+    gap: 40px;
+  }
+  .cred-integration-logo svg {
+    height: 36px;
+  }
+}
+
 /* ---------- Credentialing: How It Works Steps ---------- */
 .cred-how-it-works {
   padding: 100px 0;
