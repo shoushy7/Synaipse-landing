@@ -1790,9 +1790,9 @@ nav.scrolled {
   height: auto;
 }
 
-/* HIPAA horizontal lockup is wider */
+/* HIPAA vertical stacked badge */
 .compliance-badge--hipaa svg {
-  width: 220px;
+  width: 160px;
 }
 
 .compliance-badge-label {
@@ -1819,7 +1819,7 @@ nav.scrolled {
   }
 
   .compliance-badge--hipaa svg {
-    width: 170px;
+    width: 120px;
   }
 
   .compliance-badge-label {
