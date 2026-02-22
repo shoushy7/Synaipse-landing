@@ -374,17 +374,47 @@
     <div class="container">
       <div class="compliance-badges-inner">
         <div class="compliance-badge" aria-label="HIPAA Compliant">
-          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M40 6l28 12v20c0 18-12 32-28 38C24 70 12 56 12 38V18L40 6z" fill="#00629B" fill-opacity="0.1" stroke="#00629B" stroke-width="3"/>
-            <path d="M30 40l7 7 13-14" stroke="#00629B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <svg viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Caduceus: winged staff with two serpents -->
+            <line x1="60" y1="28" x2="60" y2="115" stroke="#00629B" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="60" cy="116" r="3.5" fill="#00629B"/>
+            <!-- Left wing -->
+            <path d="M58 30 C54 26, 42 18, 30 16 C24 15, 18 17, 16 22 C14 27, 18 30, 24 28 C30 26, 36 22, 40 20" stroke="#00629B" stroke-width="2" fill="#00629B" fill-opacity="0.08"/>
+            <path d="M56 34 C52 30, 40 24, 30 23 C25 22.5, 20 24, 19 28 C18 32, 22 34, 27 32 C32 30, 38 27, 42 25" stroke="#00629B" stroke-width="1.5" fill="#00629B" fill-opacity="0.06"/>
+            <path d="M55 38 C51 35, 42 30, 34 30 C30 30, 26 32, 26 35 C26 38, 29 39, 33 37 C37 35, 42 32, 46 30" stroke="#00629B" stroke-width="1.5" fill="#00629B" fill-opacity="0.04"/>
+            <!-- Right wing -->
+            <path d="M62 30 C66 26, 78 18, 90 16 C96 15, 102 17, 104 22 C106 27, 102 30, 96 28 C90 26, 84 22, 80 20" stroke="#00629B" stroke-width="2" fill="#00629B" fill-opacity="0.08"/>
+            <path d="M64 34 C68 30, 80 24, 90 23 C95 22.5, 100 24, 101 28 C102 32, 98 34, 93 32 C88 30, 82 27, 78 25" stroke="#00629B" stroke-width="1.5" fill="#00629B" fill-opacity="0.06"/>
+            <path d="M65 38 C69 35, 78 30, 86 30 C90 30, 94 32, 94 35 C94 38, 91 39, 87 37 C83 35, 78 32, 74 30" stroke="#00629B" stroke-width="1.5" fill="#00629B" fill-opacity="0.04"/>
+            <!-- Left serpent -->
+            <path d="M60 38 C50 42, 44 50, 50 56 C56 62, 60 58, 60 62 C60 66, 50 68, 44 74 C38 80, 48 88, 56 84 C60 82, 60 86, 60 90 C60 94, 50 96, 46 100 C42 104, 50 112, 58 108" stroke="#00629B" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <!-- Right serpent -->
+            <path d="M60 38 C70 42, 76 50, 70 56 C64 62, 60 58, 60 62 C60 66, 70 68, 76 74 C82 80, 72 88, 64 84 C60 82, 60 86, 60 90 C60 94, 70 96, 74 100 C78 104, 70 112, 62 108" stroke="#00629B" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <circle cx="60" cy="28" r="4" fill="#00629B" fill-opacity="0.15" stroke="#00629B" stroke-width="1.5"/>
+            <text x="60" y="136" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" fill="#00629B" letter-spacing="2">HIPAA</text>
           </svg>
           <span class="compliance-badge-label">HIPAA Compliant</span>
         </div>
         <div class="compliance-badge" aria-label="SOC 2 Type II">
-          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <circle cx="40" cy="40" r="32" fill="#00629B" fill-opacity="0.1" stroke="#00629B" stroke-width="3"/>
-            <path d="M40 20v20l12 8" stroke="#00629B" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-            <circle cx="40" cy="40" r="3" fill="#00629B"/>
+          <svg viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <path id="soc-arc-top-a" d="M 70 70 m -52 0 a 52 52 0 1 1 104 0" />
+              <path id="soc-arc-bot-a" d="M 70 70 m 48 0 a 48 48 0 1 1 -96 0" />
+            </defs>
+            <circle cx="70" cy="70" r="62" stroke="#00629B" stroke-width="2" fill="none"/>
+            <circle cx="70" cy="70" r="44" stroke="#00629B" stroke-width="1.5" fill="#00629B" fill-opacity="0.04"/>
+            <text font-family="'DM Sans', sans-serif" font-size="8.5" fill="#00629B" font-weight="500" letter-spacing="1.5">
+              <textPath href="#soc-arc-top-a" startOffset="50%" text-anchor="middle">SOC FOR SERVICE ORGANIZATIONS</textPath>
+            </text>
+            <text font-family="'DM Sans', sans-serif" font-size="8" fill="#00629B" font-weight="500" letter-spacing="1">
+              <textPath href="#soc-arc-bot-a" startOffset="50%" text-anchor="middle">aicpa.org/soc4so</textPath>
+            </text>
+            <circle cx="19" cy="70" r="2" fill="#00629B" fill-opacity="0.5"/>
+            <circle cx="121" cy="70" r="2" fill="#00629B" fill-opacity="0.5"/>
+            <text x="70" y="60" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="16" font-weight="700" fill="#00629B" letter-spacing="1">AICPA</text>
+            <line x1="45" y1="66" x2="95" y2="66" stroke="#00629B" stroke-width="1" stroke-opacity="0.4"/>
+            <text x="70" y="82" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="18" font-weight="800" fill="#00629B" letter-spacing="1.5">SOC</text>
+            <text x="70" y="130" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="10" font-weight="600" fill="#00629B" letter-spacing="1.5">SOC 2 TYPE II</text>
           </svg>
           <span class="compliance-badge-label">SOC 2 Type II</span>
         </div>
