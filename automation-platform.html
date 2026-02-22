@@ -165,13 +165,102 @@
             <span class="titlebar-text">Synaipse &mdash; Unified Practice Dashboard</span>
           </div>
           <div class="preview-frame-body">
-            <div class="preview-placeholder">
-              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-              <span class="preview-placeholder-title">Full Platform Demo Coming Soon</span>
-              <span class="preview-placeholder-sub">See how Synaipse replaces your entire workflow stack in a single browser tab.</span>
-            </div>
+            <img src="images/synaipse-automation-platform.png" alt="Synaipse Automation Platform dashboard showing workspace, critical action queue, autopilot monitor, and network connectivity" style="width:100%; display:block;" loading="lazy">
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Patient Journey Timeline -->
+  <section class="timeline" id="journey">
+    <div class="container">
+      <header class="section-header reveal">
+        <div class="section-label">Patient Journey</div>
+        <h2 class="section-title">Automated From <span class="highlight">Referral to Revenue</span></h2>
+        <p class="section-sub">Click a phase to explore how Synaipse automates every step of the patient journey.</p>
+      </header>
+
+      <div class="timeline-track" role="tablist" aria-label="Patient journey phases">
+        <div class="timeline-line" aria-hidden="true"></div>
+
+        <button class="timeline-node active" role="tab" aria-selected="true" aria-controls="panel-intake" id="tab-intake" data-phase="intake">
+          <span class="timeline-node-dot"></span>
+          <span class="timeline-node-label">Intake</span>
+        </button>
+        <button class="timeline-node" role="tab" aria-selected="false" aria-controls="panel-visit" id="tab-visit" data-phase="visit">
+          <span class="timeline-node-dot"></span>
+          <span class="timeline-node-label">Clinical Visit</span>
+        </button>
+        <button class="timeline-node" role="tab" aria-selected="false" aria-controls="panel-surgery" id="tab-surgery" data-phase="surgery">
+          <span class="timeline-node-dot"></span>
+          <span class="timeline-node-label">Surgery Scheduling</span>
+        </button>
+        <button class="timeline-node" role="tab" aria-selected="false" aria-controls="panel-pa" id="tab-pa" data-phase="pa">
+          <span class="timeline-node-dot"></span>
+          <span class="timeline-node-label">Prior Auth</span>
+        </button>
+        <button class="timeline-node" role="tab" aria-selected="false" aria-controls="panel-rcm" id="tab-rcm" data-phase="rcm">
+          <span class="timeline-node-dot"></span>
+          <span class="timeline-node-label">RCM</span>
+        </button>
+      </div>
+
+      <div class="timeline-panels">
+        <div class="timeline-panel active" role="tabpanel" id="panel-intake" aria-labelledby="tab-intake">
+          <h3>Intake Automation</h3>
+          <p>From the moment a referral arrives, Synaipse takes over &mdash; gathering records, verifying coverage, and getting the patient on the schedule.</p>
+          <ul>
+            <li>Referral receipt and processing</li>
+            <li>Medical record gathering</li>
+            <li>Insurance verification</li>
+            <li>Smart scheduling</li>
+          </ul>
+        </div>
+        <div class="timeline-panel" role="tabpanel" id="panel-visit" aria-labelledby="tab-visit" hidden>
+          <h3>Clinical Visit Intelligence</h3>
+          <p>AI-powered tools that support every moment of the clinical encounter &mdash; so providers stay focused on the patient.</p>
+          <ul>
+            <li>Automated pre-visit patient intake</li>
+            <li>Patient summarization &amp; HPI drafting</li>
+            <li>Ambient scribing</li>
+            <li>Automated E&amp;M coding &amp; billing</li>
+          </ul>
+        </div>
+        <div class="timeline-panel" role="tabpanel" id="panel-surgery" aria-labelledby="tab-surgery" hidden>
+          <h3>Surgery Scheduling Assistant</h3>
+          <p>A smart assistant that bridges the gap between the surgeon and the OR &mdash; collecting the details your clinic note doesn't capture.</p>
+          <ul>
+            <li>Collects procedure details not in clinic note</li>
+            <li>Identifies required supplies, location, and reps</li>
+            <li>Assesses urgency level</li>
+            <li>Coordinates with secretary to schedule with hospital</li>
+          </ul>
+        </div>
+        <div class="timeline-panel" role="tabpanel" id="panel-pa" aria-labelledby="tab-pa" hidden>
+          <h3>Prior Authorization Engine</h3>
+          <p>End-to-end prior authorization handled autonomously &mdash; from packet assembly to payer submission to status tracking.</p>
+          <ul>
+            <li>Authorization packet preparation</li>
+            <li>Electronic submission to payers</li>
+            <li>Real-time status tracking</li>
+          </ul>
+        </div>
+        <div class="timeline-panel" role="tabpanel" id="panel-rcm" aria-labelledby="tab-rcm" hidden>
+          <h3>Revenue Cycle Management</h3>
+          <p>From operative note to collected payment &mdash; the full revenue cycle automated end to end.</p>
+          <ul>
+            <li>Operative note coding</li>
+            <li>Claim preparation, submission, and tracking</li>
+            <li>Claim denial management and appeals</li>
+            <li>Collections follow-up</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-sync-note">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+        <span>Every step syncs bidirectionally with your EHR in real time</span>
       </div>
     </div>
   </section>
@@ -275,6 +364,29 @@
             <li>Claim denial management and appeals</li>
             <li>Collections follow-up</li>
           </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compliance Badges -->
+  <section class="compliance-badges">
+    <div class="container">
+      <div class="compliance-badges-inner">
+        <div class="compliance-badge" aria-label="HIPAA Compliant">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M40 6l28 12v20c0 18-12 32-28 38C24 70 12 56 12 38V18L40 6z" fill="#00629B" fill-opacity="0.1" stroke="#00629B" stroke-width="3"/>
+            <path d="M30 40l7 7 13-14" stroke="#00629B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+          <span class="compliance-badge-label">HIPAA Compliant</span>
+        </div>
+        <div class="compliance-badge" aria-label="SOC 2 Type II">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="40" cy="40" r="32" fill="#00629B" fill-opacity="0.1" stroke="#00629B" stroke-width="3"/>
+            <path d="M40 20v20l12 8" stroke="#00629B" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <circle cx="40" cy="40" r="3" fill="#00629B"/>
+          </svg>
+          <span class="compliance-badge-label">SOC 2 Type II</span>
         </div>
       </div>
     </div>

@@ -1757,6 +1757,67 @@ nav.scrolled {
   opacity: 0.5;
 }
 
+/* ---------- Compliance / Certification Badges ---------- */
+.compliance-badges {
+  padding: 48px 0;
+  background: var(--bg);
+  border-top: 1px solid rgba(0, 98, 155, 0.08);
+}
+
+.compliance-badges-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.compliance-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.compliance-badge:hover {
+  opacity: 1;
+}
+
+.compliance-badge svg {
+  width: 56px;
+  height: 56px;
+}
+
+.compliance-badge-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--blue-primary);
+}
+
+@media (max-width: 600px) {
+  .compliance-badges {
+    padding: 32px 0;
+  }
+
+  .compliance-badges-inner {
+    gap: 32px;
+  }
+
+  .compliance-badge svg {
+    width: 44px;
+    height: 44px;
+  }
+
+  .compliance-badge-label {
+    font-size: 11px;
+  }
+}
+
 /* Product page CTA */
 .product-cta {
   padding: 80px 0;
