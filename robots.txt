@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /_vercel/
 
+# Sitemap
 Sitemap: https://synaipse.org/sitemap.xml
