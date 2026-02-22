@@ -1790,6 +1790,11 @@ nav.scrolled {
   height: auto;
 }
 
+/* HIPAA horizontal lockup is wider */
+.compliance-badge--hipaa svg {
+  width: 200px;
+}
+
 .compliance-badge-label {
   font-family: 'DM Sans', sans-serif;
   font-size: 13px;
@@ -1811,6 +1816,10 @@ nav.scrolled {
   .compliance-badge svg {
     width: 72px;
     height: auto;
+  }
+
+  .compliance-badge--hipaa svg {
+    width: 160px;
   }
 
   .compliance-badge-label {
