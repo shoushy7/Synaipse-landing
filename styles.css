@@ -1414,17 +1414,28 @@ nav.scrolled {
 
 .cred-integration-logo {
   color: var(--grey);
-  opacity: 0.5;
+  opacity: 0.6;
   transition: opacity 0.3s ease;
 }
 
 .cred-integration-logo:hover {
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .cred-integration-logo svg {
   height: 44px;
   width: auto;
+}
+
+/* CAQH logo uses brand colors, not currentColor — needs separate sizing */
+.cred-integration-logo--caqh svg {
+  height: 48px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .cred-integration-logo--caqh {
+    filter: brightness(1.6) saturate(0.8);
+  }
 }
 
 @media (max-width: 640px) {
@@ -1444,6 +1455,9 @@ nav.scrolled {
   }
   .cred-integration-logo svg {
     height: 36px;
+  }
+  .cred-integration-logo--caqh svg {
+    height: 40px;
   }
 }
 
