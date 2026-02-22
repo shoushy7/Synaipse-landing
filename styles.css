@@ -3042,12 +3042,19 @@ footer {
   width: auto;
 }
 
+.institution-logo--mayo svg {
+  height: 72px;
+}
+
 @media (max-width: 768px) {
   .institution-logos-row {
     gap: 24px;
   }
   .institution-logo svg {
     height: 28px;
+  }
+  .institution-logo--mayo svg {
+    height: 56px;
   }
 }
 
