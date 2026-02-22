@@ -1427,13 +1427,18 @@ nav.scrolled {
   width: auto;
 }
 
-/* CAQH logo uses brand colors, not currentColor — needs separate sizing */
+/* CAQH & NPPES logos use brand colors, not currentColor — need separate sizing */
 .cred-integration-logo--caqh svg {
   height: 48px;
 }
 
+.cred-integration-logo--nppes svg {
+  height: 52px;
+}
+
 @media (prefers-color-scheme: dark) {
-  .cred-integration-logo--caqh {
+  .cred-integration-logo--caqh,
+  .cred-integration-logo--nppes {
     filter: brightness(1.6) saturate(0.8);
   }
 }
@@ -1458,6 +1463,9 @@ nav.scrolled {
   }
   .cred-integration-logo--caqh svg {
     height: 40px;
+  }
+  .cred-integration-logo--nppes svg {
+    height: 42px;
   }
 }
 
