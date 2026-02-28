@@ -9024,9 +9024,10 @@ details[open] > .roi-assumption-summary::after {
   min-height: 100%;
 }
 
-.cj-stage:last-of-type .cj-stage-line { display: none; }
+.cj-stage:last-of-type .cj-stage-line { visibility: hidden; }
 
 .cj-stage-content {
+  grid-column: 3;
   padding-bottom: 48px;
 }
 

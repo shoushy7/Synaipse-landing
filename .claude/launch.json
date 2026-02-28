@@ -4,7 +4,7 @@
     {
       "name": "static-server",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "-p", "3000", "."],
+      "runtimeArgs": ["serve", "-p", "3000", "/Users/soliman/Documents/Claude/Synaipse-landing"],
       "port": 3000
     }
   ]
