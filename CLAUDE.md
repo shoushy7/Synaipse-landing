@@ -21,15 +21,15 @@ document.head.insertAdjacentHTML('beforeend','<style>.reveal,.reveal-left,.revea
 
 ## File Structure
 ```
-index.html + 14 other pages   # see list below
-styles.css                     # single stylesheet (~6,500+ lines)
+index.html + 21 other pages   # see list below
+styles.css                     # single stylesheet (~9,500+ lines)
 main.js                        # single shared JS file (~235 lines)
 vercel.json                    # security headers (CSP, X-Frame-Options, etc.)
 sitemap.xml / robots.txt       # SEO
 images/                        # logos, founder photos
 ```
 
-**15 HTML pages:** `index`, `about`, `advisory-board`, `ambient-scribe`, `automation-platform`, `blog`, `careers`, `credentialing`, `customers`, `investors`, `media`, `news`, `partnerships`, `pricing`, `testimonials`
+**22 HTML pages:** `index`, `about`, `advisory-board`, `ambient-scribe`, `automation-platform`, `blog`, `careers`, `claim-journey`, `credentialing`, `customers`, `day-in-the-life`, `denial-explorer`, `health-score`, `investors`, `media`, `news`, `partnerships`, `pricing`, `resources`, `roi-calculator`, `testimonials`, `trust`
 
 ## CSS Architecture
 All styles live in `styles.css` — no separate files, no preprocessor.
@@ -77,9 +77,10 @@ Everything wrapped in an IIFE: `(function() { 'use strict'; ... })()` — no ext
 When updating nav or footer, **every HTML file must be updated**.
 
 Current nav groups:
-- **Company** (4 items): About Us, Customers, Partnerships, Clinical Advisory Board
-- **Products** (4 items): Automation Platform, Credentialing, Ambient Scribe, Pricing
-- **Resources** (5 items): Blog, Customer Testimonials, News, Media, Investors
+- **Company** (4 items): About Us, Customers, Partnerships, Trust & Security
+- **Products** (4 items): Automation Platform, Credentialing, Ambient Scribe (Coming Soon), Pricing
+- **Resources** (5 items): Knowledge Base, Customer Testimonials, News, Media, Investors
+- **Tools** (3 items): ROI Calculator, Denial Code Explorer, Practice Health Score
 - Plus standalone: Careers, Contact, Request Demo (CTA)
 
 Active page: set `aria-current="page"` on the correct `<a>` tag.
@@ -90,7 +91,7 @@ Active page: set `aria-current="page"` on the correct `<a>` tag.
 3. Update JSON-LD structured data
 4. Set `aria-current="page"` on the correct nav link in the new page
 5. Add the new URL to `sitemap.xml`
-6. Add a nav link on **all 15 existing pages**
+6. Add a nav link on **all 22 existing pages**
 
 ## SEO Conventions
 Every page must have: title tag, meta description, `og:*`, `twitter:card`, canonical link, JSON-LD.

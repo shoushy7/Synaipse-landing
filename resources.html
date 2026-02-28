@@ -5,24 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO Meta Tags -->
-  <title>Blog | Synaipse - AI Healthcare Operations Insights</title>
-  <meta name="description" content="Insights on AI-powered healthcare operations, revenue cycle management, prior authorization automation, and patient communication. Learn how AI is transforming medical practice efficiency.">
-  <meta name="keywords" content="healthcare AI blog, prior authorization AI, revenue cycle management, denial management AI, healthcare automation insights, medical billing AI, EHR integration">
+  <title>Knowledge Base | Synaipse - Healthcare AI Resources &amp; Insights</title>
+  <meta name="description" content="Comprehensive resource library for healthcare professionals. Articles, guides, tools, and regulatory updates to help your practice thrive with AI-powered automation.">
+  <meta name="keywords" content="healthcare AI resources, prior authorization guide, revenue cycle management, denial management AI, healthcare automation insights, medical billing AI, HIPAA compliance AI">
   <meta name="author" content="Synaipse Inc.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://synaipse.org/blog">
+  <link rel="canonical" href="https://synaipse.org/resources">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://synaipse.org/blog">
-  <meta property="og:title" content="Blog | Synaipse - AI Healthcare Operations Insights">
-  <meta property="og:description" content="Insights on AI-powered healthcare operations, revenue cycle management, and patient communication automation.">
+  <meta property="og:url" content="https://synaipse.org/resources">
+  <meta property="og:title" content="Knowledge Base | Synaipse - Healthcare AI Resources &amp; Insights">
+  <meta property="og:description" content="Articles, guides, tools, and regulatory updates to help your practice thrive with AI-powered healthcare automation.">
   <meta property="og:image" content="https://synaipse.org/og-image.png">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Blog | Synaipse - AI Healthcare Operations Insights">
-  <meta name="twitter:description" content="Insights on AI-powered healthcare operations, revenue cycle management, and patient communication automation.">
+  <meta name="twitter:title" content="Knowledge Base | Synaipse - Healthcare AI Resources &amp; Insights">
+  <meta name="twitter:description" content="Articles, guides, tools, and regulatory updates to help your practice thrive with AI-powered healthcare automation.">
   <meta name="twitter:image" content="https://synaipse.org/og-image.png">
 
   <!-- Fonts -->
@@ -33,36 +33,15 @@
   <!-- Shared Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 
-  <!-- Structured Data for Blog -->
+  <!-- Breadcrumb Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "Synaipse Blog",
-    "description": "Insights on AI-powered healthcare operations",
-    "url": "https://synaipse.org/blog",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Synaipse Inc.",
-      "url": "https://synaipse.org",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://synaipse.org/logo.svg"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Cincinnati",
-        "addressRegion": "OH",
-        "addressCountry": "US"
-      }
-    },
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://synaipse.org/" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://synaipse.org/blog" }
-      ]
-    }
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://synaipse.org/" },
+      { "@type": "ListItem", "position": 2, "name": "Knowledge Base", "item": "https://synaipse.org/resources" }
+    ]
   }
   </script>
 </head>
@@ -204,26 +183,47 @@
   </div>
 
   <!-- ================================================================
-       BLOG HERO — Editorial magazine-style header
+       KNOWLEDGE BASE HERO
        ================================================================ -->
-  <header class="blg-hero" id="main">
+  <header class="kb-hero blg-hero" id="main">
     <div class="container">
       <div class="blg-hero-inner">
         <div class="blg-hero-label">
           <span class="blg-hero-dot"></span>
-          The Synaipse Journal
+          Knowledge Base
         </div>
-        <h1 class="blg-hero-title">Insights at the<br>Intersection of <span class="blg-hero-em">AI</span> &amp; <span class="blg-hero-em">Medicine</span></h1>
-        <p class="blg-hero-sub">Expert perspectives on prior authorization automation, revenue cycle intelligence, and the future of healthcare operations.</p>
+        <h1 class="blg-hero-title">Resources at the<br>Intersection of <span class="blg-hero-em">AI</span> &amp; Medicine</h1>
+        <p class="blg-hero-sub">Articles, guides, tools, and regulatory updates to help your practice thrive in the age of healthcare automation.</p>
+        <a href="#subscribe" class="kb-subscribe-pill blg-subscribe-pill">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Subscribe for Updates
+        </a>
       </div>
     </div>
     <div class="blg-hero-grid-bg" aria-hidden="true"></div>
   </header>
 
   <!-- ================================================================
-       FEATURED ARTICLE — Large hero card for the latest post
+       CATEGORY NAVIGATION
        ================================================================ -->
-  <section class="blg-featured">
+  <section class="kb-categories blg-grid-section">
+    <div class="container">
+      <div class="kb-category-nav">
+        <button class="kb-category-btn active" data-category="all">All</button>
+        <button class="kb-category-btn" data-category="articles">Articles</button>
+        <button class="kb-category-btn" data-category="guides">Guides</button>
+        <button class="kb-category-btn" data-category="regulatory">Regulatory</button>
+        <button class="kb-category-btn" data-category="tools">Tools</button>
+        <button class="kb-category-btn" data-category="revenue-cycle">Revenue Cycle</button>
+        <button class="kb-category-btn" data-category="denial-management">Denial Management</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       FEATURED RESOURCE
+       ================================================================ -->
+  <section class="kb-featured blg-featured">
     <div class="container">
       <a href="#post-3" class="blg-featured-card" aria-label="Read featured article: CMS 0057-F">
         <div class="blg-featured-badge">
@@ -257,12 +257,12 @@
   </section>
 
   <!-- ================================================================
-       ARTICLE GRID — Remaining posts in editorial card layout
+       RESOURCE GRID
        ================================================================ -->
-  <section class="blg-grid-section">
+  <section class="kb-grid blg-grid-section">
     <div class="container">
       <div class="blg-grid-header">
-        <h2>Latest Articles</h2>
+        <h2>All Resources</h2>
         <a href="#subscribe" class="blg-subscribe-pill">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           Subscribe
@@ -270,8 +270,8 @@
       </div>
 
       <div class="blg-card-grid">
-        <!-- Card 1 -->
-        <a href="#post-1" class="blg-card" aria-label="Read article: How AI Is Transforming Prior Authorization">
+        <!-- Existing Blog Card 1: Prior Authorization -->
+        <a href="#post-1" class="blg-card kb-card" data-category="revenue-cycle" aria-label="Read article: How AI Is Transforming Prior Authorization">
           <div class="blg-card-top">
             <div class="blg-card-tag blg-card-tag--rcm">Revenue Cycle</div>
             <span class="blg-card-time">
@@ -290,8 +290,8 @@
           </div>
         </a>
 
-        <!-- Card 2 -->
-        <a href="#post-2" class="blg-card" aria-label="Read article: Reducing Revenue Leakage With Intelligent Denial Management">
+        <!-- Existing Blog Card 2: Denial Management -->
+        <a href="#post-2" class="blg-card kb-card" data-category="denial-management" aria-label="Read article: Reducing Revenue Leakage With Intelligent Denial Management">
           <div class="blg-card-top">
             <div class="blg-card-tag blg-card-tag--denial">Denial Management</div>
             <span class="blg-card-time">
@@ -309,14 +309,130 @@
             </span>
           </div>
         </a>
+
+        <!-- Existing Blog Card 3: CMS 0057-F (also featured above) -->
+        <a href="#post-3" class="blg-card kb-card" data-category="regulatory" aria-label="Read article: CMS 0057-F">
+          <div class="blg-card-top">
+            <div class="blg-card-tag blg-card-tag--reg">Regulatory</div>
+            <span class="blg-card-time">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              8 min
+            </span>
+          </div>
+          <h3>CMS 0057-F: What the Interoperability and Prior Authorization Final Rule Means for Your Practice</h3>
+          <p>The landmark CMS rule mandates FHIR-based APIs and faster prior auth decisions by 2027. Here's what providers need to know.</p>
+          <div class="blg-card-foot">
+            <span class="blg-card-date">February 22, 2026</span>
+            <span class="blg-card-arrow">
+              Read
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- New Card: Prior Authorization Checklist -->
+        <a href="#guide-pa-checklist" class="blg-card kb-card" data-category="guides" aria-label="Read guide: The Complete Prior Authorization Checklist for 2026">
+          <div class="blg-card-top">
+            <div class="blg-card-tag blg-card-tag--guide">Guide</div>
+          </div>
+          <h3>The Complete Prior Authorization Checklist for 2026</h3>
+          <p>Step-by-step checklist to streamline your PA process, whether you're using AI or not.</p>
+          <div class="blg-card-foot">
+            <span class="blg-card-date">Resource</span>
+            <span class="blg-card-arrow">
+              Read
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- New Card: ROI Calculator -->
+        <a href="roi-calculator.html" class="blg-card kb-card" data-category="tools" aria-label="Open tool: Practice ROI Calculator">
+          <div class="blg-card-top">
+            <div class="blg-card-tag blg-card-tag--tool">Tool</div>
+          </div>
+          <h3>Practice ROI Calculator</h3>
+          <p>Estimate your practice's savings with AI-powered automation. Interactive calculator with per-agent breakdown.</p>
+          <div class="blg-card-foot">
+            <span class="blg-card-date">Interactive Tool</span>
+            <span class="blg-card-arrow">
+              Open
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- New Card: Denial Code Explorer -->
+        <a href="denial-explorer.html" class="blg-card kb-card" data-category="tools" aria-label="Open tool: Denial Code Explorer">
+          <div class="blg-card-top">
+            <div class="blg-card-tag blg-card-tag--tool">Tool</div>
+          </div>
+          <h3>Denial Code Explorer</h3>
+          <p>Look up any denial reason code. Get plain-English explanations and see how AI handles appeals.</p>
+          <div class="blg-card-foot">
+            <span class="blg-card-date">Interactive Tool</span>
+            <span class="blg-card-arrow">
+              Open
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- New Card: Practice Health Score -->
+        <a href="health-score.html" class="blg-card kb-card" data-category="tools" aria-label="Open tool: Practice Health Score Quiz">
+          <div class="blg-card-top">
+            <div class="blg-card-tag blg-card-tag--tool">Tool</div>
+          </div>
+          <h3>Practice Health Score Quiz</h3>
+          <p>Take our 2-minute assessment to evaluate your revenue cycle health and get personalized recommendations.</p>
+          <div class="blg-card-foot">
+            <span class="blg-card-date">Interactive Tool</span>
+            <span class="blg-card-arrow">
+              Open
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- New Card: How a Medical Claim Works -->
+        <a href="claim-journey.html" class="blg-card kb-card" data-category="guides" aria-label="Read guide: How a Medical Claim Works">
+          <div class="blg-card-top">
+            <div class="blg-card-tag blg-card-tag--guide">Guide</div>
+          </div>
+          <h3>How a Medical Claim Works: The Complete Journey</h3>
+          <p>Follow a claim from patient intake to payment. Interactive guide showing where revenue leaks and where AI intervenes.</p>
+          <div class="blg-card-foot">
+            <span class="blg-card-date">Interactive Guide</span>
+            <span class="blg-card-arrow">
+              Open
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- New Card: HIPAA Compliance Guide -->
+        <a href="trust.html" class="blg-card kb-card" data-category="regulatory" aria-label="Read guide: HIPAA Compliance for AI-Powered Healthcare Tools">
+          <div class="blg-card-top">
+            <div class="blg-card-tag blg-card-tag--reg">Regulatory</div>
+          </div>
+          <h3>HIPAA Compliance for AI-Powered Healthcare Tools</h3>
+          <p>What practices need to know about HIPAA when adopting AI automation tools.</p>
+          <div class="blg-card-foot">
+            <span class="blg-card-date">Resource</span>
+            <span class="blg-card-arrow">
+              Read
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </span>
+          </div>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- ================================================================
-       IMPACT STRIP — Animated number ribbon
+       IMPACT STATS STRIP
        ================================================================ -->
-  <section class="blg-impact" aria-label="Key statistics">
+  <section class="kb-impact blg-impact" aria-label="Key statistics">
     <div class="container">
       <div class="blg-impact-grid">
         <div class="blg-impact-item">
@@ -727,15 +843,85 @@
   </article>
 
   <!-- ================================================================
+       INLINE GUIDE — Prior Authorization Checklist
+       ================================================================ -->
+  <article class="kb-guide article" id="guide-pa-checklist">
+    <header class="article-header">
+      <div class="container">
+        <div class="article-tag">Guide</div>
+        <h1>The Complete Prior Authorization Checklist for 2026</h1>
+        <div class="article-meta">
+          Practical Guide <span>&middot;</span> 6 min read
+        </div>
+      </div>
+    </header>
+
+    <div class="article-content">
+      <div class="container-narrow">
+        <a href="#" class="back-link" data-scroll-top>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+          Back to all resources
+        </a>
+
+        <p>Prior authorization remains one of the most time-consuming administrative tasks in healthcare. Whether your practice is fully manual, partially automated, or preparing to adopt AI-powered tools, a structured checklist can dramatically reduce rework, denials, and delays. Use this guide as your step-by-step reference for every PA submission.</p>
+
+        <h2>Before Submission</h2>
+
+        <ul>
+          <li><strong>Verify patient eligibility and benefits.</strong> Confirm that the patient's insurance is active and that the specific service requires prior authorization. Check the payer's PA requirements list &mdash; these change frequently.</li>
+          <li><strong>Gather all clinical documentation.</strong> Collect relevant progress notes, diagnostic test results, imaging reports, and any prior treatment records that support medical necessity. Missing documentation is the #1 reason for PA delays.</li>
+          <li><strong>Check PA requirements by payer.</strong> Each payer has unique criteria, forms, and portals. Verify whether the payer accepts electronic submission (X12N 278), portal-only submission, or still requires fax. Note any payer-specific clinical criteria or questionnaires.</li>
+          <li><strong>Confirm CPT and ICD-10 codes.</strong> Ensure that procedure codes (CPT/HCPCS) and diagnosis codes (ICD-10) are accurate, current, and paired correctly. Mismatched codes are a leading cause of denials.</li>
+          <li><strong>Review historical approval patterns.</strong> If available, check your practice's prior submission data for the same service and payer combination. This can help you anticipate what documentation will be needed and whether peer-to-peer review is likely.</li>
+        </ul>
+
+        <h2>During Submission</h2>
+
+        <ul>
+          <li><strong>Submit electronically whenever possible.</strong> Electronic submissions are processed faster and have lower error rates than fax or phone submissions. Use the payer's preferred electronic channel.</li>
+          <li><strong>Include all supporting documentation upfront.</strong> Don't wait for the payer to request additional information. Front-loading clinical evidence reduces back-and-forth and shortens decision timelines.</li>
+          <li><strong>Note submission date and reference number.</strong> Document the exact date, time, submission method, and any confirmation or reference number. This creates an audit trail that's essential for appeals and for tracking payer compliance with response time mandates under CMS 0057-F.</li>
+        </ul>
+
+        <h2>After Submission</h2>
+
+        <ul>
+          <li><strong>Track status within 48 hours.</strong> Don't wait for the payer to contact you. Check the status of your submission within two business days. Under CMS 0057-F, impacted payers must respond to standard requests within 7 calendar days and expedited requests within 72 hours.</li>
+          <li><strong>Set calendar reminders for follow-up.</strong> Create a tickler system for every pending authorization. Include the payer's response deadline, the date additional documentation was requested (if applicable), and the appeal filing deadline in case of denial.</li>
+          <li><strong>Prepare appeal documentation proactively.</strong> If a denial is likely (based on the service type, payer, or initial response), begin assembling appeal materials immediately. Include peer-reviewed literature, updated clinical notes, and a clear medical necessity argument.</li>
+        </ul>
+
+        <h2>Pro Tips</h2>
+
+        <ul>
+          <li><strong>Build a PA requirements database.</strong> Maintain a spreadsheet or internal wiki documenting each payer's PA requirements, preferred submission methods, typical turnaround times, and common denial reasons. Update it quarterly.</li>
+          <li><strong>Designate a PA specialist.</strong> If your practice volume supports it, assign one or two staff members to handle all prior authorizations. Specialization leads to faster processing and fewer errors.</li>
+          <li><strong>Track your metrics.</strong> Monitor PA volume, turnaround time, first-pass approval rate, denial rate, and appeal success rate. These metrics reveal where your process is breaking down and where automation can help most.</li>
+          <li><strong>Consider AI-powered automation.</strong> AI tools can handle eligibility verification, clinical documentation extraction, electronic submission, status tracking, and appeal generation &mdash; reducing PA processing time by up to 70%. Even partial automation of the checklist above can reclaim significant staff hours.</li>
+        </ul>
+
+        <div class="article-cta">
+          <h3>Want to automate this entire checklist?</h3>
+          <p>Synaipse's Prior Authorization Agent handles every step &mdash; from eligibility verification through appeal generation &mdash; so your staff can focus on patient care.</p>
+          <a href="index.html#contact" class="btn-primary">
+            See It in Action
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ================================================================
        SUBSCRIBE
        ================================================================ -->
-  <section class="subscribe-section" id="subscribe">
+  <section class="kb-subscribe subscribe-section" id="subscribe">
     <div class="container">
-      <h2>Stay Informed</h2>
-      <p>Get the latest insights on AI-powered healthcare operations delivered to your inbox.</p>
-      <form class="subscribe-form" action="https://formspree.io/f/mzdvnayd" method="POST">
+      <h2>Stay Updated</h2>
+      <p>Get the latest articles, guides, and regulatory updates delivered to your inbox. No spam &mdash; just actionable insights for healthcare professionals.</p>
+      <form class="subscribe-form" action="https://formspree.io/f/xgegogvg" method="POST">
         <input type="email" name="email" placeholder="Enter your email" required aria-label="Email address">
-        <input type="hidden" name="_subject" value="Blog Subscription">
+        <input type="hidden" name="_subject" value="Knowledge Base Subscription">
         <input type="hidden" name="_formtype" value="subscribe">
         <button type="submit" class="btn-primary">Subscribe</button>
       </form>
@@ -837,6 +1023,30 @@
   </script>
   <script defer src="/_vercel/speed-insights/script.js"></script>
   <script defer src="main.js"></script>
+
+  <!-- Category Filter -->
+  <script>
+    (function() {
+      'use strict';
+      var categoryBtns = document.querySelectorAll('.kb-category-btn');
+      var cards = document.querySelectorAll('.kb-card');
+
+      categoryBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          categoryBtns.forEach(function(b) { b.classList.remove('active'); });
+          this.classList.add('active');
+          var cat = this.dataset.category;
+          cards.forEach(function(card) {
+            if (cat === 'all' || card.dataset.category === cat) {
+              card.style.display = '';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    })();
+  </script>
 
 </body>
 </html>

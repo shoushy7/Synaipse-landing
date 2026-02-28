@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>ROI Calculator | Synaipse - See Your Savings</title>
+  <meta name="description" content="Calculate your potential savings with Synaipse healthcare automation. See how much time and money your practice can save on intake, prior auth, billing, and denial management.">
+  <meta name="keywords" content="healthcare ROI calculator, practice savings, automation ROI, revenue cycle savings, prior authorization savings, denial management ROI">
+  <meta name="author" content="Synaipse Inc.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://synaipse.org/roi-calculator">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://synaipse.org/roi-calculator">
+  <meta property="og:title" content="ROI Calculator | Synaipse - See Your Savings">
+  <meta property="og:description" content="Calculate your potential savings with Synaipse healthcare automation. Get a personalized estimate for your practice.">
+  <meta property="og:image" content="https://synaipse.org/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ROI Calculator | Synaipse - See Your Savings">
+  <meta name="twitter:description" content="Calculate your potential savings with Synaipse healthcare automation. Get a personalized estimate for your practice.">
+  <meta name="twitter:image" content="https://synaipse.org/og-image.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Shared Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Breadcrumb Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://synaipse.org/" },
+      { "@type": "ListItem", "position": 2, "name": "ROI Calculator", "item": "https://synaipse.org/roi-calculator" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Synaipse Home">
+        <svg width="40" height="40" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+          <circle cx="40" cy="40" r="14" fill="#00629B"/>
+          <line x1="40" y1="26" x2="40" y2="14" stroke="#5E6A71" stroke-width="4" stroke-linecap="round"/>
+          <line x1="54" y1="40" x2="66" y2="40" stroke="#5E6A71" stroke-width="4" stroke-linecap="round"/>
+          <line x1="40" y1="54" x2="40" y2="66" stroke="#5E6A71" stroke-width="4" stroke-linecap="round"/>
+          <line x1="26" y1="40" x2="14" y2="40" stroke="#5E6A71" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="40" cy="10" r="4" fill="#5E6A71"/>
+          <circle cx="70" cy="40" r="4" fill="#5E6A71"/>
+          <circle cx="40" cy="70" r="4" fill="#5E6A71"/>
+          <circle cx="10" cy="40" r="4" fill="#5E6A71"/>
+          <circle cx="40" cy="40" r="9" fill="#E8A838" fill-opacity="0.2"/>
+          <circle cx="40" cy="40" r="6" fill="#E8A838"/>
+        </svg>
+        <span class="nav-wordmark">Syn<span class="ai">AI</span>pse</span>
+      </a>
+            <div class="nav-links">
+        <div class="nav-item">
+          <button class="nav-item-trigger" aria-haspopup="true">
+            Company
+            <svg class="nav-item-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown">
+            <a href="about.html">About Us</a>
+            <a href="customers.html">Customers</a>
+            <a href="partnerships.html">Partnerships</a>
+            <a href="trust.html">Trust &amp; Security</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <button class="nav-item-trigger" aria-haspopup="true">
+            Products
+            <svg class="nav-item-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown">
+            <a href="automation-platform.html">Synaipse Automation Platform</a>
+            <a href="credentialing.html">Synaipse Credentialing</a>
+            <a href="ambient-scribe.html">Ambient Scribe <span class="nav-badge-soon">Coming Soon</span></a>
+            <a href="pricing.html">Pricing</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <button class="nav-item-trigger" aria-haspopup="true">
+            Resources
+            <svg class="nav-item-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown">
+            <a href="resources.html">Knowledge Base</a>
+            <a href="testimonials.html">Customer Testimonials</a>
+            <a href="news.html">News</a>
+            <a href="media.html">Media</a>
+            <a href="investors.html">Investors</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <button class="nav-item-trigger" aria-haspopup="true">
+            Tools
+            <svg class="nav-item-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown">
+            <a href="roi-calculator.html" aria-current="page">ROI Calculator</a>
+            <a href="denial-explorer.html">Denial Code Explorer</a>
+            <a href="health-score.html">Practice Health Score</a>
+          </div>
+        </div>
+        <a href="careers.html">Careers</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="index.html#contact" class="nav-cta">Request Demo</a>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+    <div class="mobile-nav-group">
+      <button class="mobile-nav-group-trigger" aria-expanded="false">
+        Company
+        <svg class="mobile-nav-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="mobile-nav-group-items">
+        <a href="about.html">About Us</a>
+        <a href="customers.html">Customers</a>
+        <a href="partnerships.html">Partnerships</a>
+        <a href="trust.html">Trust &amp; Security</a>
+      </div>
+    </div>
+    <div class="mobile-nav-group">
+      <button class="mobile-nav-group-trigger" aria-expanded="false">
+        Products
+        <svg class="mobile-nav-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="mobile-nav-group-items">
+        <a href="automation-platform.html">Synaipse Automation Platform</a>
+        <a href="credentialing.html">Synaipse Credentialing</a>
+        <a href="ambient-scribe.html">Ambient Scribe <span class="nav-badge-soon">Coming Soon</span></a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+    </div>
+    <div class="mobile-nav-group">
+      <button class="mobile-nav-group-trigger" aria-expanded="false">
+        Resources
+        <svg class="mobile-nav-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="mobile-nav-group-items">
+        <a href="resources.html">Knowledge Base</a>
+        <a href="testimonials.html">Customer Testimonials</a>
+        <a href="news.html">News</a>
+        <a href="media.html">Media</a>
+        <a href="investors.html">Investors</a>
+      </div>
+    </div>
+    <div class="mobile-nav-group">
+      <button class="mobile-nav-group-trigger" aria-expanded="false">
+        Tools
+        <svg class="mobile-nav-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="mobile-nav-group-items">
+        <a href="roi-calculator.html" aria-current="page">ROI Calculator</a>
+        <a href="denial-explorer.html">Denial Code Explorer</a>
+        <a href="health-score.html">Practice Health Score</a>
+      </div>
+    </div>
+    <a href="careers.html">Careers</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="index.html#contact" class="mobile-cta">Request Demo</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="roi-hero" id="main">
+    <div class="container">
+      <div class="roi-hero-content">
+        <div class="section-label">ROI Calculator</div>
+        <h1>See What Synaipse Can <span class="highlight">Save</span> Your Practice</h1>
+        <p class="roi-hero-sub">Enter your practice details below for a personalized savings estimate. Our calculator models the impact of Synaipse's four AI agents across your entire revenue cycle.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calculator -->
+  <section class="roi-calculator">
+    <div class="container">
+      <div class="roi-calculator-grid">
+
+        <!-- Inputs -->
+        <div class="roi-inputs">
+          <h2 class="roi-inputs-heading">Your Practice Details</h2>
+
+          <div class="roi-slider-group">
+            <label class="roi-slider-label" for="roi-providers">
+              Number of Providers
+              <output class="roi-slider-value" id="roi-providers-value">5</output>
+            </label>
+            <input type="range" id="roi-providers" min="1" max="50" value="5" step="1">
+            <div class="roi-slider-range">
+              <span>1</span>
+              <span>50</span>
+            </div>
+          </div>
+
+          <div class="roi-slider-group">
+            <label class="roi-slider-label" for="roi-patients">
+              Monthly Patient Volume
+              <output class="roi-slider-value" id="roi-patients-value">1,500</output>
+            </label>
+            <input type="range" id="roi-patients" min="100" max="10000" value="1500" step="100">
+            <div class="roi-slider-range">
+              <span>100</span>
+              <span>10,000</span>
+            </div>
+          </div>
+
+          <div class="roi-slider-group">
+            <label class="roi-slider-label" for="roi-denial-rate">
+              Current Denial Rate %
+              <output class="roi-slider-value" id="roi-denial-rate-value">15%</output>
+            </label>
+            <input type="range" id="roi-denial-rate" min="5" max="40" value="15" step="1">
+            <div class="roi-slider-range">
+              <span>5%</span>
+              <span>40%</span>
+            </div>
+          </div>
+
+          <div class="roi-slider-group">
+            <label class="roi-slider-label" for="roi-staff">
+              Admin Staff FTEs
+              <output class="roi-slider-value" id="roi-staff-value">4</output>
+            </label>
+            <input type="range" id="roi-staff" min="1" max="20" value="4" step="1">
+            <div class="roi-slider-range">
+              <span>1</span>
+              <span>20</span>
+            </div>
+          </div>
+
+          <div class="roi-slider-group">
+            <label class="roi-slider-label" for="roi-revenue">
+              Avg Revenue per Patient $
+              <output class="roi-slider-value" id="roi-revenue-value">$350</output>
+            </label>
+            <input type="range" id="roi-revenue" min="100" max="1000" value="350" step="50">
+            <div class="roi-slider-range">
+              <span>$100</span>
+              <span>$1,000</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Results -->
+        <div class="roi-results">
+          <div class="roi-results-header">
+            <h2 class="roi-results-heading">Your Estimated Annual Savings</h2>
+            <div class="roi-total-savings" id="roi-total-savings">$0</div>
+          </div>
+
+          <div class="roi-breakdown">
+            <h3 class="roi-breakdown-heading">Savings by Agent</h3>
+            <div class="roi-breakdown-item">
+              <div class="roi-breakdown-label">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+                Intake Agent
+              </div>
+              <div class="roi-breakdown-value" id="roi-intake-savings">$0</div>
+            </div>
+            <div class="roi-breakdown-item">
+              <div class="roi-breakdown-label">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                Prior Auth Agent
+              </div>
+              <div class="roi-breakdown-value" id="roi-pa-savings">$0</div>
+            </div>
+            <div class="roi-breakdown-item">
+              <div class="roi-breakdown-label">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                Billing Agent
+              </div>
+              <div class="roi-breakdown-value" id="roi-billing-savings">$0</div>
+            </div>
+            <div class="roi-breakdown-item">
+              <div class="roi-breakdown-label">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                Denial Agent
+              </div>
+              <div class="roi-breakdown-value" id="roi-denial-savings">$0</div>
+            </div>
+          </div>
+
+          <div class="roi-metrics">
+            <div class="roi-metric">
+              <div class="roi-metric-value" id="roi-percentage">0%</div>
+              <div class="roi-metric-label">Return on Investment</div>
+            </div>
+            <div class="roi-metric">
+              <div class="roi-metric-value" id="roi-payback">0 mo</div>
+              <div class="roi-metric-label">Payback Period</div>
+            </div>
+          </div>
+
+          <a href="index.html#contact" class="btn-primary roi-cta-btn">
+            Get Your Custom Analysis
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Assumptions -->
+  <section class="roi-assumptions">
+    <div class="container">
+      <h2 class="roi-assumptions-heading">How We Calculate Your Savings</h2>
+      <div class="roi-assumptions-grid">
+        <details class="roi-assumption">
+          <summary class="roi-assumption-summary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+            Intake Agent Savings
+          </summary>
+          <div class="roi-assumption-content">
+            <p>The Intake Agent automates patient registration, insurance verification, and eligibility checks. We estimate each provider saves <strong>12 hours per month</strong> on intake tasks, with each hour of staff time valued at <strong>$45</strong>. The calculation assumes <strong>8 tasks per hour</strong> that can be automated.</p>
+            <p><strong>Formula:</strong> Providers &times; 12 hours/month &times; 8 tasks/hour &times; $45/hour &times; 12 months</p>
+          </div>
+        </details>
+        <details class="roi-assumption">
+          <summary class="roi-assumption-summary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            Prior Auth Agent Savings
+          </summary>
+          <div class="roi-assumption-content">
+            <p>The Prior Authorization Agent handles submission, tracking, and follow-up of prior authorizations. We estimate <strong>30% of patients</strong> require a prior auth, each taking <strong>45 minutes</strong> of staff time at <strong>$45/hour</strong>. Synaipse automates <strong>70%</strong> of these workflows.</p>
+            <p><strong>Formula:</strong> Monthly patients &times; 30% &times; 45 min &times; ($45/60) &times; 70% automation rate &times; 12 months</p>
+          </div>
+        </details>
+        <details class="roi-assumption">
+          <summary class="roi-assumption-summary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            Billing Agent Savings
+          </summary>
+          <div class="roi-assumption-content">
+            <p>The Billing Agent reduces coding errors, accelerates claim submission, and improves clean claim rates. We estimate Synaipse recovers <strong>2% of total revenue</strong> that would otherwise be lost to billing errors, under-coding, and delayed submissions.</p>
+            <p><strong>Formula:</strong> Monthly patients &times; Avg revenue per patient &times; 2% recovery rate &times; 12 months</p>
+          </div>
+        </details>
+        <details class="roi-assumption">
+          <summary class="roi-assumption-summary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            Denial Agent Savings
+          </summary>
+          <div class="roi-assumption-content">
+            <p>The Denial Agent automatically identifies, categorizes, and appeals denied claims. Based on industry benchmarks, Synaipse recovers <strong>60% of denied revenue</strong> that would otherwise go unworked or be written off.</p>
+            <p><strong>Formula:</strong> Monthly patients &times; Avg revenue per patient &times; Denial rate &times; 60% recovery &times; 12 months</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="about-cta">
+    <div class="container">
+      <div class="about-cta-content">
+        <div class="section-label">Next Steps</div>
+        <h2>Ready to Realize These Savings?</h2>
+        <p>These estimates are just the beginning. Schedule a demo to see exactly how Synaipse can transform your practice's revenue cycle and get a custom analysis tailored to your workflows.</p>
+        <a href="index.html#contact" class="btn-primary">
+          Request a Demo
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" aria-label="Synaipse Home">
+            <svg width="32" height="32" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+              <circle cx="40" cy="40" r="14" fill="#00629B"/>
+              <line x1="40" y1="26" x2="40" y2="14" stroke="#5E6A71" stroke-width="4" stroke-linecap="round"/>
+              <line x1="54" y1="40" x2="66" y2="40" stroke="#5E6A71" stroke-width="4" stroke-linecap="round"/>
+              <line x1="40" y1="54" x2="40" y2="66" stroke="#5E6A71" stroke-width="4" stroke-linecap="round"/>
+              <line x1="26" y1="40" x2="14" y2="40" stroke="#5E6A71" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="40" cy="10" r="4" fill="#5E6A71"/>
+              <circle cx="70" cy="40" r="4" fill="#5E6A71"/>
+              <circle cx="40" cy="70" r="4" fill="#5E6A71"/>
+              <circle cx="10" cy="40" r="4" fill="#5E6A71"/>
+              <circle cx="40" cy="40" r="6" fill="#E8A838"/>
+            </svg>
+            <span class="nav-wordmark">Syn<span class="ai">AI</span>pse</span>
+          </a>
+          <p>Physician-led healthcare automation. Eliminating administrative burden so you can focus on patients.</p>
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:+15135125536">+1 513-512-5536</a>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:info@synaipse.org">info@synaipse.org</a>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>2900 Reading Rd<br>Cincinnati, OH 45206</span>
+            </div>
+          </div>
+        </div>
+                <div class="footer-col">
+          <h4>Platform</h4>
+          <a href="index.html#platform">Overview</a>
+          <a href="claim-journey.html">How a Claim Works</a>
+          <a href="index.html#comparison">Before &amp; After</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About Us</a>
+          <a href="resources.html">Knowledge Base</a>
+          <a href="careers.html">Careers</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="trust.html#privacy">Privacy Policy</a>
+          <a href="trust.html#terms">Terms of Service</a>
+          <a href="trust.html#hipaa">HIPAA Compliance</a>
+        </div>
+      </div>
+      <div class="footer-partner">
+        <div class="footer-partner-content">
+          <span class="footer-partner-label">Proudly headquartered at</span>
+          <div class="footer-partner-logo" aria-label="1819 Innovation Hub">
+            <svg viewBox="-20 -20 264 240" width="120" height="110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <g fill="#1a1a1a" stroke="#1a1a1a">
+                <rect x="0" y="0" width="16" height="140" stroke="none"/>
+                <rect x="104" y="0" width="16" height="140" stroke="none"/>
+                <rect x="208" y="0" width="16" height="140" stroke="none"/>
+                <circle cx="60" cy="32" r="24" stroke-width="16" fill="none"/>
+                <circle cx="60" cy="108" r="24" stroke-width="16" fill="none"/>
+                <circle cx="164" cy="32" r="24" stroke-width="16" fill="none"/>
+                <text x="0" y="186" font-family="'Montserrat','Proxima Nova','Century Gothic',sans-serif" font-weight="800" font-size="25" stroke="none" textLength="224" lengthAdjust="spacing">innovation hub</text>
+              </g>
+            </svg>
+          </div>
+          <span class="footer-partner-sub">University of Cincinnati</span>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Synaipse Inc. Cincinnati, OH. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="https://linkedin.com/company/synaipseinc" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://youtube.com/@synaipse" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vercel Speed Insights -->
+  <script>
+    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
+  <script defer src="main.js"></script>
+
+  <!-- ROI Calculator Logic -->
+  <script>
+    (function() {
+      'use strict';
+
+      var providers = document.getElementById('roi-providers');
+      var patients = document.getElementById('roi-patients');
+      var denialRate = document.getElementById('roi-denial-rate');
+      var staff = document.getElementById('roi-staff');
+      var revenue = document.getElementById('roi-revenue');
+
+      var providersValue = document.getElementById('roi-providers-value');
+      var patientsValue = document.getElementById('roi-patients-value');
+      var denialRateValue = document.getElementById('roi-denial-rate-value');
+      var staffValue = document.getElementById('roi-staff-value');
+      var revenueValue = document.getElementById('roi-revenue-value');
+
+      var totalSavingsEl = document.getElementById('roi-total-savings');
+      var intakeSavingsEl = document.getElementById('roi-intake-savings');
+      var paSavingsEl = document.getElementById('roi-pa-savings');
+      var billingSavingsEl = document.getElementById('roi-billing-savings');
+      var denialSavingsEl = document.getElementById('roi-denial-savings');
+      var percentageEl = document.getElementById('roi-percentage');
+      var paybackEl = document.getElementById('roi-payback');
+
+      function formatCurrency(num) {
+        return '$' + Math.round(num).toLocaleString('en-US');
+      }
+
+      function formatNumber(num) {
+        return Math.round(num).toLocaleString('en-US');
+      }
+
+      function calculate() {
+        var p = parseInt(providers.value, 10);
+        var pat = parseInt(patients.value, 10);
+        var dr = parseInt(denialRate.value, 10);
+        var s = parseInt(staff.value, 10);
+        var rev = parseInt(revenue.value, 10);
+
+        // Update display values
+        providersValue.textContent = p;
+        patientsValue.textContent = formatNumber(pat);
+        denialRateValue.textContent = dr + '%';
+        staffValue.textContent = s;
+        revenueValue.textContent = '$' + formatNumber(rev);
+
+        // Intake: providers x 12 x 8 x $45
+        var intakeSavings = p * 12 * 8 * 45;
+
+        // PA: patients x 0.3 x 45 x ($45/60) x 0.7 x 12
+        var paSavings = pat * 0.3 * 45 * (45 / 60) * 0.7 * 12;
+
+        // Billing: patients x revenuePerPatient x 0.02 x 12
+        var billingSavings = pat * rev * 0.02 * 12;
+
+        // Denial: patients x revenuePerPatient x (denialRate/100) x 0.6 x 12
+        var denialSavings = pat * rev * (dr / 100) * 0.6 * 12;
+
+        // Total
+        var totalSavings = intakeSavings + paSavings + billingSavings + denialSavings;
+
+        // Annual cost: providers x $800 x 12
+        var annualCost = p * 800 * 12;
+
+        // ROI%: totalSavings / annualCost x 100
+        var roiPercent = (totalSavings / annualCost) * 100;
+
+        // Payback: annualCost / totalSavings x 12 months
+        var paybackMonths = (annualCost / totalSavings) * 12;
+
+        // Update DOM
+        totalSavingsEl.textContent = formatCurrency(totalSavings);
+        intakeSavingsEl.textContent = formatCurrency(intakeSavings);
+        paSavingsEl.textContent = formatCurrency(paSavings);
+        billingSavingsEl.textContent = formatCurrency(billingSavings);
+        denialSavingsEl.textContent = formatCurrency(denialSavings);
+        percentageEl.textContent = Math.round(roiPercent) + '%';
+        paybackEl.textContent = paybackMonths < 1 ? '< 1 mo' : Math.round(paybackMonths) + ' mo';
+      }
+
+      // Listen for input events
+      providers.addEventListener('input', calculate);
+      patients.addEventListener('input', calculate);
+      denialRate.addEventListener('input', calculate);
+      staff.addEventListener('input', calculate);
+      revenue.addEventListener('input', calculate);
+
+      // Initialize on load
+      calculate();
+    })();
+  </script>
+
+</body>
+</html>

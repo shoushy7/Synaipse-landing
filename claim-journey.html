@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>How a Claim Works | Synaipse - The Claim Journey</title>
+  <meta name="description" content="Follow a medical claim from the moment a patient calls to final payment. See how Synaipse automation transforms every stage of the revenue cycle.">
+  <meta name="keywords" content="medical claim journey, revenue cycle management, claim processing, prior authorization, medical billing automation, healthcare RCM, Synaipse">
+  <meta name="author" content="Synaipse Inc.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://synaipse.org/claim-journey">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://synaipse.org/claim-journey">
+  <meta property="og:title" content="How a Claim Works | Synaipse - The Claim Journey">
+  <meta property="og:description" content="Follow a medical claim from the moment a patient calls to final payment. See how Synaipse automation transforms every stage of the revenue cycle.">
+  <meta property="og:image" content="https://synaipse.org/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How a Claim Works | Synaipse - The Claim Journey">
+  <meta name="twitter:description" content="Follow a medical claim from the moment a patient calls to final payment. See how Synaipse automation transforms every stage of the revenue cycle.">
+  <meta name="twitter:image" content="https://synaipse.org/og-image.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Shared Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Breadcrumb Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://synaipse.org/" },
+      { "@type": "ListItem", "position": 2, "name": "The Claim Journey", "item": "https://synaipse.org/claim-journey" }
+    ]
+  }
+  </script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "How a Claim Works - The Claim Journey",
+    "description": "Follow a medical claim from the moment a patient calls to final payment. See how Synaipse automation transforms every stage of the revenue cycle.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Synaipse Inc.",
+      "url": "https://synaipse.org"
+    },
+    "mainEntity": {
+      "@type": "HowTo",
+      "name": "How a Medical Claim Works",
+      "description": "The 8 stages a medical claim goes through from patient intake to final payment.",
+      "step": [
+        { "@type": "HowToStep", "position": 1, "name": "Patient Calls", "text": "Intake agent verifies insurance eligibility and collects patient information." },
+        { "@type": "HowToStep", "position": 2, "name": "Prior Authorization", "text": "PA agent submits authorization requests to the payer." },
+        { "@type": "HowToStep", "position": 3, "name": "Documentation", "text": "Clinical documentation is completed for the encounter." },
+        { "@type": "HowToStep", "position": 4, "name": "Coding & Charge Capture", "text": "Encounter is coded and charges are captured for billing." },
+        { "@type": "HowToStep", "position": 5, "name": "Claim Submission", "text": "Clean claim is submitted to the payer." },
+        { "@type": "HowToStep", "position": 6, "name": "Payer Adjudication", "text": "Payer processes and adjudicates the claim." },
+        { "@type": "HowToStep", "position": 7, "name": "Denial & Appeal", "text": "Denied claims are identified and appeals are filed." },
+        { "@type": "HowToStep", "position": 8, "name": "Payment & Posting", "text": "Payment is received and posted to the patient account." }
+      ]
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Synaipse Home">
+        <svg width="40" height="40" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+          <circle cx="40" cy="40" r="14" fill="#00629B"/>
+          <line x1="40" y1="26" x2="40" y2="14" stroke="#5E6A71" stroke-width="4" stroke-linecap="round"/>
+          <line x1="54" y1="40" x2="66" y2="40" stroke="#5E6A71" stroke-width="4" stroke-linecap="round"/>
+          <line x1="40" y1="54" x2="40" y2="66" stroke="#5E6A71" stroke-width="4" stroke-linecap="round"/>
+          <line x1="26" y1="40" x2="14" y2="40" stroke="#5E6A71" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="40" cy="10" r="4" fill="#5E6A71"/>
+          <circle cx="70" cy="40" r="4" fill="#5E6A71"/>
+          <circle cx="40" cy="70" r="4" fill="#5E6A71"/>
+          <circle cx="10" cy="40" r="4" fill="#5E6A71"/>
+          <circle cx="40" cy="40" r="9" fill="#E8A838" fill-opacity="0.2"/>
+          <circle cx="40" cy="40" r="6" fill="#E8A838"/>
+        </svg>
+        <span class="nav-wordmark">Syn<span class="ai">AI</span>pse</span>
+      </a>
+            <div class="nav-links">
+        <div class="nav-item">
+          <button class="nav-item-trigger" aria-haspopup="true">
+            Company
+            <svg class="nav-item-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown">
+            <a href="about.html">About Us</a>
+            <a href="customers.html">Customers</a>
+            <a href="partnerships.html">Partnerships</a>
+            <a href="trust.html">Trust &amp; Security</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <button class="nav-item-trigger" aria-haspopup="true">
+            Products
+            <svg class="nav-item-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown">
+            <a href="automation-platform.html">Synaipse Automation Platform</a>
+            <a href="credentialing.html">Synaipse Credentialing</a>
+            <a href="ambient-scribe.html">Ambient Scribe <span class="nav-badge-soon">Coming Soon</span></a>
+            <a href="pricing.html">Pricing</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <button class="nav-item-trigger" aria-haspopup="true">
+            Resources
+            <svg class="nav-item-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown">
+            <a href="resources.html">Knowledge Base</a>
+            <a href="testimonials.html">Customer Testimonials</a>
+            <a href="news.html">News</a>
+            <a href="media.html">Media</a>
+            <a href="investors.html">Investors</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <button class="nav-item-trigger" aria-haspopup="true">
+            Tools
+            <svg class="nav-item-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown">
+            <a href="roi-calculator.html">ROI Calculator</a>
+            <a href="denial-explorer.html">Denial Code Explorer</a>
+            <a href="health-score.html">Practice Health Score</a>
+          </div>
+        </div>
+        <a href="careers.html">Careers</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="index.html#contact" class="nav-cta">Request Demo</a>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+    <div class="mobile-nav-group">
+      <button class="mobile-nav-group-trigger" aria-expanded="false">
+        Company
+        <svg class="mobile-nav-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="mobile-nav-group-items">
+        <a href="about.html">About Us</a>
+        <a href="customers.html">Customers</a>
+        <a href="partnerships.html">Partnerships</a>
+        <a href="trust.html">Trust &amp; Security</a>
+      </div>
+    </div>
+    <div class="mobile-nav-group">
+      <button class="mobile-nav-group-trigger" aria-expanded="false">
+        Products
+        <svg class="mobile-nav-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="mobile-nav-group-items">
+        <a href="automation-platform.html">Synaipse Automation Platform</a>
+        <a href="credentialing.html">Synaipse Credentialing</a>
+        <a href="ambient-scribe.html">Ambient Scribe <span class="nav-badge-soon">Coming Soon</span></a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+    </div>
+    <div class="mobile-nav-group">
+      <button class="mobile-nav-group-trigger" aria-expanded="false">
+        Resources
+        <svg class="mobile-nav-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="mobile-nav-group-items">
+        <a href="resources.html">Knowledge Base</a>
+        <a href="testimonials.html">Customer Testimonials</a>
+        <a href="news.html">News</a>
+        <a href="media.html">Media</a>
+        <a href="investors.html">Investors</a>
+      </div>
+    </div>
+    <div class="mobile-nav-group">
+      <button class="mobile-nav-group-trigger" aria-expanded="false">
+        Tools
+        <svg class="mobile-nav-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="mobile-nav-group-items">
+        <a href="roi-calculator.html">ROI Calculator</a>
+        <a href="denial-explorer.html">Denial Code Explorer</a>
+        <a href="health-score.html">Practice Health Score</a>
+      </div>
+    </div>
+    <a href="careers.html">Careers</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="index.html#contact" class="mobile-cta">Request Demo</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="cj-hero" id="main">
+    <div class="container">
+      <div class="cj-hero-content">
+        <div class="section-label">The Claim Journey</div>
+        <h1>What Happens to a <span class="highlight">Medical Claim</span></h1>
+        <p class="cj-hero-sub">Follow a single claim from the moment a patient picks up the phone to the moment payment hits your account. See exactly where time is lost, revenue leaks, and how automation changes everything.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toggle -->
+  <section class="cj-toggle">
+    <div class="container">
+      <div class="cj-toggle-bar">
+        <button class="cj-toggle-btn active" data-view="without">Without Synaipse</button>
+        <button class="cj-toggle-btn" data-view="with">With Synaipse</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="cj-timeline">
+    <div class="container">
+
+      <!-- Stage 1: Patient Calls -->
+      <div class="cj-stage reveal">
+        <div class="cj-stage-number">1</div>
+        <div class="cj-stage-line"></div>
+        <div class="cj-stage-content">
+          <h2 class="cj-stage-title">Patient Calls</h2>
+          <div class="cj-stage-agent">Intake Agent</div>
+
+          <div class="cj-stage-without">
+            <div class="cj-stage-card cj-stage-card--without">
+              <h3 class="cj-stage-card-heading">The Old Way</h3>
+              <p>Staff spends <strong>15-20 minutes per call</strong> manually verifying insurance eligibility, checking patient demographics, and confirming benefits. Information is re-keyed across multiple systems, leading to data entry errors that cause downstream denials.</p>
+              <div class="cj-stage-stat">
+                <span class="cj-stage-stat-number">15-20 min</span>
+                <span class="cj-stage-stat-label">per patient call</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cj-stage-with" style="display:none">
+            <div class="cj-stage-card cj-stage-card--with">
+              <h3 class="cj-stage-card-heading">With Synaipse</h3>
+              <p>The Intake Agent automatically verifies insurance eligibility in real-time, pre-populates patient data, and flags coverage gaps before the appointment is scheduled. Total call time drops to <strong>3 minutes</strong>.</p>
+              <div class="cj-stage-stat">
+                <span class="cj-stage-stat-number">3 min</span>
+                <span class="cj-stage-stat-label">per patient call</span>
+              </div>
+              <div class="cj-stage-improvement">90% fewer eligibility-related denials</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stage 2: Prior Authorization -->
+      <div class="cj-stage reveal">
+        <div class="cj-stage-number">2</div>
+        <div class="cj-stage-line"></div>
+        <div class="cj-stage-content">
+          <h2 class="cj-stage-title">Prior Authorization</h2>
+          <div class="cj-stage-agent">PA Agent</div>
+
+          <div class="cj-stage-without">
+            <div class="cj-stage-card cj-stage-card--without">
+              <h3 class="cj-stage-card-heading">The Old Way</h3>
+              <p>Each prior authorization requires <strong>45 minutes of staff time</strong> -- gathering clinical documentation, navigating payer portals, faxing forms, and following up by phone. Approvals take days or weeks, delaying patient care and creating scheduling bottlenecks.</p>
+              <div class="cj-stage-stat">
+                <span class="cj-stage-stat-number">45 min</span>
+                <span class="cj-stage-stat-label">per PA request</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cj-stage-with" style="display:none">
+            <div class="cj-stage-card cj-stage-card--with">
+              <h3 class="cj-stage-card-heading">With Synaipse</h3>
+              <p>The PA Agent auto-generates authorization requests with the correct clinical documentation attached, submits electronically to payers, and tracks status in real-time. Most authorizations are completed in <strong>5 minutes</strong>.</p>
+              <div class="cj-stage-stat">
+                <span class="cj-stage-stat-number">5 min</span>
+                <span class="cj-stage-stat-label">per PA request</span>
+              </div>
+              <div class="cj-stage-improvement">70% faster authorization turnaround</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stage 3: Documentation -->
+      <div class="cj-stage reveal">
+        <div class="cj-stage-number">3</div>
+        <div class="cj-stage-line"></div>
+        <div class="cj-stage-content">
+          <h2 class="cj-stage-title">Documentation</h2>
+          <div class="cj-stage-agent">Scribe Agent <span class="cj-badge-coming">Coming Q2 2026</span></div>
+
+          <div class="cj-stage-without">
+            <div class="cj-stage-card cj-stage-card--without">
+              <h3 class="cj-stage-card-heading">The Old Way</h3>
+              <p>Physicians spend <strong>15 minutes per patient</strong> on post-visit documentation -- typing notes into the EHR, ensuring compliance with payer requirements, and adding the detail needed for accurate coding. Most of this happens after hours, contributing to burnout.</p>
+              <div class="cj-stage-stat">
+                <span class="cj-stage-stat-number">15 min</span>
+                <span class="cj-stage-stat-label">per patient encounter</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cj-stage-with" style="display:none">
+            <div class="cj-stage-card cj-stage-card--with">
+              <h3 class="cj-stage-card-heading">With Synaipse</h3>
+              <p>The Scribe Agent listens to the encounter, generates structured clinical notes in real-time, and maps documentation to the correct billing codes. Physicians review and sign off in <strong>2 minutes</strong> instead of writing from scratch.</p>
+              <div class="cj-stage-stat">
+                <span class="cj-stage-stat-number">2 min</span>
+                <span class="cj-stage-stat-label">review &amp; sign-off</span>
+              </div>
+              <div class="cj-stage-improvement">80% less documentation time</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stage 4: Coding & Charge Capture -->
+      <div class="cj-stage reveal">
+        <div class="cj-stage-number">4</div>
+        <div class="cj-stage-line"></div>
+        <div class="cj-stage-content">
+          <h2 class="cj-stage-title">Coding &amp; Charge Capture</h2>
+          <div class="cj-stage-agent">Billing Agent</div>
+
+          <div class="cj-stage-without">
+            <div class="cj-stage-card cj-stage-card--without">
+              <h3 class="cj-stage-card-heading">The Old Way</h3>
+              <p>Charge capture takes <strong>2-3 days</strong> after the encounter. Coders manually review notes, assign CPT and ICD-10 codes, and reconcile charges. Missed charges and under-coding are common -- most practices leave significant revenue on the table without realizing it.</p>
+              <div class="cj-stage-stat">
+                <span class="cj-stage-stat-number">2-3 days</span>
+                <span class="cj-stage-stat-label">charge capture lag</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cj-stage-with" style="display:none">
+            <div class="cj-stage-card cj-stage-card--with">
+              <h3 class="cj-stage-card-heading">With Synaipse</h3>
+              <p>The Billing Agent captures charges in <strong>real-time</strong> as documentation is completed, suggests appropriate codes based on clinical content, and flags potential under-coding or bundling opportunities before submission.</p>
+              <div class="cj-stage-stat">
+                <span class="cj-stage-stat-number">Real-time</span>
+                <span class="cj-stage-stat-label">charge capture</span>
+              </div>
+              <div class="cj-stage-improvement">15% coding accuracy improvement</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stage 5: Claim Submission -->
+      <div class="cj-stage reveal">
+        <div class="cj-stage-number">5</div>
+        <div class="cj-stage-line"></div>
+        <div class="cj-stage-content">
+          <h2 class="cj-stage-title">Claim Submission</h2>
+          <div class="cj-stage-agent">Billing Agent</div>
+
+          <div class="cj-stage-without">
+            <div class="cj-stage-card cj-stage-card--without">
+              <h3 class="cj-stage-card-heading">The Old Way</h3>
+              <p>Claims sit in a queue for <strong>3-5 days</strong> before submission. Staff manually scrubs each claim for errors, but many issues slip through -- wrong modifier, missing NPI, outdated payer ID. The average practice has a first-pass acceptance rate below 80%.</p>
+              <div class="cj-stage-stat">
+                <span class="cj-stage-stat-number">3-5 days</span>
+                <span class="cj-stage-stat-label">to submit claim</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cj-stage-with" style="display:none">
+            <div class="cj-stage-card cj-stage-card--with">
+              <h3 class="cj-stage-card-heading">With Synaipse</h3>
+              <p>Claims are scrubbed, validated, and submitted <strong>same day</strong>. The Billing Agent cross-references payer rules, checks for common rejection triggers, and ensures every claim is clean before it goes out the door.</p>
+              <div class="cj-stage-stat">
+                <span class="cj-stage-stat-number">Same day</span>
+                <span class="cj-stage-stat-label">claim submission</span>
+              </div>
+              <div class="cj-stage-improvement">95% first-pass acceptance rate</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stage 6: Payer Adjudication -->
+      <div class="cj-stage reveal">
+        <div class="cj-stage-number">6</div>
+        <div class="cj-stage-line"></div>
+        <div class="cj-stage-content">
+          <h2 class="cj-stage-title">Payer Adjudication</h2>
+          <div class="cj-stage-agent">Monitoring</div>
+
+          <div class="cj-stage-without">
+            <div class="cj-stage-card cj-stage-card--without">
+              <h3 class="cj-stage-card-heading">The Old Way</h3>
+              <p>Once submitted, claims enter a black box. Adjudication takes <strong>14-45 days</strong> with no visibility into where the claim is or what's happening to it. Staff spends hours on hold with payer representatives trying to get status updates.</p>
+              <div class="cj-stage-stat">
+                <span class="cj-stage-stat-number">14-45 days</span>
+                <span class="cj-stage-stat-label">adjudication period</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cj-stage-with" style="display:none">
+            <div class="cj-stage-card cj-stage-card--with">
+              <h3 class="cj-stage-card-heading">With Synaipse</h3>
+              <p>Synaipse provides <strong>real-time tracking</strong> of every claim through the adjudication process. Automated status checks replace phone calls, and the system flags stalled claims before they become problems.</p>
+              <div class="cj-stage-stat">
+                <span class="cj-stage-stat-number">Real-time</span>
+                <span class="cj-stage-stat-label">claim tracking</span>
+              </div>
+              <div class="cj-stage-improvement">50% less time on payer phone calls</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stage 7: Denial & Appeal -->
+      <div class="cj-stage reveal">
+        <div class="cj-stage-number">7</div>
+        <div class="cj-stage-line"></div>
+        <div class="cj-stage-content">
+          <h2 class="cj-stage-title">Denial &amp; Appeal</h2>
+          <div class="cj-stage-agent">Appeal Agent</div>
+
+          <div class="cj-stage-without">
+            <div class="cj-stage-card cj-stage-card--without">
+              <h3 class="cj-stage-card-heading">The Old Way</h3>
+              <p>Denials pile up and are often <strong>never worked</strong> because staff is overwhelmed. When appeals are filed, they're generic and miss payer-specific requirements. The average practice loses <strong>$125K+ per year</strong> in unworked denials alone.</p>
+              <div class="cj-stage-stat">
+                <span class="cj-stage-stat-number">$125K+</span>
+                <span class="cj-stage-stat-label">lost revenue per year</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cj-stage-with" style="display:none">
+            <div class="cj-stage-card cj-stage-card--with">
+              <h3 class="cj-stage-card-heading">With Synaipse</h3>
+              <p>The Appeal Agent <strong>automatically generates appeals</strong> tailored to the specific denial reason and payer requirements, attaching the right supporting documentation. No denial goes unworked.</p>
+              <div class="cj-stage-stat">
+                <span class="cj-stage-stat-number">Auto-appeal</span>
+                <span class="cj-stage-stat-label">every denial worked</span>
+              </div>
+              <div class="cj-stage-improvement">87% appeal success rate</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stage 8: Payment & Posting -->
+      <div class="cj-stage reveal">
+        <div class="cj-stage-number">8</div>
+        <div class="cj-stage-line"></div>
+        <div class="cj-stage-content">
+          <h2 class="cj-stage-title">Payment &amp; Posting</h2>
+          <div class="cj-stage-agent">Billing Agent</div>
+
+          <div class="cj-stage-without">
+            <div class="cj-stage-card cj-stage-card--without">
+              <h3 class="cj-stage-card-heading">The Old Way</h3>
+              <p><strong>Manual posting</strong> of ERA/EOB data is tedious and error-prone. Underpayments and contractual variances are routinely missed. Patient balance follow-up is inconsistent, and aged AR balloons without anyone noticing until it's too late.</p>
+              <div class="cj-stage-stat">
+                <span class="cj-stage-stat-number">Missed</span>
+                <span class="cj-stage-stat-label">underpayments &amp; variances</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cj-stage-with" style="display:none">
+            <div class="cj-stage-card cj-stage-card--with">
+              <h3 class="cj-stage-card-heading">With Synaipse</h3>
+              <p>Payments are <strong>auto-posted</strong> with contractual variance detection. The Billing Agent flags underpayments against fee schedules, automates patient balance notifications, and keeps AR aging clean.</p>
+              <div class="cj-stage-stat">
+                <span class="cj-stage-stat-number">Auto-post</span>
+                <span class="cj-stage-stat-label">with variance detection</span>
+              </div>
+              <div class="cj-stage-improvement">$2.4M recovered in underpayments</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Summary -->
+  <section class="cj-summary">
+    <div class="container">
+      <div class="cj-summary-header">
+        <div class="section-label">The Bottom Line</div>
+        <h2>Two Realities, One Revenue Cycle</h2>
+      </div>
+      <div class="cj-summary-grid">
+        <div class="cj-summary-card cj-summary-card--without reveal">
+          <h3 class="cj-summary-card-title">Without Synaipse</h3>
+          <ul class="cj-summary-list">
+            <li>15-20 min per intake call</li>
+            <li>45 min per prior authorization</li>
+            <li>3-5 days to submit a claim</li>
+            <li>No visibility during adjudication</li>
+            <li>$125K+ lost to unworked denials</li>
+            <li>Missed underpayments &amp; variances</li>
+            <li>Staff burnout &amp; high turnover</li>
+          </ul>
+        </div>
+        <div class="cj-summary-card cj-summary-card--with reveal">
+          <h3 class="cj-summary-card-title">With Synaipse</h3>
+          <ul class="cj-summary-list">
+            <li>3 min per intake call</li>
+            <li>5 min per prior authorization</li>
+            <li>Same-day claim submission</li>
+            <li>Real-time claim tracking</li>
+            <li>87% appeal success rate</li>
+            <li>$2.4M recovered in underpayments</li>
+            <li>Staff focused on patient care</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cj-cta">
+    <div class="container">
+      <div class="cj-cta-content">
+        <div class="section-label">Get Started</div>
+        <h2>Ready to Transform Your Revenue Cycle?</h2>
+        <p>See how Synaipse automates every stage of the claim journey for your practice. Book a personalized demo and discover how much revenue you're leaving on the table.</p>
+        <a href="index.html#contact" class="btn-primary">
+          Request a Demo
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" aria-label="Synaipse Home">
+            <svg width="32" height="32" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+              <circle cx="40" cy="40" r="14" fill="#00629B"/>
+              <line x1="40" y1="26" x2="40" y2="14" stroke="#5E6A71" stroke-width="4" stroke-linecap="round"/>
+              <line x1="54" y1="40" x2="66" y2="40" stroke="#5E6A71" stroke-width="4" stroke-linecap="round"/>
+              <line x1="40" y1="54" x2="40" y2="66" stroke="#5E6A71" stroke-width="4" stroke-linecap="round"/>
+              <line x1="26" y1="40" x2="14" y2="40" stroke="#5E6A71" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="40" cy="10" r="4" fill="#5E6A71"/>
+              <circle cx="70" cy="40" r="4" fill="#5E6A71"/>
+              <circle cx="40" cy="70" r="4" fill="#5E6A71"/>
+              <circle cx="10" cy="40" r="4" fill="#5E6A71"/>
+              <circle cx="40" cy="40" r="6" fill="#E8A838"/>
+            </svg>
+            <span class="nav-wordmark">Syn<span class="ai">AI</span>pse</span>
+          </a>
+          <p>Physician-led healthcare automation. Eliminating administrative burden so you can focus on patients.</p>
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:+15135125536">+1 513-512-5536</a>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:info@synaipse.org">info@synaipse.org</a>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>2900 Reading Rd<br>Cincinnati, OH 45206</span>
+            </div>
+          </div>
+        </div>
+                <div class="footer-col">
+          <h4>Platform</h4>
+          <a href="index.html#platform">Overview</a>
+          <a href="claim-journey.html">How a Claim Works</a>
+          <a href="index.html#comparison">Before &amp; After</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About Us</a>
+          <a href="resources.html">Knowledge Base</a>
+          <a href="careers.html">Careers</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="trust.html#privacy">Privacy Policy</a>
+          <a href="trust.html#terms">Terms of Service</a>
+          <a href="trust.html#hipaa">HIPAA Compliance</a>
+        </div>
+      </div>
+      <div class="footer-partner">
+        <div class="footer-partner-content">
+          <span class="footer-partner-label">Proudly headquartered at</span>
+          <div class="footer-partner-logo" aria-label="1819 Innovation Hub">
+            <svg viewBox="-20 -20 264 240" width="120" height="110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <g fill="#1a1a1a" stroke="#1a1a1a">
+                <rect x="0" y="0" width="16" height="140" stroke="none"/>
+                <rect x="104" y="0" width="16" height="140" stroke="none"/>
+                <rect x="208" y="0" width="16" height="140" stroke="none"/>
+                <circle cx="60" cy="32" r="24" stroke-width="16" fill="none"/>
+                <circle cx="60" cy="108" r="24" stroke-width="16" fill="none"/>
+                <circle cx="164" cy="32" r="24" stroke-width="16" fill="none"/>
+                <text x="0" y="186" font-family="'Montserrat','Proxima Nova','Century Gothic',sans-serif" font-weight="800" font-size="25" stroke="none" textLength="224" lengthAdjust="spacing">innovation hub</text>
+              </g>
+            </svg>
+          </div>
+          <span class="footer-partner-sub">University of Cincinnati</span>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Synaipse Inc. Cincinnati, OH. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="https://linkedin.com/company/synaipseinc" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://youtube.com/@synaipse" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toggle Script -->
+  <script>
+  (function(){
+    document.querySelectorAll('.cj-toggle-btn').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        var view=this.dataset.view;
+        document.querySelectorAll('.cj-toggle-btn').forEach(function(b){b.classList.remove('active')});
+        this.classList.add('active');
+        document.querySelectorAll('.cj-stage-without').forEach(function(el){el.style.display=view==='without'?'':'none'});
+        document.querySelectorAll('.cj-stage-with').forEach(function(el){el.style.display=view==='with'?'':'none'});
+      });
+    });
+  })();
+  </script>
+
+  <!-- Vercel Speed Insights -->
+  <script>
+    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
+  <script defer src="main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>Denial Code Explorer | Synaipse - Understand &amp; Appeal Denials</title>
+  <meta name="description" content="Look up any denial reason code. Get plain-English explanations, root causes, and see how Synaipse automatically handles appeals for healthcare practices.">
+  <meta name="keywords" content="denial codes, claim denials, denial management, appeal automation, CO-4, CO-50, CO-29, healthcare billing, denial reason codes, Synaipse">
+  <meta name="author" content="Synaipse Inc.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://synaipse.org/denial-explorer">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://synaipse.org/denial-explorer">
+  <meta property="og:title" content="Denial Code Explorer | Synaipse - Understand &amp; Appeal Denials">
+  <meta property="og:description" content="Look up any denial reason code. Get plain-English explanations, root causes, and see how Synaipse automatically handles appeals.">
+  <meta property="og:image" content="https://synaipse.org/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Denial Code Explorer | Synaipse - Understand &amp; Appeal Denials">
+  <meta name="twitter:description" content="Look up any denial reason code. Get plain-English explanations, root causes, and see how Synaipse automatically handles appeals.">
+  <meta name="twitter:image" content="https://synaipse.org/og-image.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Shared Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Breadcrumb Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://synaipse.org/" },
+      { "@type": "ListItem", "position": 2, "name": "Denial Code Explorer", "item": "https://synaipse.org/denial-explorer" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Synaipse Home">
+        <svg width="40" height="40" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+          <circle cx="40" cy="40" r="14" fill="#00629B"/>
+          <line x1="40" y1="26" x2="40" y2="14" stroke="#5E6A71" stroke-width="4" stroke-linecap="round"/>
+          <line x1="54" y1="40" x2="66" y2="40" stroke="#5E6A71" stroke-width="4" stroke-linecap="round"/>
+          <line x1="40" y1="54" x2="40" y2="66" stroke="#5E6A71" stroke-width="4" stroke-linecap="round"/>
+          <line x1="26" y1="40" x2="14" y2="40" stroke="#5E6A71" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="40" cy="10" r="4" fill="#5E6A71"/>
+          <circle cx="70" cy="40" r="4" fill="#5E6A71"/>
+          <circle cx="40" cy="70" r="4" fill="#5E6A71"/>
+          <circle cx="10" cy="40" r="4" fill="#5E6A71"/>
+          <circle cx="40" cy="40" r="9" fill="#E8A838" fill-opacity="0.2"/>
+          <circle cx="40" cy="40" r="6" fill="#E8A838"/>
+        </svg>
+        <span class="nav-wordmark">Syn<span class="ai">AI</span>pse</span>
+      </a>
+            <div class="nav-links">
+        <div class="nav-item">
+          <button class="nav-item-trigger" aria-haspopup="true">
+            Company
+            <svg class="nav-item-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown">
+            <a href="about.html">About Us</a>
+            <a href="customers.html">Customers</a>
+            <a href="partnerships.html">Partnerships</a>
+            <a href="trust.html">Trust &amp; Security</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <button class="nav-item-trigger" aria-haspopup="true">
+            Products
+            <svg class="nav-item-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown">
+            <a href="automation-platform.html">Synaipse Automation Platform</a>
+            <a href="credentialing.html">Synaipse Credentialing</a>
+            <a href="ambient-scribe.html">Ambient Scribe <span class="nav-badge-soon">Coming Soon</span></a>
+            <a href="pricing.html">Pricing</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <button class="nav-item-trigger" aria-haspopup="true">
+            Resources
+            <svg class="nav-item-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown">
+            <a href="resources.html">Knowledge Base</a>
+            <a href="testimonials.html">Customer Testimonials</a>
+            <a href="news.html">News</a>
+            <a href="media.html">Media</a>
+            <a href="investors.html">Investors</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <button class="nav-item-trigger" aria-haspopup="true">
+            Tools
+            <svg class="nav-item-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown">
+            <a href="roi-calculator.html">ROI Calculator</a>
+            <a href="denial-explorer.html" aria-current="page">Denial Code Explorer</a>
+            <a href="health-score.html">Practice Health Score</a>
+          </div>
+        </div>
+        <a href="careers.html">Careers</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="index.html#contact" class="nav-cta">Request Demo</a>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+    <div class="mobile-nav-group">
+      <button class="mobile-nav-group-trigger" aria-expanded="false">
+        Company
+        <svg class="mobile-nav-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="mobile-nav-group-items">
+        <a href="about.html">About Us</a>
+        <a href="customers.html">Customers</a>
+        <a href="partnerships.html">Partnerships</a>
+        <a href="trust.html">Trust &amp; Security</a>
+      </div>
+    </div>
+    <div class="mobile-nav-group">
+      <button class="mobile-nav-group-trigger" aria-expanded="false">
+        Products
+        <svg class="mobile-nav-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="mobile-nav-group-items">
+        <a href="automation-platform.html">Synaipse Automation Platform</a>
+        <a href="credentialing.html">Synaipse Credentialing</a>
+        <a href="ambient-scribe.html">Ambient Scribe <span class="nav-badge-soon">Coming Soon</span></a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+    </div>
+    <div class="mobile-nav-group">
+      <button class="mobile-nav-group-trigger" aria-expanded="false">
+        Resources
+        <svg class="mobile-nav-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="mobile-nav-group-items">
+        <a href="resources.html">Knowledge Base</a>
+        <a href="testimonials.html">Customer Testimonials</a>
+        <a href="news.html">News</a>
+        <a href="media.html">Media</a>
+        <a href="investors.html">Investors</a>
+      </div>
+    </div>
+    <div class="mobile-nav-group">
+      <button class="mobile-nav-group-trigger" aria-expanded="false">
+        Tools
+        <svg class="mobile-nav-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="mobile-nav-group-items">
+        <a href="roi-calculator.html">ROI Calculator</a>
+        <a href="denial-explorer.html" aria-current="page">Denial Code Explorer</a>
+        <a href="health-score.html">Practice Health Score</a>
+      </div>
+    </div>
+    <a href="careers.html">Careers</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="index.html#contact" class="mobile-cta">Request Demo</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="de-hero" id="main">
+    <div class="container">
+      <div class="de-hero-content">
+        <div class="section-label">Free Tool</div>
+        <h1>Denial Code <span class="highlight">Explorer</span></h1>
+        <p class="de-hero-sub">Look up any denial reason code. Get plain-English explanations, root causes, and see how Synaipse automatically handles appeals.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Search Section -->
+  <section class="de-search">
+    <div class="container">
+      <div class="de-search-wrapper">
+        <div class="de-search-box">
+          <svg class="de-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="de-search-input" id="de-search-input" placeholder="Search by code (e.g., CO-4) or description..." aria-label="Search denial codes">
+        </div>
+        <div class="de-filters">
+          <button class="de-filter-chip active" data-category="all">All</button>
+          <button class="de-filter-chip" data-category="medical-necessity">Medical Necessity</button>
+          <button class="de-filter-chip" data-category="coding">Coding</button>
+          <button class="de-filter-chip" data-category="eligibility">Eligibility</button>
+          <button class="de-filter-chip" data-category="authorization">Authorization</button>
+          <button class="de-filter-chip" data-category="timely-filing">Timely Filing</button>
+          <button class="de-filter-chip" data-category="duplicate">Duplicate</button>
+        </div>
+        <span class="de-results-count" id="de-results-count"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results Grid -->
+  <section class="de-results-section">
+    <div class="container">
+      <div class="de-results" id="de-results">
+
+        <!-- Authorization Codes -->
+        <div class="de-card" data-category="authorization" data-code="CO-4" data-searchable="CO-4 The procedure code is inconsistent with the modifier used Modifier doesn't match the procedure code billed, or a required modifier is missing. Our Billing Agent automatically validates modifier-procedure combinations before submission, preventing this denial. If received, the Appeal Agent identifies the correct modifier and generates an appeal with supporting documentation. authorization">
+          <div class="de-card-header">
+            <span class="de-card-code">CO-4</span>
+            <span class="de-card-category">Authorization</span>
+          </div>
+          <h3 class="de-card-title">The procedure code is inconsistent with the modifier used</h3>
+          <div class="de-card-section">
+            <h4>Common Cause</h4>
+            <p>Modifier doesn't match the procedure code billed, or a required modifier is missing.</p>
+          </div>
+          <div class="de-card-section de-card-synaipse">
+            <h4>How Synaipse Handles This</h4>
+            <p>Our Billing Agent automatically validates modifier-procedure combinations before submission, preventing this denial. If received, the Appeal Agent identifies the correct modifier and generates an appeal with supporting documentation.</p>
+          </div>
+        </div>
+
+        <div class="de-card" data-category="authorization" data-code="CO-15" data-searchable="CO-15 The authorization number is missing, invalid, or does not apply to the billed services Authorization was not obtained prior to service, the auth number is invalid, or the authorized services don't match what was billed. Synaipse's Prior Auth Agent checks authorization status in real time before claims are submitted. When a missing or expired auth is detected, it automatically initiates a new authorization request or flags the claim for review before submission. authorization">
+          <div class="de-card-header">
+            <span class="de-card-code">CO-15</span>
+            <span class="de-card-category">Authorization</span>
+          </div>
+          <h3 class="de-card-title">The authorization number is missing, invalid, or does not apply to the billed services</h3>
+          <div class="de-card-section">
+            <h4>Common Cause</h4>
+            <p>Authorization was not obtained prior to service, the auth number is invalid, or the authorized services don't match what was billed.</p>
+          </div>
+          <div class="de-card-section de-card-synaipse">
+            <h4>How Synaipse Handles This</h4>
+            <p>Synaipse's Prior Auth Agent checks authorization status in real time before claims are submitted. When a missing or expired auth is detected, it automatically initiates a new authorization request or flags the claim for review before submission.</p>
+          </div>
+        </div>
+
+        <div class="de-card" data-category="authorization" data-code="CO-27" data-searchable="CO-27 Expenses incurred after coverage terminated The patient's insurance coverage ended before the date of service, often due to a lapsed policy or job change. Synaipse's Eligibility Agent verifies coverage in real time before each encounter. If coverage has lapsed, the system alerts front desk staff immediately and suggests alternative billing pathways or patient self-pay options. authorization">
+          <div class="de-card-header">
+            <span class="de-card-code">CO-27</span>
+            <span class="de-card-category">Authorization</span>
+          </div>
+          <h3 class="de-card-title">Expenses incurred after coverage terminated</h3>
+          <div class="de-card-section">
+            <h4>Common Cause</h4>
+            <p>The patient's insurance coverage ended before the date of service, often due to a lapsed policy or job change.</p>
+          </div>
+          <div class="de-card-section de-card-synaipse">
+            <h4>How Synaipse Handles This</h4>
+            <p>Synaipse's Eligibility Agent verifies coverage in real time before each encounter. If coverage has lapsed, the system alerts front desk staff immediately and suggests alternative billing pathways or patient self-pay options.</p>
+          </div>
+        </div>
+
+        <div class="de-card" data-category="authorization" data-code="CO-197" data-searchable="CO-197 Precertification/authorization/notification absent The payer required prior authorization or precertification for the service, but none was obtained before the procedure was performed. Synaipse's Prior Auth Agent cross-references every scheduled procedure against payer-specific auth requirements. It automatically submits precertification requests days before the service date and tracks approval status, ensuring no claim is filed without proper authorization. authorization precertification notification">
+          <div class="de-card-header">
+            <span class="de-card-code">CO-197</span>
+            <span class="de-card-category">Authorization</span>
+          </div>
+          <h3 class="de-card-title">Precertification/authorization/notification absent</h3>
+          <div class="de-card-section">
+            <h4>Common Cause</h4>
+            <p>The payer required prior authorization or precertification for the service, but none was obtained before the procedure was performed.</p>
+          </div>
+          <div class="de-card-section de-card-synaipse">
+            <h4>How Synaipse Handles This</h4>
+            <p>Synaipse's Prior Auth Agent cross-references every scheduled procedure against payer-specific auth requirements. It automatically submits precertification requests days before the service date and tracks approval status, ensuring no claim is filed without proper authorization.</p>
+          </div>
+        </div>
+
+        <div class="de-card" data-category="authorization" data-code="CO-198" data-searchable="CO-198 Precertification/notification/authorization was not obtained in a timely manner Authorization was eventually obtained, but not within the payer's required timeframe before the service was rendered. Synaipse monitors upcoming appointments and triggers auth requests as early as possible. The system tracks payer-specific lead time requirements and escalates urgent cases, dramatically reducing late-auth denials. authorization precertification timely">
+          <div class="de-card-header">
+            <span class="de-card-code">CO-198</span>
+            <span class="de-card-category">Authorization</span>
+          </div>
+          <h3 class="de-card-title">Precertification/notification/authorization was not obtained in a timely manner</h3>
+          <div class="de-card-section">
+            <h4>Common Cause</h4>
+            <p>Authorization was eventually obtained, but not within the payer's required timeframe before the service was rendered.</p>
+          </div>
+          <div class="de-card-section de-card-synaipse">
+            <h4>How Synaipse Handles This</h4>
+            <p>Synaipse monitors upcoming appointments and triggers auth requests as early as possible. The system tracks payer-specific lead time requirements and escalates urgent cases, dramatically reducing late-auth denials.</p>
+          </div>
+        </div>
+
+        <div class="de-card" data-category="authorization" data-code="CO-242" data-searchable="CO-242 Services not provided by network/primary care provider The service was performed by a provider who is out-of-network or was not the patient's designated primary care provider as required by the plan. Synaipse's Eligibility Agent verifies network status and PCP assignment before each visit. If a network mismatch is detected, staff is alerted to obtain a referral or redirect the patient, preventing costly out-of-network denials. authorization network primary care">
+          <div class="de-card-header">
+            <span class="de-card-code">CO-242</span>
+            <span class="de-card-category">Authorization</span>
+          </div>
+          <h3 class="de-card-title">Services not provided by network/primary care provider</h3>
+          <div class="de-card-section">
+            <h4>Common Cause</h4>
+            <p>The service was performed by a provider who is out-of-network or was not the patient's designated primary care provider as required by the plan.</p>
+          </div>
+          <div class="de-card-section de-card-synaipse">
+            <h4>How Synaipse Handles This</h4>
+            <p>Synaipse's Eligibility Agent verifies network status and PCP assignment before each visit. If a network mismatch is detected, staff is alerted to obtain a referral or redirect the patient, preventing costly out-of-network denials.</p>
+          </div>
+        </div>
+
+        <!-- Medical Necessity Codes -->
+        <div class="de-card" data-category="medical-necessity" data-code="CO-50" data-searchable="CO-50 These are non-covered services because this is not deemed a medical necessity by the payer The payer determined the service was not medically necessary based on the diagnosis submitted, or the documentation did not support the level of service billed. Synaipse's Coding Agent reviews diagnosis-to-procedure mappings against payer medical policies before submission. When a medical necessity risk is detected, it suggests stronger ICD-10 codes or flags the claim for additional clinical documentation. medical necessity non-covered">
+          <div class="de-card-header">
+            <span class="de-card-code">CO-50</span>
+            <span class="de-card-category">Medical Necessity</span>
+          </div>
+          <h3 class="de-card-title">These are non-covered services because this is not deemed a medical necessity by the payer</h3>
+          <div class="de-card-section">
+            <h4>Common Cause</h4>
+            <p>The payer determined the service was not medically necessary based on the diagnosis submitted, or the documentation did not support the level of service billed.</p>
+          </div>
+          <div class="de-card-section de-card-synaipse">
+            <h4>How Synaipse Handles This</h4>
+            <p>Synaipse's Coding Agent reviews diagnosis-to-procedure mappings against payer medical policies before submission. When a medical necessity risk is detected, it suggests stronger ICD-10 codes or flags the claim for additional clinical documentation.</p>
+          </div>
+        </div>
+
+        <div class="de-card" data-category="medical-necessity" data-code="CO-55" data-searchable="CO-55 Procedure/treatment is deemed experimental or investigational by the payer The payer considers the procedure or treatment experimental, investigational, or not yet approved under the patient's specific plan. Synaipse's Appeal Agent compiles peer-reviewed literature, clinical guidelines, and FDA approvals to build a comprehensive medical necessity argument. It generates a fully drafted appeal letter with citations for physician review and signature. medical necessity experimental investigational">
+          <div class="de-card-header">
+            <span class="de-card-code">CO-55</span>
+            <span class="de-card-category">Medical Necessity</span>
+          </div>
+          <h3 class="de-card-title">Procedure/treatment is deemed experimental or investigational by the payer</h3>
+          <div class="de-card-section">
+            <h4>Common Cause</h4>
+            <p>The payer considers the procedure or treatment experimental, investigational, or not yet approved under the patient's specific plan.</p>
+          </div>
+          <div class="de-card-section de-card-synaipse">
+            <h4>How Synaipse Handles This</h4>
+            <p>Synaipse's Appeal Agent compiles peer-reviewed literature, clinical guidelines, and FDA approvals to build a comprehensive medical necessity argument. It generates a fully drafted appeal letter with citations for physician review and signature.</p>
+          </div>
+        </div>
+
+        <div class="de-card" data-category="medical-necessity" data-code="CO-56" data-searchable="CO-56 Procedure/treatment has not been deemed approved by the payer for this provider The payer has not credentialed or approved this specific provider to perform the billed procedure, or the provider type doesn't match the service. Synaipse's Credentialing Agent monitors provider-payer enrollment status and flags any gaps. If a denial occurs, it initiates the credentialing update and generates an appeal citing the provider's qualifications and active enrollment. medical necessity provider not approved">
+          <div class="de-card-header">
+            <span class="de-card-code">CO-56</span>
+            <span class="de-card-category">Medical Necessity</span>
+          </div>
+          <h3 class="de-card-title">Procedure/treatment has not been deemed approved by the payer for this provider</h3>
+          <div class="de-card-section">
+            <h4>Common Cause</h4>
+            <p>The payer has not credentialed or approved this specific provider to perform the billed procedure, or the provider type doesn't match the service.</p>
+          </div>
+          <div class="de-card-section de-card-synaipse">
+            <h4>How Synaipse Handles This</h4>
+            <p>Synaipse's Credentialing Agent monitors provider-payer enrollment status and flags any gaps. If a denial occurs, it initiates the credentialing update and generates an appeal citing the provider's qualifications and active enrollment.</p>
+          </div>
+        </div>
+
+        <div class="de-card" data-category="medical-necessity" data-code="CO-150" data-searchable="CO-150 Payer deems the information submitted does not support this level of service The clinical documentation submitted was insufficient to justify the level or type of service billed, according to the payer's review criteria. Synaipse's Documentation Agent analyzes chart notes against payer-specific documentation requirements before claim submission. It identifies gaps in clinical documentation and prompts providers to add supporting details, reducing insufficient-info denials by catching them before they happen. medical necessity insufficient information documentation">
+          <div class="de-card-header">
+            <span class="de-card-code">CO-150</span>
+            <span class="de-card-category">Medical Necessity</span>
+          </div>
+          <h3 class="de-card-title">Payer deems the information submitted does not support this level of service</h3>
+          <div class="de-card-section">
+            <h4>Common Cause</h4>
+            <p>The clinical documentation submitted was insufficient to justify the level or type of service billed, according to the payer's review criteria.</p>
+          </div>
+          <div class="de-card-section de-card-synaipse">
+            <h4>How Synaipse Handles This</h4>
+            <p>Synaipse's Documentation Agent analyzes chart notes against payer-specific documentation requirements before claim submission. It identifies gaps in clinical documentation and prompts providers to add supporting details, reducing insufficient-info denials by catching them before they happen.</p>
+          </div>
+        </div>
+
+        <div class="de-card" data-category="medical-necessity" data-code="CO-167" data-searchable="CO-167 This (these) diagnosis(es) is (are) not consistent with the procedure(s)/service(s) The diagnosis code submitted does not clinically support or justify the procedure that was performed, based on payer medical policy. Synaipse's Coding Agent cross-references diagnosis and procedure code pairs against CCI edits and payer-specific medical policies. It flags inconsistent pairings before submission and suggests compliant alternatives, preventing this common denial at the source. medical necessity diagnosis inconsistent">
+          <div class="de-card-header">
+            <span class="de-card-code">CO-167</span>
+            <span class="de-card-category">Medical Necessity</span>
+          </div>
+          <h3 class="de-card-title">This diagnosis is not consistent with the procedure/service</h3>
+          <div class="de-card-section">
+            <h4>Common Cause</h4>
+            <p>The diagnosis code submitted does not clinically support or justify the procedure that was performed, based on payer medical policy.</p>
+          </div>
+          <div class="de-card-section de-card-synaipse">
+            <h4>How Synaipse Handles This</h4>
+            <p>Synaipse's Coding Agent cross-references diagnosis and procedure code pairs against CCI edits and payer-specific medical policies. It flags inconsistent pairings before submission and suggests compliant alternatives, preventing this common denial at the source.</p>
+          </div>
+        </div>
+
+        <div class="de-card" data-category="medical-necessity" data-code="CO-243" data-searchable="CO-243 Services not authorized/referred by the primary care provider The patient's plan requires a referral from their PCP before seeing a specialist, and no referral was on file at the time of service. Synaipse tracks referral requirements by payer and plan type. When a patient is scheduled without a required referral, the system automatically contacts the PCP's office to obtain one or alerts your staff to do so before the visit. medical necessity referral PCP primary care">
+          <div class="de-card-header">
+            <span class="de-card-code">CO-243</span>
+            <span class="de-card-category">Medical Necessity</span>
+          </div>
+          <h3 class="de-card-title">Services not authorized/referred by the primary care provider</h3>
+          <div class="de-card-section">
+            <h4>Common Cause</h4>
+            <p>The patient's plan requires a referral from their PCP before seeing a specialist, and no referral was on file at the time of service.</p>
+          </div>
+          <div class="de-card-section de-card-synaipse">
+            <h4>How Synaipse Handles This</h4>
+            <p>Synaipse tracks referral requirements by payer and plan type. When a patient is scheduled without a required referral, the system automatically contacts the PCP's office to obtain one or alerts your staff to do so before the visit.</p>
+          </div>
+        </div>
+
+        <!-- Coding Codes -->
+        <div class="de-card" data-category="coding" data-code="CO-11" data-searchable="CO-11 The diagnosis is inconsistent with the procedure The diagnosis code does not support or justify the procedure code billed, often due to a mismatch between the clinical condition and the service rendered. Synaipse's Coding Agent validates every diagnosis-procedure combination against NCCI edits and payer rules before submission. When mismatches are found, it suggests the most appropriate diagnosis code from the patient's chart and corrects the claim automatically. coding diagnosis inconsistent procedure">
+          <div class="de-card-header">
+            <span class="de-card-code">CO-11</span>
+            <span class="de-card-category">Coding</span>
+          </div>
+          <h3 class="de-card-title">The diagnosis is inconsistent with the procedure</h3>
+          <div class="de-card-section">
+            <h4>Common Cause</h4>
+            <p>The diagnosis code does not support or justify the procedure code billed, often due to a mismatch between the clinical condition and the service rendered.</p>
+          </div>
+          <div class="de-card-section de-card-synaipse">
+            <h4>How Synaipse Handles This</h4>
+            <p>Synaipse's Coding Agent validates every diagnosis-procedure combination against NCCI edits and payer rules before submission. When mismatches are found, it suggests the most appropriate diagnosis code from the patient's chart and corrects the claim automatically.</p>
+          </div>
+        </div>
+
+        <div class="de-card" data-category="coding" data-code="CO-16" data-searchable="CO-16 Claim/service lacks information or has submission/billing error which is needed for adjudication The claim was missing required data fields such as referring provider NPI, place of service, or patient demographics needed for the payer to process it. Synaipse's Billing Agent runs a comprehensive pre-submission audit on every claim, checking for over 200 common data gaps. Missing fields are auto-populated from the EHR when possible, or flagged for staff review before the claim is sent. coding lacks information adjudication submission error">
+          <div class="de-card-header">
+            <span class="de-card-code">CO-16</span>
+            <span class="de-card-category">Coding</span>
+          </div>
+          <h3 class="de-card-title">Claim/service lacks information or has submission/billing error needed for adjudication</h3>
+          <div class="de-card-section">
+            <h4>Common Cause</h4>
+            <p>The claim was missing required data fields such as referring provider NPI, place of service, or patient demographics needed for the payer to process it.</p>
+          </div>
+          <div class="de-card-section de-card-synaipse">
+            <h4>How Synaipse Handles This</h4>
+            <p>Synaipse's Billing Agent runs a comprehensive pre-submission audit on every claim, checking for over 200 common data gaps. Missing fields are auto-populated from the EHR when possible, or flagged for staff review before the claim is sent.</p>
+          </div>
+        </div>
+
+        <div class="de-card" data-category="coding" data-code="CO-97" data-searchable="CO-97 The benefit for this service is included in the payment/allowance for another service/procedure that has already been adjudicated The service was bundled with another procedure under payer rules, meaning separate payment is not allowed because it's considered part of a more comprehensive service. Synaipse's Coding Agent checks CCI bundling rules and payer-specific edits before submission. When bundling conflicts are detected, it recommends appropriate modifier usage (such as modifier 59) or restructures the claim to maximize legitimate reimbursement. coding bundled payment another service adjudicated">
+          <div class="de-card-header">
+            <span class="de-card-code">CO-97</span>
+            <span class="de-card-category">Coding</span>
+          </div>
+          <h3 class="de-card-title">The benefit for this service is included in the payment/allowance for another service/procedure that has already been adjudicated</h3>
+          <div class="de-card-section">
+            <h4>Common Cause</h4>
+            <p>The service was bundled with another procedure under payer rules, meaning separate payment is not allowed because it's considered part of a more comprehensive service.</p>
+          </div>
+          <div class="de-card-section de-card-synaipse">
+            <h4>How Synaipse Handles This</h4>
+            <p>Synaipse's Coding Agent checks CCI bundling rules and payer-specific edits before submission. When bundling conflicts are detected, it recommends appropriate modifier usage (such as modifier 59) or restructures the claim to maximize legitimate reimbursement.</p>
+          </div>
+        </div>
+
+        <div class="de-card" data-category="coding" data-code="CO-125" data-searchable="CO-125 Submission/billing error(s). At least one Remark Code must be provided The claim contains a billing or formatting error that the payer cannot resolve without additional information, often a missing or invalid field on the CMS-1500 or UB-04 form. Synaipse's Billing Agent validates claim forms against payer-specific formatting requirements before submission. It catches errors like invalid taxonomy codes, missing NPI numbers, and incorrect place-of-service codes, reducing rejection rates by up to 85%. coding submission billing error remark code">
+          <div class="de-card-header">
+            <span class="de-card-code">CO-125</span>
+            <span class="de-card-category">Coding</span>
+          </div>
+          <h3 class="de-card-title">Submission/billing error(s)</h3>
+          <div class="de-card-section">
+            <h4>Common Cause</h4>
+            <p>The claim contains a billing or formatting error that the payer cannot resolve without additional information, often a missing or invalid field on the CMS-1500 or UB-04 form.</p>
+          </div>
+          <div class="de-card-section de-card-synaipse">
+            <h4>How Synaipse Handles This</h4>
+            <p>Synaipse's Billing Agent validates claim forms against payer-specific formatting requirements before submission. It catches errors like invalid taxonomy codes, missing NPI numbers, and incorrect place-of-service codes, reducing rejection rates by up to 85%.</p>
+          </div>
+        </div>
+
+        <div class="de-card" data-category="coding" data-code="CO-181" data-searchable="CO-181 Procedure code was invalid on the date of service The CPT or HCPCS code used has been deleted, replaced, or was not yet effective on the date the service was provided. Synaipse's Coding Agent maintains an up-to-date code database that reflects annual CPT updates, quarterly HCPCS changes, and payer-specific code lists. It automatically flags outdated codes and suggests valid replacements before claim submission. coding procedure code invalid date of service CPT HCPCS">
+          <div class="de-card-header">
+            <span class="de-card-code">CO-181</span>
+            <span class="de-card-category">Coding</span>
+          </div>
+          <h3 class="de-card-title">Procedure code was invalid on the date of service</h3>
+          <div class="de-card-section">
+            <h4>Common Cause</h4>
+            <p>The CPT or HCPCS code used has been deleted, replaced, or was not yet effective on the date the service was provided.</p>
+          </div>
+          <div class="de-card-section de-card-synaipse">
+            <h4>How Synaipse Handles This</h4>
+            <p>Synaipse's Coding Agent maintains an up-to-date code database that reflects annual CPT updates, quarterly HCPCS changes, and payer-specific code lists. It automatically flags outdated codes and suggests valid replacements before claim submission.</p>
+          </div>
+        </div>
+
+        <div class="de-card" data-category="coding" data-code="CO-252" data-searchable="CO-252 An attachment/other documentation is required to adjudicate this claim/service The payer requires additional documentation such as operative notes, lab results, or medical records to process the claim, but they were not included with the submission. Synaipse's Documentation Agent identifies payer-specific attachment requirements before claim submission. It automatically pulls relevant documents from the EHR and attaches them to the claim, or alerts staff when manual document retrieval is needed. coding attachment documentation required adjudicate">
+          <div class="de-card-header">
+            <span class="de-card-code">CO-252</span>
+            <span class="de-card-category">Coding</span>
+          </div>
+          <h3 class="de-card-title">An attachment/other documentation is required to adjudicate this claim/service</h3>
+          <div class="de-card-section">
+            <h4>Common Cause</h4>
+            <p>The payer requires additional documentation such as operative notes, lab results, or medical records to process the claim, but they were not included with the submission.</p>
+          </div>
+          <div class="de-card-section de-card-synaipse">
+            <h4>How Synaipse Handles This</h4>
+            <p>Synaipse's Documentation Agent identifies payer-specific attachment requirements before claim submission. It automatically pulls relevant documents from the EHR and attaches them to the claim, or alerts staff when manual document retrieval is needed.</p>
+          </div>
+        </div>
+
+        <!-- Eligibility Codes -->
+        <div class="de-card" data-category="eligibility" data-code="CO-22" data-searchable="CO-22 This care may be covered by another payer per coordination of benefits The patient has multiple insurance plans and the claim was sent to the wrong payer, or coordination of benefits information is missing or incorrect. Synaipse's Eligibility Agent automatically checks for secondary and tertiary coverage during eligibility verification. It determines the correct payer order and routes claims appropriately, preventing COB denials and ensuring maximum reimbursement across all plans. eligibility coordination of benefits COB multiple insurance">
+          <div class="de-card-header">
+            <span class="de-card-code">CO-22</span>
+            <span class="de-card-category">Eligibility</span>
+          </div>
+          <h3 class="de-card-title">This care may be covered by another payer per coordination of benefits</h3>
+          <div class="de-card-section">
+            <h4>Common Cause</h4>
+            <p>The patient has multiple insurance plans and the claim was sent to the wrong payer, or coordination of benefits information is missing or incorrect.</p>
+          </div>
+          <div class="de-card-section de-card-synaipse">
+            <h4>How Synaipse Handles This</h4>
+            <p>Synaipse's Eligibility Agent automatically checks for secondary and tertiary coverage during eligibility verification. It determines the correct payer order and routes claims appropriately, preventing COB denials and ensuring maximum reimbursement across all plans.</p>
+          </div>
+        </div>
+
+        <div class="de-card" data-category="eligibility" data-code="CO-26" data-searchable="CO-26 Expenses incurred prior to coverage The date of service falls before the patient's insurance coverage effective date, meaning the plan was not yet active when the service was rendered. Synaipse's Eligibility Agent verifies coverage effective dates in real time at scheduling and check-in. When a service date precedes coverage, staff is immediately notified to collect self-pay or reschedule, avoiding write-offs from pre-coverage denials. eligibility prior to coverage effective date">
+          <div class="de-card-header">
+            <span class="de-card-code">CO-26</span>
+            <span class="de-card-category">Eligibility</span>
+          </div>
+          <h3 class="de-card-title">Expenses incurred prior to coverage</h3>
+          <div class="de-card-section">
+            <h4>Common Cause</h4>
+            <p>The date of service falls before the patient's insurance coverage effective date, meaning the plan was not yet active when the service was rendered.</p>
+          </div>
+          <div class="de-card-section de-card-synaipse">
+            <h4>How Synaipse Handles This</h4>
+            <p>Synaipse's Eligibility Agent verifies coverage effective dates in real time at scheduling and check-in. When a service date precedes coverage, staff is immediately notified to collect self-pay or reschedule, avoiding write-offs from pre-coverage denials.</p>
+          </div>
+        </div>
+
+        <div class="de-card" data-category="eligibility" data-code="PR-1" data-searchable="PR-1 Deductible amount The patient is responsible for this portion of the charge because their annual deductible has not been met. This is a patient responsibility adjustment, not a true denial. Synaipse's Patient Billing Agent calculates remaining deductible amounts before the visit using real-time benefits data. It enables front desk staff to collect estimated patient responsibility at check-in, improving collections and reducing accounts receivable days. eligibility deductible patient responsibility">
+          <div class="de-card-header">
+            <span class="de-card-code">PR-1</span>
+            <span class="de-card-category">Eligibility</span>
+          </div>
+          <h3 class="de-card-title">Deductible amount</h3>
+          <div class="de-card-section">
+            <h4>Common Cause</h4>
+            <p>The patient is responsible for this portion of the charge because their annual deductible has not been met. This is a patient responsibility adjustment, not a true denial.</p>
+          </div>
+          <div class="de-card-section de-card-synaipse">
+            <h4>How Synaipse Handles This</h4>
+            <p>Synaipse's Patient Billing Agent calculates remaining deductible amounts before the visit using real-time benefits data. It enables front desk staff to collect estimated patient responsibility at check-in, improving collections and reducing accounts receivable days.</p>
+          </div>
+        </div>
+
+        <div class="de-card" data-category="eligibility" data-code="PR-2" data-searchable="PR-2 Coinsurance amount The patient owes a percentage of the allowed amount as their coinsurance obligation under their plan. This is a patient responsibility, not a payer denial. Synaipse's Patient Billing Agent calculates coinsurance amounts based on real-time benefits verification and generates accurate patient estimates before the visit. After adjudication, it automatically generates and sends patient statements for any remaining balance. eligibility coinsurance patient responsibility percentage">
+          <div class="de-card-header">
+            <span class="de-card-code">PR-2</span>
+            <span class="de-card-category">Eligibility</span>
+          </div>
+          <h3 class="de-card-title">Coinsurance amount</h3>
+          <div class="de-card-section">
+            <h4>Common Cause</h4>
+            <p>The patient owes a percentage of the allowed amount as their coinsurance obligation under their plan. This is a patient responsibility, not a payer denial.</p>
+          </div>
+          <div class="de-card-section de-card-synaipse">
+            <h4>How Synaipse Handles This</h4>
+            <p>Synaipse's Patient Billing Agent calculates coinsurance amounts based on real-time benefits verification and generates accurate patient estimates before the visit. After adjudication, it automatically generates and sends patient statements for any remaining balance.</p>
+          </div>
+        </div>
+
+        <div class="de-card" data-category="eligibility" data-code="PR-3" data-searchable="PR-3 Co-payment amount The patient owes a fixed co-payment amount for this visit or service as defined by their insurance plan. This is collected at the time of service. Synaipse's Patient Billing Agent looks up exact co-pay amounts during eligibility verification and displays them to front desk staff at check-in. It tracks collected vs. owed amounts and automates patient balance reminders for any uncollected co-pays. eligibility co-payment copay patient responsibility">
+          <div class="de-card-header">
+            <span class="de-card-code">PR-3</span>
+            <span class="de-card-category">Eligibility</span>
+          </div>
+          <h3 class="de-card-title">Co-payment amount</h3>
+          <div class="de-card-section">
+            <h4>Common Cause</h4>
+            <p>The patient owes a fixed co-payment amount for this visit or service as defined by their insurance plan. This is collected at the time of service.</p>
+          </div>
+          <div class="de-card-section de-card-synaipse">
+            <h4>How Synaipse Handles This</h4>
+            <p>Synaipse's Patient Billing Agent looks up exact co-pay amounts during eligibility verification and displays them to front desk staff at check-in. It tracks collected vs. owed amounts and automates patient balance reminders for any uncollected co-pays.</p>
+          </div>
+        </div>
+
+        <!-- Timely Filing Codes -->
+        <div class="de-card" data-category="timely-filing" data-code="CO-29" data-searchable="CO-29 The time limit for filing has expired The claim was submitted after the payer's filing deadline, which typically ranges from 90 days to one year depending on the payer and contract. Synaipse's Billing Agent tracks filing deadlines for every payer and prioritizes claims approaching their limit. It sends automated escalation alerts at 30, 15, and 7 days before deadline, and ensures clean claims are submitted well within the filing window. timely filing time limit expired deadline">
+          <div class="de-card-header">
+            <span class="de-card-code">CO-29</span>
+            <span class="de-card-category">Timely Filing</span>
+          </div>
+          <h3 class="de-card-title">The time limit for filing has expired</h3>
+          <div class="de-card-section">
+            <h4>Common Cause</h4>
+            <p>The claim was submitted after the payer's filing deadline, which typically ranges from 90 days to one year depending on the payer and contract.</p>
+          </div>
+          <div class="de-card-section de-card-synaipse">
+            <h4>How Synaipse Handles This</h4>
+            <p>Synaipse's Billing Agent tracks filing deadlines for every payer and prioritizes claims approaching their limit. It sends automated escalation alerts at 30, 15, and 7 days before deadline, and ensures clean claims are submitted well within the filing window.</p>
+          </div>
+        </div>
+
+        <div class="de-card" data-category="timely-filing" data-code="CO-187" data-searchable="CO-187 Consumer/insured was not given a required notice within the required timeframe The required notification to the patient or insured party was not provided within the payer-mandated timeframe, resulting in denial of the claim. Synaipse's Compliance Agent tracks notification requirements across payers and automatically generates required patient notices. When denial occurs, the Appeal Agent documents the timeline and submits proof of timely notification if available, or identifies process gaps to prevent recurrence. timely filing required notice timeframe notification">
+          <div class="de-card-header">
+            <span class="de-card-code">CO-187</span>
+            <span class="de-card-category">Timely Filing</span>
+          </div>
+          <h3 class="de-card-title">Consumer/insured was not given a required notice within the required timeframe</h3>
+          <div class="de-card-section">
+            <h4>Common Cause</h4>
+            <p>The required notification to the patient or insured party was not provided within the payer-mandated timeframe, resulting in denial of the claim.</p>
+          </div>
+          <div class="de-card-section de-card-synaipse">
+            <h4>How Synaipse Handles This</h4>
+            <p>Synaipse's Compliance Agent tracks notification requirements across payers and automatically generates required patient notices. When denial occurs, the Appeal Agent documents the timeline and submits proof of timely notification if available, or identifies process gaps to prevent recurrence.</p>
+          </div>
+        </div>
+
+        <div class="de-card" data-category="timely-filing" data-code="CO-235" data-searchable="CO-235 Sales tax The claim was assessed a late filing penalty or adjustment, typically reducing the allowed amount due to late submission even if the claim was ultimately accepted. Synaipse prevents late filing penalties by submitting claims within 48 hours of service completion. Its priority queue system ensures that no claim sits idle, and automated status tracking catches any submission failures that could lead to late filing. timely filing late penalty">
+          <div class="de-card-header">
+            <span class="de-card-code">CO-235</span>
+            <span class="de-card-category">Timely Filing</span>
+          </div>
+          <h3 class="de-card-title">Late filing penalty applied</h3>
+          <div class="de-card-section">
+            <h4>Common Cause</h4>
+            <p>The claim was assessed a late filing penalty or adjustment, typically reducing the allowed amount due to late submission even if the claim was ultimately accepted.</p>
+          </div>
+          <div class="de-card-section de-card-synaipse">
+            <h4>How Synaipse Handles This</h4>
+            <p>Synaipse prevents late filing penalties by submitting claims within 48 hours of service completion. Its priority queue system ensures that no claim sits idle, and automated status tracking catches any submission failures that could lead to late filing.</p>
+          </div>
+        </div>
+
+        <!-- Duplicate Codes -->
+        <div class="de-card" data-category="duplicate" data-code="CO-18" data-searchable="CO-18 Exact duplicate claim/service An identical claim with the same patient, date of service, procedure code, and provider was already submitted and processed by the payer. Synaipse's Billing Agent maintains a complete submission history and checks every outgoing claim against previously submitted ones. It blocks true duplicates from being sent while identifying legitimate resubmissions that need corrected information, preventing both duplicate denials and lost revenue. duplicate exact claim service">
+          <div class="de-card-header">
+            <span class="de-card-code">CO-18</span>
+            <span class="de-card-category">Duplicate</span>
+          </div>
+          <h3 class="de-card-title">Exact duplicate claim/service</h3>
+          <div class="de-card-section">
+            <h4>Common Cause</h4>
+            <p>An identical claim with the same patient, date of service, procedure code, and provider was already submitted and processed by the payer.</p>
+          </div>
+          <div class="de-card-section de-card-synaipse">
+            <h4>How Synaipse Handles This</h4>
+            <p>Synaipse's Billing Agent maintains a complete submission history and checks every outgoing claim against previously submitted ones. It blocks true duplicates from being sent while identifying legitimate resubmissions that need corrected information, preventing both duplicate denials and lost revenue.</p>
+          </div>
+        </div>
+
+        <div class="de-card" data-category="duplicate" data-code="CO-19" data-searchable="CO-19 This is a work-related injury/illness and thus the liability of the worker's compensation carrier The payer determined the service is related to a work injury and should be billed to the worker's compensation carrier instead of the health insurance plan. Synaipse's Eligibility Agent flags work-related diagnoses and injury codes during pre-submission review. When worker's comp liability is identified, it automatically redirects the claim to the correct carrier and ensures proper billing forms are used. duplicate work-related injury workers compensation liability">
+          <div class="de-card-header">
+            <span class="de-card-code">CO-19</span>
+            <span class="de-card-category">Duplicate</span>
+          </div>
+          <h3 class="de-card-title">This is a work-related injury/illness and thus the liability of the worker's compensation carrier</h3>
+          <div class="de-card-section">
+            <h4>Common Cause</h4>
+            <p>The payer determined the service is related to a work injury and should be billed to the worker's compensation carrier instead of the health insurance plan.</p>
+          </div>
+          <div class="de-card-section de-card-synaipse">
+            <h4>How Synaipse Handles This</h4>
+            <p>Synaipse's Eligibility Agent flags work-related diagnoses and injury codes during pre-submission review. When worker's comp liability is identified, it automatically redirects the claim to the correct carrier and ensures proper billing forms are used.</p>
+          </div>
+        </div>
+
+        <div class="de-card" data-category="duplicate" data-code="OA-18" data-searchable="OA-18 Exact duplicate claim/service (Other Adjustment) The payer identified this as an exact duplicate of a previously processed claim. The OA group code indicates it is a non-contractual adjustment rather than a contractual obligation. Synaipse's Billing Agent cross-references all outgoing claims against the payer's remittance history. When an OA-18 is received, the system automatically verifies whether the original claim was paid correctly and alerts staff only if the original payment is missing or underpaid. duplicate exact OA other adjustment">
+          <div class="de-card-header">
+            <span class="de-card-code">OA-18</span>
+            <span class="de-card-category">Duplicate</span>
+          </div>
+          <h3 class="de-card-title">Exact duplicate claim/service (Other Adjustment)</h3>
+          <div class="de-card-section">
+            <h4>Common Cause</h4>
+            <p>The payer identified this as an exact duplicate of a previously processed claim. The OA group code indicates it is a non-contractual adjustment rather than a contractual obligation.</p>
+          </div>
+          <div class="de-card-section de-card-synaipse">
+            <h4>How Synaipse Handles This</h4>
+            <p>Synaipse's Billing Agent cross-references all outgoing claims against the payer's remittance history. When an OA-18 is received, the system automatically verifies whether the original claim was paid correctly and alerts staff only if the original payment is missing or underpaid.</p>
+          </div>
+        </div>
+
+        <div class="de-card" data-category="duplicate" data-code="CO-39" data-searchable="CO-39 Services denied at the time of discharge The services were denied because they were rendered after the patient was officially discharged, or the charges overlap with services already included in the discharge billing. Synaipse's Billing Agent validates service dates against admission and discharge records to prevent post-discharge billing errors. It separates inpatient from outpatient charges and ensures each claim accurately reflects the service timeline, eliminating discharge-related denials. duplicate denied discharge services overlap">
+          <div class="de-card-header">
+            <span class="de-card-code">CO-39</span>
+            <span class="de-card-category">Duplicate</span>
+          </div>
+          <h3 class="de-card-title">Services denied at the time of discharge</h3>
+          <div class="de-card-section">
+            <h4>Common Cause</h4>
+            <p>The services were denied because they were rendered after the patient was officially discharged, or the charges overlap with services already included in the discharge billing.</p>
+          </div>
+          <div class="de-card-section de-card-synaipse">
+            <h4>How Synaipse Handles This</h4>
+            <p>Synaipse's Billing Agent validates service dates against admission and discharge records to prevent post-discharge billing errors. It separates inpatient from outpatient charges and ensures each claim accurately reflects the service timeline, eliminating discharge-related denials.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Strip -->
+  <section class="de-stats">
+    <div class="container">
+      <div class="de-stats-grid">
+        <div class="de-stat">
+          <span class="de-stat-number">87%</span>
+          <span class="de-stat-label">Appeal success rate</span>
+        </div>
+        <div class="de-stat">
+          <span class="de-stat-number">60%</span>
+          <span class="de-stat-label">Of denials are preventable</span>
+        </div>
+        <div class="de-stat">
+          <span class="de-stat-number">$125K</span>
+          <span class="de-stat-label">Average annual recovery</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="de-cta">
+    <div class="container">
+      <div class="de-cta-content">
+        <div class="section-label">Take Action</div>
+        <h2>Stop Losing Revenue to Denials</h2>
+        <p>Synaipse's AI agents prevent denials before they happen and automatically appeal the ones that get through. See how much revenue your practice is leaving on the table.</p>
+        <a href="index.html#contact" class="btn-primary">
+          Request a Demo
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" aria-label="Synaipse Home">
+            <svg width="32" height="32" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+              <circle cx="40" cy="40" r="14" fill="#00629B"/>
+              <line x1="40" y1="26" x2="40" y2="14" stroke="#5E6A71" stroke-width="4" stroke-linecap="round"/>
+              <line x1="54" y1="40" x2="66" y2="40" stroke="#5E6A71" stroke-width="4" stroke-linecap="round"/>
+              <line x1="40" y1="54" x2="40" y2="66" stroke="#5E6A71" stroke-width="4" stroke-linecap="round"/>
+              <line x1="26" y1="40" x2="14" y2="40" stroke="#5E6A71" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="40" cy="10" r="4" fill="#5E6A71"/>
+              <circle cx="70" cy="40" r="4" fill="#5E6A71"/>
+              <circle cx="40" cy="70" r="4" fill="#5E6A71"/>
+              <circle cx="10" cy="40" r="4" fill="#5E6A71"/>
+              <circle cx="40" cy="40" r="6" fill="#E8A838"/>
+            </svg>
+            <span class="nav-wordmark">Syn<span class="ai">AI</span>pse</span>
+          </a>
+          <p>Physician-led healthcare automation. Eliminating administrative burden so you can focus on patients.</p>
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:+15135125536">+1 513-512-5536</a>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:info@synaipse.org">info@synaipse.org</a>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>2900 Reading Rd<br>Cincinnati, OH 45206</span>
+            </div>
+          </div>
+        </div>
+                <div class="footer-col">
+          <h4>Platform</h4>
+          <a href="index.html#platform">Overview</a>
+          <a href="claim-journey.html">How a Claim Works</a>
+          <a href="index.html#comparison">Before &amp; After</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About Us</a>
+          <a href="resources.html">Knowledge Base</a>
+          <a href="careers.html">Careers</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="trust.html#privacy">Privacy Policy</a>
+          <a href="trust.html#terms">Terms of Service</a>
+          <a href="trust.html#hipaa">HIPAA Compliance</a>
+        </div>
+      </div>
+      <div class="footer-partner">
+        <div class="footer-partner-content">
+          <span class="footer-partner-label">Proudly headquartered at</span>
+          <div class="footer-partner-logo" aria-label="1819 Innovation Hub">
+            <svg viewBox="-20 -20 264 240" width="120" height="110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <g fill="#1a1a1a" stroke="#1a1a1a">
+                <rect x="0" y="0" width="16" height="140" stroke="none"/>
+                <rect x="104" y="0" width="16" height="140" stroke="none"/>
+                <rect x="208" y="0" width="16" height="140" stroke="none"/>
+                <circle cx="60" cy="32" r="24" stroke-width="16" fill="none"/>
+                <circle cx="60" cy="108" r="24" stroke-width="16" fill="none"/>
+                <circle cx="164" cy="32" r="24" stroke-width="16" fill="none"/>
+                <text x="0" y="186" font-family="'Montserrat','Proxima Nova','Century Gothic',sans-serif" font-weight="800" font-size="25" stroke="none" textLength="224" lengthAdjust="spacing">innovation hub</text>
+              </g>
+            </svg>
+          </div>
+          <span class="footer-partner-sub">University of Cincinnati</span>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Synaipse Inc. Cincinnati, OH. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="https://linkedin.com/company/synaipseinc" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://youtube.com/@synaipse" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vercel Speed Insights -->
+  <script>
+    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
+  <script defer src="main.js"></script>
+
+  <!-- Denial Explorer Search -->
+  <script>
+  (function() {
+    'use strict';
+
+    var searchInput = document.getElementById('de-search-input');
+    var cards = document.querySelectorAll('.de-card');
+    var filterChips = document.querySelectorAll('.de-filter-chip');
+    var resultsCount = document.getElementById('de-results-count');
+    var activeCategory = 'all';
+
+    function filterCards() {
+      var query = searchInput.value.toLowerCase().trim();
+      var visible = 0;
+      cards.forEach(function(card) {
+        var matchesCategory = activeCategory === 'all' || card.dataset.category === activeCategory;
+        var searchable = (card.dataset.code + ' ' + card.dataset.searchable).toLowerCase();
+        var matchesSearch = !query || searchable.includes(query);
+        var show = matchesCategory && matchesSearch;
+        card.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      resultsCount.textContent = visible + ' code' + (visible !== 1 ? 's' : '') + ' found';
+    }
+
+    searchInput.addEventListener('input', filterCards);
+
+    filterChips.forEach(function(chip) {
+      chip.addEventListener('click', function() {
+        filterChips.forEach(function(c) { c.classList.remove('active'); });
+        chip.classList.add('active');
+        activeCategory = chip.dataset.category;
+        filterCards();
+      });
+    });
+
+    // Initialize
+    filterCards();
+  })();
+  </script>
+
+</body>
+</html>
