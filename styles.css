@@ -492,6 +492,24 @@ nav.scrolled {
   line-height: 1.2;
 }
 
+/* Dark mode overrides for nav dropdown — must appear after base .nav-dropdown rules */
+@media (prefers-color-scheme: dark) {
+  .nav-dropdown {
+    background: rgba(15, 20, 25, 0.95);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .nav-links .nav-dropdown a {
+    color: #E8ECF0;
+  }
+
+  .nav-links .nav-dropdown a:hover {
+    background: rgba(0, 98, 155, 0.2);
+    color: #fff;
+  }
+}
+
 /* Mobile menu button */
 .mobile-menu-btn {
   display: none;
