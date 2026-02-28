@@ -257,8 +257,23 @@
       <div class="role-cards reveal-stagger">
         <article class="role-card reveal">
           <div class="role-card-image">
-            <div class="role-card-image-placeholder">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <div class="role-card-ui" aria-hidden="true">
+              <div class="rcu-bar">
+                <span class="rcu-dot"></span><span class="rcu-dot"></span><span class="rcu-dot"></span>
+                <span class="rcu-window-title">Patient Queue</span>
+              </div>
+              <div class="rcu-patient-row">
+                <span class="rcu-patient-name">Johnson, M.</span>
+                <span class="rcu-status rcu-status--green">Checked In</span>
+              </div>
+              <div class="rcu-patient-row">
+                <span class="rcu-patient-name">Patel, R.</span>
+                <span class="rcu-status rcu-status--blue">Eligibility ✓</span>
+              </div>
+              <div class="rcu-patient-row">
+                <span class="rcu-patient-name">Chen, W.</span>
+                <span class="rcu-status rcu-status--amber">Referral Rcvd</span>
+              </div>
             </div>
           </div>
           <div class="role-card-icon" aria-hidden="true">
@@ -277,8 +292,25 @@
 
         <article class="role-card featured reveal">
           <div class="role-card-image">
-            <div class="role-card-image-placeholder">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <div class="role-card-ui" aria-hidden="true">
+              <div class="rcu-bar">
+                <span class="rcu-dot"></span><span class="rcu-dot"></span><span class="rcu-dot"></span>
+                <span class="rcu-window-title">Clinical Workspace</span>
+              </div>
+              <div class="rcu-waveform">
+                <svg viewBox="0 0 160 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M0 18 L18 18 L26 4 L34 32 L42 18 L58 18 L66 8 L74 28 L82 18 L100 18 L108 6 L116 30 L124 18 L160 18" stroke="rgba(46,139,192,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="rcu-code-suggestion">
+                <span class="rcu-code-badge">CPT 27447</span>
+                <span class="rcu-confidence">AI: 94% confidence</span>
+              </div>
+              <div class="rcu-note-lines" aria-hidden="true">
+                <div class="rcu-note-line" style="width:88%"></div>
+                <div class="rcu-note-line" style="width:72%"></div>
+                <div class="rcu-note-line" style="width:50%"></div>
+              </div>
             </div>
           </div>
           <div class="role-card-icon" aria-hidden="true">
@@ -297,8 +329,29 @@
 
         <article class="role-card reveal">
           <div class="role-card-image">
-            <div class="role-card-image-placeholder">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <div class="role-card-ui" aria-hidden="true">
+              <div class="rcu-bar">
+                <span class="rcu-dot"></span><span class="rcu-dot"></span><span class="rcu-dot"></span>
+                <span class="rcu-window-title">RCM Dashboard</span>
+              </div>
+              <div class="rcu-metrics-row">
+                <div class="rcu-metric">
+                  <span class="rcu-metric-val">94%</span>
+                  <span class="rcu-metric-label">PA Approval</span>
+                </div>
+                <div class="rcu-metric">
+                  <span class="rcu-metric-val rcu-metric-val--amber">$12.4K</span>
+                  <span class="rcu-metric-label">Recovered</span>
+                </div>
+              </div>
+              <div class="rcu-patient-row">
+                <span class="rcu-patient-name">PA #4821</span>
+                <span class="rcu-status rcu-status--green">Approved</span>
+              </div>
+              <div class="rcu-patient-row">
+                <span class="rcu-patient-name">Claim #9034</span>
+                <span class="rcu-status rcu-status--blue">Filed</span>
+              </div>
             </div>
           </div>
           <div class="role-card-icon" aria-hidden="true">
@@ -371,37 +424,53 @@
         <p class="section-sub">See how Synaipse transforms daily operations for every member of your team.</p>
       </header>
 
-      <div class="comparison-grid">
-        <div class="comparison-col comparison-before reveal-left">
-          <div class="comparison-header">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-            <h3>Without Synaipse</h3>
+      <div class="comparison-table reveal">
+        <div class="comparison-table-head">
+          <div class="cmp-col-label cmp-col-label--before">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+            Without Synaipse
           </div>
-          <ul class="comparison-list">
-            <li>Staff toggle between 4-6 applications per case</li>
-            <li>Manual data entry into EMR, payer portals, fax</li>
-            <li>Copy-paste between systems, prone to error</li>
-            <li>No visibility into PA status without logging into each portal</li>
-            <li>Coding done manually or with basic reference tools</li>
-            <li>Denials discovered late, appeals scrambled</li>
-            <li>No analytics on RCM performance</li>
-          </ul>
+          <div class="cmp-divider-head"></div>
+          <div class="cmp-col-label cmp-col-label--after">
+            With Synaipse
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
         </div>
 
-        <div class="comparison-col comparison-after reveal-right">
-          <div class="comparison-header">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            <h3>With Synaipse</h3>
-          </div>
-          <ul class="comparison-list">
-            <li>Single browser tab — one platform for the entire workflow</li>
-            <li>AI auto-populates fields from referrals, notes, and EHR data</li>
-            <li>Real-time eligibility, coding suggestions, and PA assembly</li>
-            <li>Unified dashboard: every case, every status, one view</li>
-            <li>AI-assisted surgical coding with confidence scores</li>
-            <li>Proactive denial prevention and automated appeals workflow</li>
-            <li>Live KPIs: approval rates, revenue impact, turnaround times</li>
-          </ul>
+        <div class="comparison-row">
+          <div class="cmp-cell cmp-cell--before"><span class="cmp-x">✕</span>Staff toggle between 4–6 applications per case</div>
+          <div class="cmp-arrow">→</div>
+          <div class="cmp-cell cmp-cell--after"><span class="cmp-check">✓</span>Single browser tab — one platform for the entire workflow</div>
+        </div>
+        <div class="comparison-row">
+          <div class="cmp-cell cmp-cell--before"><span class="cmp-x">✕</span>Manual data entry into EMR, payer portals, fax</div>
+          <div class="cmp-arrow">→</div>
+          <div class="cmp-cell cmp-cell--after"><span class="cmp-check">✓</span>AI auto-populates fields from referrals, notes, and EHR data</div>
+        </div>
+        <div class="comparison-row">
+          <div class="cmp-cell cmp-cell--before"><span class="cmp-x">✕</span>Copy-paste between systems, prone to error</div>
+          <div class="cmp-arrow">→</div>
+          <div class="cmp-cell cmp-cell--after"><span class="cmp-check">✓</span>Real-time eligibility, coding suggestions, and PA assembly</div>
+        </div>
+        <div class="comparison-row">
+          <div class="cmp-cell cmp-cell--before"><span class="cmp-x">✕</span>No visibility into PA status without logging into each portal</div>
+          <div class="cmp-arrow">→</div>
+          <div class="cmp-cell cmp-cell--after"><span class="cmp-check">✓</span>Unified dashboard: every case, every status, one view</div>
+        </div>
+        <div class="comparison-row">
+          <div class="cmp-cell cmp-cell--before"><span class="cmp-x">✕</span>Coding done manually or with basic reference tools</div>
+          <div class="cmp-arrow">→</div>
+          <div class="cmp-cell cmp-cell--after"><span class="cmp-check">✓</span>AI-assisted surgical coding with confidence scores</div>
+        </div>
+        <div class="comparison-row">
+          <div class="cmp-cell cmp-cell--before"><span class="cmp-x">✕</span>Denials discovered late, appeals scrambled</div>
+          <div class="cmp-arrow">→</div>
+          <div class="cmp-cell cmp-cell--after"><span class="cmp-check">✓</span>Proactive denial prevention and automated appeals workflow</div>
+        </div>
+        <div class="comparison-row">
+          <div class="cmp-cell cmp-cell--before"><span class="cmp-x">✕</span>No analytics on RCM performance</div>
+          <div class="cmp-arrow">→</div>
+          <div class="cmp-cell cmp-cell--after"><span class="cmp-check">✓</span>Live KPIs: approval rates, revenue impact, turnaround times</div>
         </div>
       </div>
     </div>
