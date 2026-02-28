@@ -1,4 +1,6 @@
-# Synaipse Landing Site — Claude Context
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
 Static marketing site for Synaipse (physician-led healthcare automation).
@@ -6,15 +8,25 @@ Static marketing site for Synaipse (physician-led healthcare automation).
 - Deployed on Vercel; live at `https://synaipse.org`
 - Push to `main` → Vercel auto-deploys
 
+## Local Preview
+```bash
+npx serve -p 3000 .
+```
+Or use the configured launch profile: `/preview start static-server`
+
+Note: `.reveal*` elements are `opacity:0` until IntersectionObserver fires — if previewing via screenshot tooling, inject:
+```js
+document.head.insertAdjacentHTML('beforeend','<style>.reveal,.reveal-left,.reveal-right,.reveal-scale{opacity:1!important;transform:none!important;}</style>')
+```
+
 ## File Structure
 ```
 index.html + 14 other pages   # see list below
-styles.css                     # single stylesheet (~6,200 lines)
+styles.css                     # single stylesheet (~6,500+ lines)
 main.js                        # single shared JS file (~235 lines)
 vercel.json                    # security headers (CSP, X-Frame-Options, etc.)
 sitemap.xml / robots.txt       # SEO
 images/                        # logos, founder photos
-docs/plans/                    # design plans (not publicly served)
 ```
 
 **15 HTML pages:** `index`, `about`, `advisory-board`, `ambient-scribe`, `automation-platform`, `blog`, `careers`, `credentialing`, `customers`, `investors`, `media`, `news`, `partnerships`, `pricing`, `testimonials`
@@ -35,6 +47,17 @@ CSS custom properties (defined in `:root`):
 - Scroll-reveal animation classes: `.reveal`, `.reveal-left`, `.reveal-right`, `.reveal-scale`
 - BEM-adjacent naming: `.hero`, `.hero-content`, `.hero-actions`
 
+**CSS cascade gotcha:** The early `@media (prefers-color-scheme: dark)` block at the top of `styles.css` is overridden by base rules defined later in the file. When adding dark mode overrides, always add a second `@media` block *after* the relevant base rules, not only in the early block.
+
+## Key Component Patterns
+| Component | Classes | Used in |
+|---|---|---|
+| Split feature section | `.pf-split`, `.pf-split--reverse`, `.pf-visual`, `.pf-content`, `.pf-mockup`, `.pf-chips`, `.pf-chip`, `.pf-step` | `automation-platform.html` |
+| CSS UI mockups | `.role-card-ui`, `.rcu-*` | `index.html` role cards |
+| Comparison table | `.comparison-table`, `.comparison-row`, `.cmp-cell--before/after`, `.cmp-x`, `.cmp-check`, `.cmp-arrow` | `index.html` before/after section |
+
+`.pf-split--reverse` uses `direction: rtl` on the grid to visually flip column order without changing HTML source order (preserves screen-reader and tab order).
+
 ## JavaScript Patterns (`main.js`)
 Everything wrapped in an IIFE: `(function() { 'use strict'; ... })()` — no external libraries.
 
@@ -53,7 +76,11 @@ Everything wrapped in an IIFE: `(function() { 'use strict'; ... })()` — no ext
 
 When updating nav or footer, **every HTML file must be updated**.
 
-Current nav groups: **Products** (3 items) · **Company** (4 items) · **Resources** (3 items) · CTA button
+Current nav groups:
+- **Company** (4 items): About Us, Customers, Partnerships, Clinical Advisory Board
+- **Products** (4 items): Automation Platform, Credentialing, Ambient Scribe, Pricing
+- **Resources** (5 items): Blog, Customer Testimonials, News, Media, Investors
+- Plus standalone: Careers, Contact, Request Demo (CTA)
 
 Active page: set `aria-current="page"` on the correct `<a>` tag.
 
@@ -79,7 +106,7 @@ Every page must have: title tag, meta description, `og:*`, `twitter:card`, canon
 ## Deployment & Security
 - Push to `main` → Vercel auto-deploys (no manual step needed)
 - Security headers in `vercel.json` — **do not remove or weaken the CSP**
-- If adding a new external resource (font, script, API endpoint), update the CSP `connect-src` / `script-src` / `style-src` in `vercel.json`
+- If adding a new external resource (font, script, API endpoint), update `connect-src` / `script-src` / `style-src` in `vercel.json`
 
 ## Accessibility
 - Keyboard nav: Escape closes mobile menu, focus returned to toggle button
