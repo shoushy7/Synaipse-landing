@@ -72,16 +72,18 @@ Everything wrapped in an IIFE: `(function() { 'use strict'; ... })()` — no ext
 | Form validation | `.contact-form` / `.subscribe-form`; `.invalid` on `.form-group` |
 
 ## ⚠️ Nav & Footer: Manually Repeated
-**There is no templating system.** Nav and footer HTML are copy-pasted across all 15 pages.
+**There is no templating system.** Nav and footer HTML are copy-pasted across all 22 pages.
 
 When updating nav or footer, **every HTML file must be updated**.
 
 Current nav groups:
-- **Company** (4 items): About Us, Customers, Partnerships, Trust & Security
+- **Company** (3 items): About Us, Partnerships, Trust & Security
 - **Products** (4 items): Automation Platform, Credentialing, Ambient Scribe (Coming Soon), Pricing
-- **Resources** (5 items): Knowledge Base, Customer Testimonials, News, Media, Investors
+- **Resources** (4 items): Knowledge Base, News, Media, Investors
 - **Tools** (3 items): ROI Calculator, Denial Code Explorer, Practice Health Score
 - Plus standalone: Careers, Contact, Request Demo (CTA)
+
+Note: `customers.html` and `testimonials.html` exist but are **not linked in the nav**.
 
 Active page: set `aria-current="page"` on the correct `<a>` tag.
 
